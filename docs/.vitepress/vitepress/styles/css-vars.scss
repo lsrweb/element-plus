@@ -2,6 +2,19 @@
 
 // css variables
 :root {
+  // Compatibility aliases for documentation assets that still use the
+  // historical `el` CSS variable namespace.
+  --el-bg-color-overlay: var(--elp-bg-color-overlay);
+  --el-border-color-dark: var(--elp-border-color-dark);
+  --el-border-color-light: var(--elp-border-color-light);
+  --el-color-info-light-5: var(--elp-color-info-light-5);
+  --el-color-primary: var(--elp-color-primary);
+  --el-color-primary-light-5: var(--elp-color-primary-light-5);
+  --el-color-primary-light-8: var(--elp-color-primary-light-8);
+  --el-color-success: var(--elp-color-success);
+  --el-fill-color-blank: var(--elp-fill-color-blank);
+  --el-fill-color-light: var(--elp-fill-color-light);
+  --el-text-color-primary: var(--elp-text-color-primary);
   // layouts
   --vp-screen-max-width: 1376px;
 

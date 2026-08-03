@@ -4,7 +4,8 @@
 public/llms.txt
 public/llms-full.txt
 temp
-zh-CN
+# Keep translated Markdown sources, but ignore local static HTML output.
+zh-CN/**/*.html
 fr-FR
 es-ES
 ja-JP

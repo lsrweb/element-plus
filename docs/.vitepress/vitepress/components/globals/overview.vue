@@ -140,7 +140,7 @@ onMounted(() => {
     top: 60px;
     z-index: 10;
 
-    .el-input {
+    .elp-input {
       background: var(--bg-color);
     }
   }
@@ -171,19 +171,19 @@ onMounted(() => {
           }
         }
 
-        :deep(.el-card) {
+        :deep(.elp-card) {
           width: 100%;
           cursor: pointer;
           transition: none;
 
-          .el-card__header {
+          .elp-card__header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 8px;
             padding: 8px 12px;
 
-            .el-text {
+            .elp-text {
               font-size: 14px;
               font-weight: 500;
               color: var(--el-text-color-regular);
@@ -191,7 +191,7 @@ onMounted(() => {
             }
           }
 
-          .el-card__body {
+          .elp-card__body {
             padding: 0;
             display: flex;
             justify-content: center;

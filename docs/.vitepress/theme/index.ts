@@ -1,7 +1,5 @@
-import ElementPlus, {
-  ID_INJECTION_KEY,
-  ZINDEX_INJECTION_KEY,
-} from 'element-plus'
+import ElementPlus, * as ElementPlusExports from 'element-plus'
+import { ID_INJECTION_KEY, ZINDEX_INJECTION_KEY } from 'element-plus'
 import { isClient } from '@vueuse/core'
 import VPApp, { NotFound, globals } from '../vitepress'
 import { define } from '../utils/types'
@@ -9,13 +7,29 @@ import './style.css'
 import 'vitepress/dist/client/theme-default/styles/components/vp-code-group.css'
 import 'virtual:group-icons.css'
 
+import type { App, Component } from 'vue'
 import type { Theme } from 'vitepress'
+
+const registerLegacyComponentNames = (app: App) => {
+  Object.values(ElementPlusExports).forEach((component) => {
+    const name = (component as { name?: unknown } | undefined)?.name
+
+    if (
+      typeof name === 'string' &&
+      name.startsWith('El') &&
+      !app.component(name)
+    ) {
+      app.component(name, component as Component)
+    }
+  })
+}
 
 export default define<Theme>({
   NotFound,
   Layout: VPApp,
   enhanceApp: async ({ app, router }) => {
     app.use(ElementPlus as any)
+    registerLegacyComponentNames(app)
     app.provide(ID_INJECTION_KEY, { prefix: 1024, current: 0 })
     app.provide(ZINDEX_INJECTION_KEY, { current: 0 })
     Object.entries(globals).forEach(([name, Comp]) => {
