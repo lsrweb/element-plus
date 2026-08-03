@@ -1,13 +1,13 @@
 import { computed, inject, isRef, ref, unref } from 'vue'
 import { get } from 'lodash-unified'
-import English from '@element-plus/locale/lang/en'
+import Chinese from '@element-plus/locale/lang/zh-cn'
 
 import type { InjectionKey, MaybeRef, Ref } from 'vue'
 import type { FieldPath } from '@element-plus/utils'
 import type { Language } from '@element-plus/locale'
 
 export type LocaleKeys =
-  | Exclude<FieldPath<typeof English>, 'name' | 'el'>
+  | Exclude<FieldPath<typeof Chinese>, 'name' | 'el'>
   | (string & NonNullable<unknown>)
 
 export type TranslatorOption = Record<string, string | number>
@@ -50,5 +50,5 @@ export const localeContextKey: InjectionKey<Ref<Language | undefined>> =
 
 export const useLocale = (localeOverrides?: Ref<Language | undefined>) => {
   const locale = localeOverrides || inject(localeContextKey, ref())!
-  return buildLocaleContext(computed(() => locale.value || English))
+  return buildLocaleContext(computed(() => locale.value || Chinese))
 }

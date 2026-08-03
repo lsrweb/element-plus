@@ -6,9 +6,12 @@ export const generateExternal = (options: { full: boolean }) => {
   const { dependencies, peerDependencies } = getPackageDependencies(epPackage)
 
   return (id: string) => {
-    const packages: string[] = [...peerDependencies]
+    let packages: string[] = [...peerDependencies]
     if (!options.full) {
       packages.push('@vue', ...dependencies)
+    }
+    if (options.full) {
+      packages = packages.filter((pkg) => pkg !== 'vue')
     }
 
     return [...new Set(packages)].some(

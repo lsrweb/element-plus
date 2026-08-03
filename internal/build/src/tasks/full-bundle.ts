@@ -17,6 +17,7 @@ import {
   execCommand,
   getPackageManifest,
   localeRoot,
+  projRoot,
 } from '@element-plus/build-utils'
 import { ElementPlusAlias } from '../plugins/element-plus-alias'
 import { formatBundleFilename, generateExternal, writeBundles } from '../utils'
@@ -26,9 +27,19 @@ import type { Plugin } from 'rolldown'
 
 const { version } = getPackageManifest(epPackage)
 const banner = `/*! ${PKG_BRAND_NAME} v${version} */\n`
+const PKG_CAMELCASE_NAME_ALIAS = 'EPS'
 
 async function buildFullEntry(minify: boolean) {
   const plugins: Plugin[] = [
+    {
+      name: 'vue-compiler-bundle-alias',
+      resolveId: {
+        filter: { id: /^vue$/ },
+        handler(id) {
+          return { id: path.resolve(projRoot, 'node_modules/vue/dist/vue.esm-browser.js') }
+        },
+      },
+    },
     ElementPlusAlias(),
     vue() as Plugin,
     vueJsx() as Plugin,
@@ -54,11 +65,9 @@ async function buildFullEntry(minify: boolean) {
       ),
       exports: 'named',
       name: PKG_CAMELCASE_NAME,
-      globals: {
-        vue: 'Vue',
-      },
       sourcemap: minify,
       banner,
+      footer: `if(typeof window!=='undefined'){window.${PKG_CAMELCASE_NAME_ALIAS}=window.${PKG_CAMELCASE_NAME};}`,
       minify,
       comments: {
         jsdoc: false,
