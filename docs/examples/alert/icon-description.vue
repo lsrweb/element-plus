@@ -36,10 +36,10 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-.el-alert {
+.elp-alert {
   margin: 20px 0 0;
 }
-.el-alert:first-child {
+.elp-alert:first-child {
   margin: 0;
 }
 </style>

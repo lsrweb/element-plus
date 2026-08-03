@@ -43,7 +43,7 @@ import { isDark } from '~/composables/dark'
       y="52.5"
       width="76"
       height="29"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
     />
     <rect
       x="19.5"

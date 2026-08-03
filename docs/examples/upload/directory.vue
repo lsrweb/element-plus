@@ -7,8 +7,8 @@
     multiple
     :on-change="handleChange"
   >
-    <el-icon class="el-icon--upload"><upload-filled /></el-icon>
-    <div class="el-upload__text">
+    <el-icon class="elp-icon--upload"><upload-filled /></el-icon>
+    <div class="elp-upload__text">
       Drop directory here or <em>click to upload</em>
     </div>
   </el-upload>

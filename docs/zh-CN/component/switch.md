@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 绑定 `v-model` 到一个 `Boolean` 类型的变量。 可以使用 `--el-switch-on-color` 属性与 `--el-switch-off-color` 属性来设置开关的背景色。
+:::demo 绑定 `v-model` 到一个 `Boolean` 类型的变量。 可以使用 `--elp-switch-on-color` 属性与 `--elp-switch-off-color` 属性来设置开关的背景色。
 
 switch/basic
 
@@ -121,9 +121,9 @@ switch/custom-action-slot
 | id                            | input 的 id                                                                      | ^[string]                                      | —       |
 | tabindex                      | input 的 tabindex                                                                | ^[string] / ^[number]                          | —       |
 | aria-label ^(a11y) ^(2.7.2)   | 等价于原生 input `aria-label` 属性                                               | ^[string]                                      | —       |
-| active-color ^(deprecated)    | 当在 `on` 状态时的背景颜色(推荐使用 CSS var `--el-switch-on-color` )             | ^[string]                                      | ''      |
-| inactive-color ^(deprecated)  | `off` 状态时的背景颜色(推荐使用 CSS var `--el-switch-off-color` )                | ^[string]                                      | ''      |
-| border-color ^(deprecated)    | 开关的边框颜色 ( 推荐使用 CSS var `--el-switch-border-color` )                   | ^[string]                                      | ''      |
+| active-color ^(deprecated)    | 当在 `on` 状态时的背景颜色(推荐使用 CSS var `--elp-switch-on-color` )            | ^[string]                                      | ''      |
+| inactive-color ^(deprecated)  | `off` 状态时的背景颜色(推荐使用 CSS var `--elp-switch-off-color` )               | ^[string]                                      | ''      |
+| border-color ^(deprecated)    | 开关的边框颜色 ( 推荐使用 CSS var `--elp-switch-border-color` )                  | ^[string]                                      | ''      |
 | label ^(a11y) ^(deprecated)   | 等价于原生 input `aria-label` 属性                                               | ^[string]                                      | —       |
 
 ### 事件

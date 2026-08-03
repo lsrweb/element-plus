@@ -17,7 +17,7 @@ const value2 = ref()
 </script>
 
 <style>
-.example-basic .el-date-editor {
+.example-basic .elp-date-editor {
   margin: 8px;
 }
 </style>

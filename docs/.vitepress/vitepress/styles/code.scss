@@ -3,7 +3,7 @@
 @use 'vitepress/dist/client/theme-default/styles/components/vp-code.css';
 
 :root {
-  --vp-code-block-bg: var(--el-fill-color-light);
+  --vp-code-block-bg: var(--elp-fill-color-light);
   --vp-code-line-height: 1.6;
 }
 pre,
@@ -16,7 +16,7 @@ samp {
 :not(pre) > code {
   border-radius: 4px;
   padding: 0.15rem 0.5rem;
-  background-color: var(--el-fill-color-light);
+  background-color: var(--elp-fill-color-light);
   transition:
     color 0.25s,
     background-color 0.5s;

@@ -44,8 +44,8 @@ const load = () => {
   align-items: center;
   justify-content: center;
   height: 50px;
-  background: var(--el-color-danger-light-9);
-  color: var(--el-color-danger);
+  background: var(--elp-color-danger-light-9);
+  color: var(--elp-color-danger);
 }
 .infinite-list-wrapper .list-item + .list-item {
   margin-top: 10px;

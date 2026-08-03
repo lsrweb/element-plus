@@ -7,7 +7,7 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_12777_164035)">
-      <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+      <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
       <g filter="url(#filter0_d_12777_164035)">
         <rect
           x="60"
@@ -15,7 +15,7 @@
           width="160"
           height="24"
           rx="2"
-          fill="var(--el-fill-color-blank)"
+          fill="var(--elp-fill-color-blank)"
         />
         <rect
           x="59.7"
@@ -23,7 +23,7 @@
           width="160.6"
           height="24.6"
           rx="2.3"
-          stroke="var(--el-border-color-dark)"
+          stroke="var(--elp-border-color-dark)"
           stroke-width="0.6"
         />
       </g>
@@ -33,7 +33,7 @@
         width="36"
         height="4"
         rx="2"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
     </g>
     <defs>

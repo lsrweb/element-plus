@@ -154,7 +154,7 @@ onMounted(() => {
         align-items: center;
         font-size: 20px;
         font-weight: 600;
-        color: var(--el-text-color-primary);
+        color: var(--elp-text-color-primary);
         gap: 8px;
       }
 
@@ -166,7 +166,7 @@ onMounted(() => {
         a {
           border-radius: 4px;
           &:focus-visible {
-            outline: 2px solid var(--el-color-primary);
+            outline: 2px solid var(--elp-color-primary);
             outline-offset: 1px;
           }
         }
@@ -186,7 +186,7 @@ onMounted(() => {
             .elp-text {
               font-size: 14px;
               font-weight: 500;
-              color: var(--el-text-color-regular);
+              color: var(--elp-text-color-regular);
               line-height: 24px;
             }
           }

@@ -30,7 +30,7 @@ defineProps<{
   align-items: center;
 }
 
-.el-icon {
+.elp-icon {
   margin-left: 4px;
 }
 </style>

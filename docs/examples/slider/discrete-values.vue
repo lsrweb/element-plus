@@ -22,13 +22,13 @@ const value2 = ref(0)
   display: flex;
   align-items: center;
 }
-.slider-demo-block .el-slider {
+.slider-demo-block .elp-slider {
   margin-top: 0;
   margin-left: 12px;
 }
 .slider-demo-block .demonstration {
   font-size: 14px;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   line-height: 44px;
   flex: 1;
   overflow: hidden;
@@ -36,7 +36,7 @@ const value2 = ref(0)
   white-space: nowrap;
   margin-bottom: 0;
 }
-.slider-demo-block .demonstration + .el-slider {
+.slider-demo-block .demonstration + .elp-slider {
   flex: 0 0 70%;
 }
 </style>

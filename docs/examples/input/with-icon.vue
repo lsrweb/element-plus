@@ -26,7 +26,7 @@
           placeholder="Pick a date"
         >
           <template #suffix>
-            <el-icon class="el-input__icon"><calendar /></el-icon>
+            <el-icon class="elp-input__icon"><calendar /></el-icon>
           </template>
         </el-input>
         <el-input
@@ -35,7 +35,7 @@
           placeholder="Type something"
         >
           <template #prefix>
-            <el-icon class="el-input__icon"><search /></el-icon>
+            <el-icon class="elp-input__icon"><search /></el-icon>
           </template>
         </el-input>
       </div>
@@ -65,7 +65,7 @@ const input4 = ref('')
 .label {
   display: block;
   margin-bottom: 1rem;
-  color: var(--el-text-color-regular);
+  color: var(--elp-text-color-regular);
 }
 
 .input-container {

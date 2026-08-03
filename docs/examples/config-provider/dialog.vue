@@ -33,7 +33,7 @@ const globalConfig = computed<GlobalConfig>(() => {
           nextTick(() => {
             if (buttonRef.value) {
               const buttonRect = buttonRef.value.ref!.getBoundingClientRect()
-              const dialogEl = el.querySelector('.el-dialog') as HTMLElement
+              const dialogEl = el.querySelector('.elp-dialog') as HTMLElement
 
               if (dialogEl) {
                 const dialogRect = dialogEl.getBoundingClientRect()
@@ -55,7 +55,7 @@ const globalConfig = computed<GlobalConfig>(() => {
         },
         onEnter(el, done) {
           nextTick(() => {
-            const dialogEl = el.querySelector('.el-dialog') as HTMLElement
+            const dialogEl = el.querySelector('.elp-dialog') as HTMLElement
             if (dialogEl) {
               // force reflow
               dialogEl.offsetHeight
@@ -77,7 +77,7 @@ const globalConfig = computed<GlobalConfig>(() => {
           })
         },
         onLeave(el, done) {
-          const dialogEl = el.querySelector('.el-dialog') as HTMLElement
+          const dialogEl = el.querySelector('.elp-dialog') as HTMLElement
           if (dialogEl) {
             if (buttonRef.value) {
               const buttonRect = buttonRef.value.ref!.getBoundingClientRect()
@@ -195,8 +195,8 @@ const globalConfig = computed<GlobalConfig>(() => {
 /* Bounce Animation */
 .dialog-bounce-enter-active,
 .dialog-bounce-leave-active,
-.dialog-bounce-enter-active .el-dialog,
-.dialog-bounce-leave-active .el-dialog {
+.dialog-bounce-enter-active .elp-dialog,
+.dialog-bounce-leave-active .elp-dialog {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -205,8 +205,8 @@ const globalConfig = computed<GlobalConfig>(() => {
   opacity: 0;
 }
 
-.dialog-bounce-enter-from .el-dialog,
-.dialog-bounce-leave-to .el-dialog {
+.dialog-bounce-enter-from .elp-dialog,
+.dialog-bounce-leave-to .elp-dialog {
   transform: scale(0.3) translateY(-50px);
   opacity: 0;
 }

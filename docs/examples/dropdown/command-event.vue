@@ -1,7 +1,7 @@
 <template>
   <el-dropdown @command="handleCommand">
-    <span class="el-dropdown-link">
-      Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+    <span class="elp-dropdown-link">
+      Dropdown List<el-icon class="elp-icon--right"><arrow-down /></el-icon>
     </span>
     <template #dropdown>
       <el-dropdown-menu>
@@ -25,9 +25,9 @@ const handleCommand = (command: string | number | object) => {
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown-link {
+.example-showcase .elp-dropdown-link {
   cursor: pointer;
-  color: var(--el-color-primary);
+  color: var(--elp-color-primary);
   display: flex;
   align-items: center;
 }

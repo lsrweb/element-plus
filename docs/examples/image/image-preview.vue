@@ -32,10 +32,10 @@ const srcList = [
 .demo-image__error .image-slot {
   font-size: 30px;
 }
-.demo-image__error .image-slot .el-icon {
+.demo-image__error .image-slot .elp-icon {
   font-size: 30px;
 }
-.demo-image__error .el-image {
+.demo-image__error .elp-image {
   width: 100%;
   height: 200px;
 }

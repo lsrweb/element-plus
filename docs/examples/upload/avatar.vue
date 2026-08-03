@@ -48,20 +48,20 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
 </style>
 
 <style>
-.avatar-uploader .el-upload {
-  border: 1px dashed var(--el-border-color);
+.avatar-uploader .elp-upload {
+  border: 1px dashed var(--elp-border-color);
   border-radius: 6px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: var(--el-transition-duration-fast);
+  transition: var(--elp-transition-duration-fast);
 }
 
-.avatar-uploader .el-upload:hover {
-  border-color: var(--el-color-primary);
+.avatar-uploader .elp-upload:hover {
+  border-color: var(--elp-color-primary);
 }
 
-.el-icon.avatar-uploader-icon {
+.elp-icon.avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
   width: 178px;

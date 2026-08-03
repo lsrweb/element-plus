@@ -9,7 +9,7 @@ Element Plus 内应用在部分组件的过渡动画，你也可以直接使用�
 
 ## Fade 淡入淡出
 
-:::demo 提供 `el-fade-in-linear` 和 `el-fade-in` 两种效果。
+:::demo 提供 `elp-fade-in-linear` 和 `elp-fade-in` 两种效果。
 
 transitions/fade
 

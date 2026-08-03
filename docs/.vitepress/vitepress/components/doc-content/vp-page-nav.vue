@@ -76,7 +76,7 @@ const { hasLinks, prev, next } = usePageNav()
   text-overflow: ellipsis;
 }
 
-.el-icon {
+.elp-icon {
   display: inline-flex;
   flex-shrink: 0;
   font-size: 12px;

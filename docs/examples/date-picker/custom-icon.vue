@@ -234,7 +234,7 @@ const value4 = ref('')
 .demo-date-picker-icon .container {
   flex: 1;
   min-width: 400px;
-  border-right: solid 1px var(--el-border-color);
+  border-right: solid 1px var(--elp-border-color);
   display: flex;
   flex-direction: column;
 }
@@ -252,12 +252,12 @@ const value4 = ref('')
 }
 
 .demo-date-picker-icon .block:not(:first-child) {
-  border-top: solid 1px var(--el-border-color);
+  border-top: solid 1px var(--elp-border-color);
 }
 
 .demo-date-picker-icon .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   font-size: 14px;
   margin-bottom: 1rem;
   width: 100%;
@@ -275,7 +275,7 @@ const value4 = ref('')
   }
 
   .demo-date-picker-icon .container:not(:last-child) {
-    border-bottom: solid 1px var(--el-border-color);
+    border-bottom: solid 1px var(--elp-border-color);
   }
 
   .demo-date-picker-icon .block {

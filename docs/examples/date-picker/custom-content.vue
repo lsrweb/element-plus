@@ -16,15 +16,15 @@
     </el-date-picker>
     <el-date-picker v-model="month" type="month" placeholder="Pick a month">
       <template #default="cell">
-        <div class="el-date-table-cell" :class="{ current: cell.isCurrent }">
-          <span class="el-date-table-cell__text">{{ cell.text + 1 }}期</span>
+        <div class="elp-date-table-cell" :class="{ current: cell.isCurrent }">
+          <span class="elp-date-table-cell__text">{{ cell.text + 1 }}期</span>
         </div>
       </template>
     </el-date-picker>
     <el-date-picker v-model="year" type="year" placeholder="Pick a year">
       <template #default="cell">
-        <div class="el-date-table-cell" :class="{ current: cell.isCurrent }">
-          <span class="el-date-table-cell__text">{{ cell.text + 1 }}y</span>
+        <div class="elp-date-table-cell" :class="{ current: cell.isCurrent }">
+          <span class="elp-date-table-cell__text">{{ cell.text + 1 }}y</span>
         </div>
       </template>
     </el-date-picker>
@@ -90,7 +90,7 @@ const isHoliday = ({ dayjs }) => {
   position: absolute;
   width: 6px;
   height: 6px;
-  background: var(--el-color-danger);
+  background: var(--elp-color-danger);
   border-radius: 50%;
   bottom: 0px;
   left: 50%;

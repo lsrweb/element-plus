@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_12777_163851)">
       <rect
         x="91"
@@ -14,7 +14,7 @@
         width="24"
         height="24"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <rect
         x="91.5"
@@ -22,7 +22,7 @@
         width="23"
         height="23"
         rx="1.5"
-        stroke="var(--el-color-primary)"
+        stroke="var(--elp-color-primary)"
       />
     </g>
     <rect
@@ -31,7 +31,7 @@
       width="16"
       height="16"
       rx="1"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <g filter="url(#filter1_d_12777_163851)">
       <rect
@@ -40,7 +40,7 @@
         width="96"
         height="77"
         rx="2"
-        fill="var(--el-bg-color-overlay)"
+        fill="var(--elp-bg-color-overlay)"
       />
     </g>
     <rect
@@ -179,7 +179,7 @@
         y2="127"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--el-color-primary)" />
+        <stop stop-color="var(--elp-color-primary)" />
         <stop offset="1" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
@@ -190,10 +190,10 @@
         y2="95"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--el-color-primary)" />
+        <stop stop-color="var(--elp-color-primary)" />
         <stop
           offset="1"
-          stop-color="var(--el-color-primary)"
+          stop-color="var(--elp-color-primary)"
           stop-opacity="0"
         />
       </linearGradient>
@@ -208,7 +208,7 @@
         <stop />
         <stop
           offset="1"
-          stop-color="var(--el-color-primary)"
+          stop-color="var(--elp-color-primary)"
           stop-opacity="0"
         />
       </linearGradient>

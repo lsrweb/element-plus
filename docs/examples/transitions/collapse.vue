@@ -23,8 +23,8 @@ const show = ref(true)
 .transition-box {
   width: 200px;
   height: 100px;
-  border-radius: var(--el-border-radius-base);
-  background-color: var(--el-color-primary);
+  border-radius: var(--elp-border-radius-base);
+  background-color: var(--elp-color-primary);
   text-align: center;
   color: #fff;
   padding: 40px 20px;

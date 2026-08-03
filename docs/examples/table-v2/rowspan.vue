@@ -49,7 +49,7 @@ const Row = ({ rowData, rowIndex, cells, columns }) => {
     const cell = cells[rowSpanIndex]
     const style = {
       ...cell.props.style,
-      backgroundColor: 'var(--el-color-primary-light-3)',
+      backgroundColor: 'var(--elp-color-primary-light-3)',
       height: `${rowSpan * 50 - 1}px`,
       alignSelf: 'flex-start',
       zIndex: 1,

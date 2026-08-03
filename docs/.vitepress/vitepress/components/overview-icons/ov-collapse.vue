@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13239_209025)">
       <rect
         x="65"
@@ -14,7 +14,7 @@
         width="150"
         height="77"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <rect
         x="64.7"
@@ -22,7 +22,7 @@
         width="150.6"
         height="77.6"
         rx="2.3"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
@@ -31,7 +31,7 @@
       y="72"
       width="150"
       height="35"
-      fill="var(--el-border-color-light)"
+      fill="var(--elp-border-color-light)"
     />
     <rect
       x="73"
@@ -39,7 +39,7 @@
       width="36"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="73"
@@ -47,7 +47,7 @@
       width="36"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="73"
@@ -55,18 +55,18 @@
       width="91"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <path
       d="M202.2 60.3994C202.733 60.9327 203.8 61.9994 203.8 61.9994L202.2 63.5996"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--elp-border-color-dark)"
       stroke-width="0.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M204.6 81.2002C204.067 81.7335 203 82.8002 203 82.8002L201.4 81.2002"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-width="0.5"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -76,7 +76,7 @@
       y1="71.75"
       x2="215"
       y2="71.75"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--elp-border-color-dark)"
       stroke-width="0.5"
     />
     <rect
@@ -85,11 +85,11 @@
       width="36"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <path
       d="M202.2 117.399C202.733 117.933 203.8 118.999 203.8 118.999L202.2 120.6"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--elp-border-color-dark)"
       stroke-width="0.5"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -99,7 +99,7 @@
       y1="106.75"
       x2="215"
       y2="106.75"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--elp-border-color-dark)"
       stroke-width="0.5"
     />
     <defs>

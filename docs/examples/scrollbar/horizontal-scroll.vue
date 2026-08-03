@@ -23,7 +23,7 @@
   margin: 10px;
   text-align: center;
   border-radius: 4px;
-  background: var(--el-color-danger-light-9);
-  color: var(--el-color-danger);
+  background: var(--elp-color-danger-light-9);
+  color: var(--elp-color-danger);
 }
 </style>

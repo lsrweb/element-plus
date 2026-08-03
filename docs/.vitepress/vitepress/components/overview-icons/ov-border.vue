@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_12403_168838)">
       <rect
         x="88"
@@ -14,7 +14,7 @@
         width="40"
         height="12"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
     </g>
     <rect
@@ -23,7 +23,7 @@
       width="55"
       height="23"
       rx="1.5"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
     />
     <g filter="url(#filter1_d_12403_168838)">
       <rect
@@ -32,7 +32,7 @@
         width="40"
         height="12"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
     </g>
     <rect
@@ -41,7 +41,7 @@
       width="55"
       height="23"
       rx="1.5"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-dasharray="3 2"
     />
     <defs>

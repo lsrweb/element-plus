@@ -71,16 +71,16 @@ rate/readonly
 
 ## 自定义样式
 
-您可以为 rate 组件设定自定义样式。 使用 `css` 或 `scss` 改变全局或局部的颜色。 我们设置了一些全局颜色变量：`--el-rate-void-color`、`--el-rate-fill-color`、`--el-rate-disabled-void-color` 和 `--el-rate-text-color`。 您可以像这样使用：`:root { --el-rate-void-color: red; --el-rate-fill-color: blue; }`。
+您可以为 rate 组件设定自定义样式。 使用 `css` 或 `scss` 改变全局或局部的颜色。 我们设置了一些全局颜色变量：`--elp-rate-void-color`、`--elp-rate-fill-color`、`--elp-rate-disabled-void-color` 和 `--elp-rate-text-color`。 您可以像这样使用：`:root { --elp-rate-void-color: red; --elp-rate-fill-color: blue; }`。
 
 ### 默认变量
 
-| 变量                          | 默认颜色                      |
-| ----------------------------- | ----------------------------- |
-| --el-rate-void-color          | var(--el-border-color-darker) |
-| --el-rate-fill-color          | #f7ba2a                       |
-| --el-rate-disabled-void-color | var(--el-fill-color)          |
-| --el-rate-text-color          | var(--el-text-color-primary)  |
+| 变量                           | 默认颜色                       |
+| ------------------------------ | ------------------------------ |
+| --elp-rate-void-color          | var(--elp-border-color-darker) |
+| --elp-rate-fill-color          | #f7ba2a                        |
+| --elp-rate-disabled-void-color | var(--elp-fill-color)          |
+| --elp-rate-text-color          | var(--elp-text-color-primary)  |
 
 ## API
 

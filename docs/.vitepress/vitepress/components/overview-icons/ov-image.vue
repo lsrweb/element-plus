@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13239_209071)">
       <rect
         x="108"
@@ -14,7 +14,7 @@
         width="64"
         height="48"
         rx="4"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <rect
         x="109.5"
@@ -22,7 +22,7 @@
         width="61"
         height="45"
         rx="2.5"
-        stroke="var(--el-color-primary)"
+        stroke="var(--elp-color-primary)"
         stroke-width="3"
       />
     </g>
@@ -42,7 +42,7 @@
         height="44"
         rx="4"
         fill="white"
-        stroke="var(--el-color-primary)"
+        stroke="var(--elp-color-primary)"
         stroke-width="4"
       />
     </mask>
@@ -52,14 +52,14 @@
         y="103.76"
         width="66.56"
         height="16.64"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
       <path
         d="M131.378 102.255C130.976 102.759 130.209 102.757 129.81 102.25L121.844 92.1319C120.685 90.66 118.806 90.6601 117.647 92.1319L101.522 112.614C100.363 114.086 101.054 115.279 103.066 115.279H176.948C178.96 115.279 179.636 114.089 178.466 112.62L152.912 80.5446C151.734 79.0662 149.844 79.0759 148.674 80.5446L131.378 102.255Z"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
     </g>
-    <circle cx="123.04" cy="77.2004" r="4.8" fill="var(--el-color-primary)" />
+    <circle cx="123.04" cy="77.2004" r="4.8" fill="var(--elp-color-primary)" />
     <defs>
       <filter
         id="filter0_d_13239_209071"

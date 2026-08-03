@@ -3,7 +3,7 @@ import { useClipboard } from '@vueuse/core'
 import { isDark } from '~/composables/dark'
 
 export const getCssVarName = (namespace: string, type: string) => {
-  return type ? `--el-${namespace}-${type}` : `--el-${namespace}`
+  return type ? `--elp-${namespace}-${type}` : `--elp-${namespace}`
 }
 
 /**
@@ -30,7 +30,7 @@ export const getCssVarValue = (name: string) => {
 
 export const getColorValue = (type: string) => {
   const color = getComputedStyle(document.documentElement).getPropertyValue(
-    `--el-color-${type}`
+    `--elp-color-${type}`
   )
   return color
 }
@@ -51,7 +51,7 @@ export const useCopyColor = () => {
     }
     try {
       await copy()
-      $message.success(`--el-color-${colorType}: ${source.value}`)
+      $message.success(`--elp-color-${colorType}: ${source.value}`)
     } catch (e: any) {
       $message.error(e.message)
     }

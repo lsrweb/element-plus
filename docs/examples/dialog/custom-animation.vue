@@ -71,7 +71,7 @@ const openDialogWithObject = () => {
 
 <style scoped>
 code {
-  background: var(--el-bg-color-page);
+  background: var(--elp-bg-color-page);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -84,8 +84,8 @@ code {
 /* Scale Animation */
 .dialog-scale-enter-active,
 .dialog-scale-leave-active,
-.dialog-scale-enter-active .el-dialog,
-.dialog-scale-leave-active .el-dialog {
+.dialog-scale-enter-active .elp-dialog,
+.dialog-scale-leave-active .elp-dialog {
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -94,8 +94,8 @@ code {
   opacity: 0;
 }
 
-.dialog-scale-enter-from .el-dialog,
-.dialog-scale-leave-to .el-dialog {
+.dialog-scale-enter-from .elp-dialog,
+.dialog-scale-leave-to .elp-dialog {
   transform: scale(0.5);
   opacity: 0;
 }
@@ -103,8 +103,8 @@ code {
 /* Slide Animation */
 .dialog-slide-enter-active,
 .dialog-slide-leave-active,
-.dialog-slide-enter-active .el-dialog,
-.dialog-slide-leave-active .el-dialog {
+.dialog-slide-enter-active .elp-dialog,
+.dialog-slide-leave-active .elp-dialog {
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -113,8 +113,8 @@ code {
   opacity: 0;
 }
 
-.dialog-slide-enter-from .el-dialog,
-.dialog-slide-leave-to .el-dialog {
+.dialog-slide-enter-from .elp-dialog,
+.dialog-slide-leave-to .elp-dialog {
   transform: translateY(-100px);
   opacity: 0;
 }
@@ -122,8 +122,8 @@ code {
 /* Bounce Animation */
 .dialog-bounce-enter-active,
 .dialog-bounce-leave-active,
-.dialog-bounce-enter-active .el-dialog,
-.dialog-bounce-leave-active .el-dialog {
+.dialog-bounce-enter-active .elp-dialog,
+.dialog-bounce-leave-active .elp-dialog {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -132,8 +132,8 @@ code {
   opacity: 0;
 }
 
-.dialog-bounce-enter-from .el-dialog,
-.dialog-bounce-leave-to .el-dialog {
+.dialog-bounce-enter-from .elp-dialog,
+.dialog-bounce-leave-to .elp-dialog {
   transform: scale(0.3) translateY(-50px);
   opacity: 0;
 }
@@ -141,8 +141,8 @@ code {
 /* Object Configuration Animation */
 .dialog-custom-object-enter-active,
 .dialog-custom-object-leave-active,
-.dialog-custom-object-enter-active .el-dialog,
-.dialog-custom-object-leave-active .el-dialog {
+.dialog-custom-object-enter-active .elp-dialog,
+.dialog-custom-object-leave-active .elp-dialog {
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -151,8 +151,8 @@ code {
   opacity: 0;
 }
 
-.dialog-custom-object-enter-from .el-dialog,
-.dialog-custom-object-leave-to .el-dialog {
+.dialog-custom-object-enter-from .elp-dialog,
+.dialog-custom-object-leave-to .elp-dialog {
   transform: rotate(180deg) scale(0.5);
   opacity: 0;
 }

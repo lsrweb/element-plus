@@ -74,7 +74,7 @@ const onReset = () => {
 }
 
 const handleShowPopover = () => {
-  const button = document.querySelector('.el-table-v2__demo-filter button')
+  const button = document.querySelector('.elp-table-v2__demo-filter button')
   ;(button as HTMLElement)?.focus()
 }
 
@@ -96,7 +96,7 @@ columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {
                   Filter Text
                 </ElCheckbox>
               </div>
-              <div class="el-table-v2__demo-filter">
+              <div class="elp-table-v2__demo-filter">
                 <ElButton text onClick={onFilter}>
                   Confirm
                 </ElButton>
@@ -110,7 +110,7 @@ columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {
             <button
               type="button"
               aria-label={ariaLabel.value}
-              class="el-table-v2__demo-filter-btn"
+              class="elp-table-v2__demo-filter-btn"
             >
               <ElIcon size={14}>
                 <Filter />
@@ -132,14 +132,14 @@ const fixedColumns = columns.map((column, columnIndex) => {
 </script>
 
 <style>
-.el-table-v2__demo-filter {
-  border-top: var(--el-border);
+.elp-table-v2__demo-filter {
+  border-top: var(--elp-border);
   margin: 12px -12px -12px;
   padding: 0 12px;
   display: flex;
   justify-content: space-between;
 }
-.el-table-v2__demo-filter-btn {
+.elp-table-v2__demo-filter-btn {
   display: flex;
   cursor: pointer;
   padding: 0;

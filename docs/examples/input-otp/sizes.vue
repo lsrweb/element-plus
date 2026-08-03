@@ -33,6 +33,6 @@ const otp3 = ref('')
 p {
   margin-bottom: 8px;
   font-size: 14px;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
 }
 </style>

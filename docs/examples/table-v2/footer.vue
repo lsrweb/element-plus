@@ -14,7 +14,7 @@
         style="
           justify-content: center;
           height: 100%;
-          background-color: var(--el-color-primary-light-7);
+          background-color: var(--elp-color-primary-light-7);
         "
       >
         Display a message in the footer

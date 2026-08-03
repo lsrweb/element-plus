@@ -99,7 +99,7 @@ function onSubmit() {
 </script>
 
 <style>
-.el-radio-group {
+.elp-radio-group {
   margin-right: 12px;
 }
 </style>

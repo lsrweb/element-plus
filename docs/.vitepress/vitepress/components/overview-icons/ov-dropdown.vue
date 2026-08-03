@@ -7,14 +7,14 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_13637_231123)">
-      <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+      <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
       <rect
         x="90"
         y="53"
         width="43"
         height="12"
         rx="2"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
       <path
         d="M123.399 59.7998C123.933 59.2665 124.999 58.1998 124.999 58.1998L126.6 59.7998"
@@ -31,7 +31,7 @@
           width="100"
           height="64"
           rx="2"
-          fill="var(--el-bg-color-overlay)"
+          fill="var(--elp-bg-color-overlay)"
         />
         <rect
           x="89.7"
@@ -39,7 +39,7 @@
           width="100.6"
           height="64.6"
           rx="2.3"
-          stroke="var(--el-border-color-dark)"
+          stroke="var(--elp-border-color-dark)"
           stroke-width="0.6"
         />
       </g>
@@ -48,7 +48,7 @@
         y="72"
         width="100"
         height="18"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
       <rect x="99" y="80" width="24" height="2" rx="1" fill="white" />
       <rect
@@ -57,7 +57,7 @@
         width="24"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="99"
@@ -65,7 +65,7 @@
         width="24"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
     </g>
     <defs>

@@ -83,7 +83,7 @@ const kls = ref<string>('')
 .hovering-col-8 [data-key='hovering-col-8'],
 .hovering-col-9 [data-key='hovering-col-9'],
 .hovering-col-10 [data-key='hovering-col-10'] {
-  background: var(--el-table-row-hover-bg-color);
+  background: var(--elp-table-row-hover-bg-color);
 }
 
 [data-key='hovering-col-0'] {

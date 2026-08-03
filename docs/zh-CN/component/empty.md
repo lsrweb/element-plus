@@ -47,22 +47,22 @@ empty/bottom-content
 
 ## 自定义样式
 
-您可以为empty组件设置自定义样式。 使用 `css/scss` 语言来更改全局或局部颜色。 我们设置了一些全局颜色变量：`--el-empty-fill-color-0`、`--el-empty-fill-color-1`、`--el-empty-fill-color-2`、……、`--el-empty-fill-color-9`。 您可以使用类似 `:root { --el-empty-fill-color-0: red; --el-empty-fill-color-1: blue; }` 等变量。 但通常，如果你想要更改样式，你需要更改所有颜色，因为这些颜色是一个组合。
+您可以为empty组件设置自定义样式。 使用 `css/scss` 语言来更改全局或局部颜色。 我们设置了一些全局颜色变量：`--elp-empty-fill-color-0`、`--elp-empty-fill-color-1`、`--elp-empty-fill-color-2`、……、`--elp-empty-fill-color-9`。 您可以使用类似 `:root { --elp-empty-fill-color-0: red; --elp-empty-fill-color-1: blue; }` 等变量。 但通常，如果你想要更改样式，你需要更改所有颜色，因为这些颜色是一个组合。
 
 ### 默认变量
 
-| 变量                    | 颜色                  |
-| ----------------------- | --------------------- |
-| --el-empty-fill-color-0 | var(--el-color-white) |
-| --el-empty-fill-color-1 | #fcfcfd               |
-| --el-empty-fill-color-2 | #f8f9fb               |
-| --el-empty-fill-color-3 | #f7f8fc               |
-| --el-empty-fill-color-4 | #eeeff3               |
-| --el-empty-fill-color-5 | #edeef2               |
-| --el-empty-fill-color-6 | #e9ebef               |
-| --el-empty-fill-color-7 | #e5e7e9               |
-| --el-empty-fill-color-8 | #e0e3e9               |
-| --el-empty-fill-color-9 | #d5d7de               |
+| 变量                     | 颜色                   |
+| ------------------------ | ---------------------- |
+| --elp-empty-fill-color-0 | var(--elp-color-white) |
+| --elp-empty-fill-color-1 | #fcfcfd                |
+| --elp-empty-fill-color-2 | #f8f9fb                |
+| --elp-empty-fill-color-3 | #f7f8fc                |
+| --elp-empty-fill-color-4 | #eeeff3                |
+| --elp-empty-fill-color-5 | #edeef2                |
+| --elp-empty-fill-color-6 | #e9ebef                |
+| --elp-empty-fill-color-7 | #e5e7e9                |
+| --elp-empty-fill-color-8 | #e0e3e9                |
+| --elp-empty-fill-color-9 | #d5d7de                |
 
 ## API
 

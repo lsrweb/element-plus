@@ -4,7 +4,7 @@
       <h5 class="mb-2">Default colors</h5>
       <el-menu
         default-active="2"
-        class="el-menu-vertical-demo"
+        class="elp-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
       >
@@ -44,7 +44,7 @@
       <el-menu
         active-text-color="#ffd04b"
         background-color="#545c64"
-        class="el-menu-vertical-demo"
+        class="elp-menu-vertical-demo"
         default-active="2"
         text-color="#fff"
         @open="handleOpen"

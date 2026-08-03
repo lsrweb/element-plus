@@ -211,7 +211,7 @@ const openIssues = () => {
   .changelog-drawer-title {
     font-size: 18px;
     font-weight: 600;
-    color: var(--el-text-color-primary);
+    color: var(--elp-text-color-primary);
   }
 
   .changelog-version-header {
@@ -237,7 +237,7 @@ const openIssues = () => {
     margin-bottom: 6px;
     font-size: 14px;
     line-height: 1.6;
-    color: var(--el-text-color-regular);
+    color: var(--elp-text-color-regular);
 
     & > span,
     & > a {
@@ -256,13 +256,13 @@ const openIssues = () => {
 
     :deep(code) {
       padding: 2px 6px;
-      color: var(--el-color-primary);
-      background-color: var(--el-color-primary-light-9);
+      color: var(--elp-color-primary);
+      background-color: var(--elp-color-primary-light-9);
       border-radius: 4px;
     }
 
     :deep(a) {
-      color: var(--el-color-primary);
+      color: var(--elp-color-primary);
       text-decoration: none;
 
       &:hover {

@@ -113,7 +113,7 @@ onMounted(() => {
 
 .demo-title {
   font-size: 0.875rem;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   min-height: 2.5em;
   display: flex;
   align-items: center;
@@ -141,32 +141,32 @@ onMounted(() => {
   stroke-dasharray: 90, 150;
   stroke-dashoffset: 0;
   stroke-width: 2;
-  stroke: var(--el-color-primary);
+  stroke: var(--elp-color-primary);
   stroke-linecap: round;
 }
 .loading-path .dot1 {
   transform: translate(3.75px, 3.75px);
-  fill: var(--el-color-primary);
+  fill: var(--elp-color-primary);
   animation: custom-spin-move 1s infinite linear alternate;
   opacity: 0.3;
 }
 .loading-path .dot2 {
   transform: translate(calc(100% - 3.75px), 3.75px);
-  fill: var(--el-color-primary);
+  fill: var(--elp-color-primary);
   animation: custom-spin-move 1s infinite linear alternate;
   opacity: 0.3;
   animation-delay: 0.4s;
 }
 .loading-path .dot3 {
   transform: translate(3.75px, calc(100% - 3.75px));
-  fill: var(--el-color-primary);
+  fill: var(--elp-color-primary);
   animation: custom-spin-move 1s infinite linear alternate;
   opacity: 0.3;
   animation-delay: 1.2s;
 }
 .loading-path .dot4 {
   transform: translate(calc(100% - 3.75px), calc(100% - 3.75px));
-  fill: var(--el-color-primary);
+  fill: var(--elp-color-primary);
   animation: custom-spin-move 1s infinite linear alternate;
   opacity: 0.3;
   animation-delay: 0.8s;

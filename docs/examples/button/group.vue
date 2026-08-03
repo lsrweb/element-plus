@@ -2,7 +2,7 @@
   <el-button-group class="mb-4">
     <el-button type="primary" :icon="ArrowLeft">Previous Page</el-button>
     <el-button type="primary">
-      Next Page<el-icon class="el-icon--right"><ArrowRight /></el-icon>
+      Next Page<el-icon class="elp-icon--right"><ArrowRight /></el-icon>
     </el-button>
   </el-button-group>
   <br />

@@ -7,9 +7,9 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_13239_208917)">
-      <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+      <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
       <g filter="url(#filter0_d_13239_208917)">
-        <circle cx="140" cy="90" r="24" fill="var(--el-color-primary)" />
+        <circle cx="140" cy="90" r="24" fill="var(--elp-color-primary)" />
       </g>
       <circle cx="140" cy="86" r="4" fill="white" />
       <path

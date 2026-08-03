@@ -131,7 +131,7 @@ const blockMargin = computed(() => {
 </script>
 
 <style scoped>
-.el-descriptions {
+.elp-descriptions {
   margin-top: 20px;
 }
 .cell-item {

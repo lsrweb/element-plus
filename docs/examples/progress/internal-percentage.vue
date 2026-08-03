@@ -23,7 +23,7 @@
 </template>
 
 <style scoped>
-.demo-progress .el-progress--line {
+.demo-progress .elp-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }

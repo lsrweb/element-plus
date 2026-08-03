@@ -6,15 +6,15 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13239_209079)">
       <path
         d="M65 60C65 58.8954 65.8954 58 67 58H213C214.105 58 215 58.8954 215 60V120C215 121.105 214.105 122 213 122H67C65.8954 122 65 121.105 65 120V60Z"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <path
         d="M67 57.7C65.7297 57.7 64.7 58.7297 64.7 60V120C64.7 121.27 65.7297 122.3 67 122.3H213C214.27 122.3 215.3 121.27 215.3 120V60C215.3 58.7297 214.27 57.7 213 57.7H67Z"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
@@ -24,7 +24,7 @@
       width="36"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="146"
@@ -32,7 +32,7 @@
       width="36"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="71"
@@ -40,11 +40,11 @@
       width="62"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <path
       d="M65 60C65 58.8954 65.8954 58 67 58H213C214.105 58 215 58.8954 215 60V70H65V60Z"
-      fill="var(--el-border-color-light)"
+      fill="var(--elp-border-color-light)"
     />
     <rect
       x="146"
@@ -52,7 +52,7 @@
       width="12"
       height="2"
       rx="1"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="71"
@@ -60,23 +60,23 @@
       width="12"
       height="2"
       rx="1"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
-    <path d="M65 90H215V102H65V90Z" fill="var(--el-border-color-light)" />
+    <path d="M65 90H215V102H65V90Z" fill="var(--elp-border-color-light)" />
     <rect
       x="71"
       y="95"
       width="12"
       height="2"
       rx="1"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <line
       x1="140.25"
       y1="58"
       x2="140.25"
       y2="90"
-      stroke="var(--el-border-color-light)"
+      stroke="var(--elp-border-color-light)"
       stroke-width="0.5"
     />
     <defs>

@@ -7,16 +7,16 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_12777_164053)">
-      <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+      <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
       <circle
         cx="122"
         cy="90"
         r="9.5"
-        fill="var(--el-fill-color-blank)"
-        stroke="var(--el-color-primary)"
+        fill="var(--elp-fill-color-blank)"
+        stroke="var(--elp-color-primary)"
       />
       <g filter="url(#filter0_d_12777_164053)">
-        <circle cx="158" cy="90" r="10" fill="var(--el-color-primary)" />
+        <circle cx="158" cy="90" r="10" fill="var(--elp-color-primary)" />
       </g>
       <circle cx="158" cy="89.9992" r="2.8" fill="white" />
     </g>

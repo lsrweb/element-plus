@@ -5,7 +5,7 @@
   </el-radio-group>
   <el-menu
     default-active="2"
-    class="el-menu-vertical-demo"
+    class="elp-menu-vertical-demo"
     :collapse="isCollapse"
     @open="handleOpen"
     @close="handleClose"
@@ -62,7 +62,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 </script>
 
 <style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+.elp-menu-vertical-demo:not(.elp-menu--collapse) {
   width: 200px;
   min-height: 400px;
 }

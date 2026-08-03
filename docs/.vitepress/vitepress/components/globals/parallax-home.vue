@@ -175,7 +175,7 @@ onMounted(() => {
       position: absolute;
       right: -12px;
       bottom: 8px;
-      background: var(--el-color-primary);
+      background: var(--elp-color-primary);
       height: 8px;
       width: 8px;
       border-radius: 100%;
@@ -219,7 +219,7 @@ onMounted(() => {
       margin: 10px auto 0;
     }
     .cd-num {
-      color: var(--el-color-primary);
+      color: var(--elp-color-primary);
       font-size: 78px;
       font-weight: bold;
     }

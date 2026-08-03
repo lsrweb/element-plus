@@ -28,7 +28,7 @@ const value4 = ref(0)
   display: flex;
   align-items: center;
 }
-.slider-demo-block .el-slider {
+.slider-demo-block .elp-slider {
   margin-top: 0;
   margin-left: 12px;
 }

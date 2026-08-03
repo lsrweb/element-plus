@@ -2,7 +2,7 @@
 import { useCssVar } from '@vueuse/core'
 import { useCopyColor } from '../../utils'
 
-const primary = useCssVar('--el-color-primary')
+const primary = useCssVar('--elp-color-primary')
 const colorLevel = [3, 5, 7, 8, 9].map((i) => `light-${i}`)
 colorLevel.unshift('dark-2')
 
@@ -22,7 +22,7 @@ const { copyColor } = useCopyColor()
             class="bg-blue-sub-item cursor-pointer hover:shadow"
             :style="{
               width: `${100 / 6}%`,
-              background: 'var(--el-color-primary-' + level + ')',
+              background: 'var(--elp-color-primary-' + level + ')',
             }"
             @click="copyColor('primary-' + level)"
           />

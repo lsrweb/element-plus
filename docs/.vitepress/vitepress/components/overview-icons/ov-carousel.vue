@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13239_209013)">
       <rect
         x="90"
@@ -14,7 +14,7 @@
         width="100"
         height="64"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <rect
         x="89.7"
@@ -22,7 +22,7 @@
         width="100.6"
         height="64.6"
         rx="2.3"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
@@ -32,11 +32,11 @@
       width="92"
       height="46"
       rx="1"
-      fill="var(--el-border-color-light)"
+      fill="var(--elp-border-color-light)"
     />
     <path
       d="M126 113C126 112.448 126.448 112 127 112H129C129.552 112 130 112.448 130 113C130 113.552 129.552 114 129 114H127C126.448 114 126 113.552 126 113Z"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
     />
     <rect
       x="134"
@@ -44,7 +44,7 @@
       width="4"
       height="2"
       rx="1"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="142"
@@ -52,7 +52,7 @@
       width="4"
       height="2"
       rx="1"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
     />
     <rect
       x="150"
@@ -60,10 +60,10 @@
       width="4"
       height="2"
       rx="1"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
     />
     <g filter="url(#filter1_d_13239_209013)">
-      <circle cx="207" cy="88" r="5" fill="var(--el-color-primary)" />
+      <circle cx="207" cy="88" r="5" fill="var(--elp-color-primary)" />
     </g>
     <path
       d="M206.4 86.3994C206.933 86.9327 208 87.9994 208 87.9994L206.4 89.5996"
@@ -78,7 +78,7 @@
         cy="5"
         r="5"
         transform="matrix(-1 0 0 1 78 83)"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
     </g>
     <path

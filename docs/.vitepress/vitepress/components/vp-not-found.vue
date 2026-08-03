@@ -23,7 +23,7 @@ const goHome = () => {
 </template>
 
 <style scoped>
-.el-result {
+.elp-result {
   height: 100vh;
   width: 100vw;
 }

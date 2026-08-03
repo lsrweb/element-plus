@@ -22,7 +22,7 @@
           <span class="text-large font-600 mr-3"> Title </span>
           <span
             class="text-sm mr-2"
-            style="color: var(--el-text-color-regular)"
+            style="color: var(--elp-text-color-regular)"
           >
             Sub title
           </span>

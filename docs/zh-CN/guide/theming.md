@@ -210,21 +210,21 @@ CSS 变量是一个非常有用的功能，几乎所有浏览器都支持。 （
 
 ```css
 :root {
-  --el-color-primary: green;
+  --elp-color-primary: green;
 }
 ```
 
 如果你只想自定义一个特定的组件，只需为某些组件单独添加内联样式。
 
 ```html
-<el-tag style="--el-tag-bg-color: red">Tag</el-tag>
+<el-tag style="--elp-tag-bg-color: red">Tag</el-tag>
 ```
 
 出于性能原因，更加推荐你在类名下添加自定义 css 变量，而不是在全局的 `:root` 下。
 
 ```css
 .custom-class {
-  --el-tag-bg-color: red;
+  --elp-tag-bg-color: red;
 }
 ```
 
@@ -236,10 +236,10 @@ const el = document.documentElement
 // const el = document.getElementById('xxx')
 
 // 获取 css 变量
-getComputedStyle(el).getPropertyValue(`--el-color-primary`)
+getComputedStyle(el).getPropertyValue(`--elp-color-primary`)
 
 // 设置 css 变量
-el.style.setProperty('--el-color-primary', 'red')
+el.style.setProperty('--elp-color-primary', 'red')
 ```
 
 如果你想要更优雅的方式，请看这里。 [useCssVar | VueUse](https://vueuse.org/core/usecssvar/)

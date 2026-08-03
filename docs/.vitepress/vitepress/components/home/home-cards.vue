@@ -49,7 +49,7 @@ const homeLang = computed(() => homeLocale[lang.value])
     max-width: 1200px;
   }
 
-  .el-card {
+  .elp-card {
     height: 430px;
     background: var(--bg-color);
     border: 1px solid var(--border-color);
@@ -60,12 +60,12 @@ const homeLang = computed(() => homeLocale[lang.value])
     transition: all 0.3s;
     bottom: 0;
 
-    .el-card__body {
+    .elp-card__body {
       padding: 0;
       height: 100%;
     }
 
-    .el-card__footer {
+    .elp-card__footer {
       position: sticky;
       bottom: 0;
       padding: 0;
@@ -78,7 +78,7 @@ const homeLang = computed(() => homeLocale[lang.value])
     h3 {
       margin: 0;
       font-size: 18px;
-      color: var(--el-text-color-primary);
+      color: var(--elp-text-color-primary);
       font-weight: normal;
     }
 
@@ -119,7 +119,7 @@ const homeLang = computed(() => homeLocale[lang.value])
       grid-template-columns: 1fr;
     }
 
-    .el-card {
+    .elp-card {
       height: auto;
     }
   }

@@ -6,9 +6,9 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13637_231098)">
-      <circle cx="140" cy="90" r="24" fill="var(--el-color-primary)" />
+      <circle cx="140" cy="90" r="24" fill="var(--elp-color-primary)" />
     </g>
     <path
       d="M136.367 90.3598C135.824 91.0111 136.287 92 137.135 92L142.865 92C143.713 92 144.176 91.0111 143.633 90.3598L140.768 86.9219C140.368 86.4421 139.632 86.4421 139.232 86.9219L136.367 90.3598Z"

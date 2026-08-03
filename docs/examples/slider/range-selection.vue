@@ -16,7 +16,7 @@ const value = ref([4, 8])
   display: flex;
   align-items: center;
 }
-.slider-demo-block .el-slider {
+.slider-demo-block .elp-slider {
   margin-top: 0;
   margin-left: 12px;
 }

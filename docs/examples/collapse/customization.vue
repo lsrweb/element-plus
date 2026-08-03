@@ -69,6 +69,6 @@ import { InfoFilled } from '@element-plus/icons-vue'
 }
 
 .title-wrapper.is-active {
-  color: var(--el-color-primary);
+  color: var(--elp-color-primary);
 }
 </style>

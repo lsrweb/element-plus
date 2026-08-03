@@ -8,10 +8,10 @@
   >
     <template #overlay>
       <div
-        class="el-loading-mask"
+        class="elp-loading-mask"
         style="display: flex; align-items: center; justify-content: center"
       >
-        <el-icon class="is-loading" color="var(--el-color-primary)" :size="26">
+        <el-icon class="is-loading" color="var(--elp-color-primary)" :size="26">
           <loading-icon />
         </el-icon>
       </div>
@@ -54,7 +54,7 @@ const data = generateData(columns, 200)
 </script>
 
 <style>
-.example-showcase .el-table-v2__overlay {
+.example-showcase .elp-table-v2__overlay {
   z-index: 9;
 }
 </style>

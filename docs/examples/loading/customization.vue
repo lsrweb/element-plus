@@ -60,7 +60,7 @@ const tableData = [
 </script>
 
 <style>
-.example-showcase .el-loading-mask {
+.example-showcase .elp-loading-mask {
   z-index: 9;
 }
 </style>

@@ -38,11 +38,11 @@ import { Check } from '@element-plus/icons-vue'
   margin-top: 10px;
   font-size: 12px;
 }
-.demo-progress .el-progress--line {
+.demo-progress .elp-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }
-.demo-progress .el-progress--circle {
+.demo-progress .elp-progress--circle {
   margin-right: 15px;
 }
 </style>

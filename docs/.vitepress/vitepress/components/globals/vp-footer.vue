@@ -88,7 +88,7 @@ const homeLang = computed(() => homeLocale[lang.value])
 
 <style lang="scss">
 .dark .footer {
-  background-color: var(--el-fill-color-lighter);
+  background-color: var(--elp-fill-color-lighter);
 }
 .footer {
   background-color: #f5f7fa;
@@ -118,7 +118,7 @@ const homeLang = computed(() => homeLocale[lang.value])
       line-height: 1;
       margin: 0 0 15px;
       font-weight: 400;
-      color: var(--el-text-color-primary);
+      color: var(--elp-text-color-primary);
     }
 
     .footer-main-link {

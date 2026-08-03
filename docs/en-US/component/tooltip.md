@@ -50,7 +50,7 @@ tooltip/rich-content
 
 In addition to basic usages, there are some attributes that allow you to customize your own:
 
-`transition` attribute allows you to customize the animation in which the tooltip shows or hides, and the default value is el-fade-in-linear.
+`transition` attribute allows you to customize the animation in which the tooltip shows or hides, and the default value is elp-fade-in-linear.
 
 `disabled` attribute allows you to disable `tooltip`. You just need set it to `true`.
 

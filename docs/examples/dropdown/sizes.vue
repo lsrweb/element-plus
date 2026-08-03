@@ -37,7 +37,7 @@
 </template>
 
 <style scoped>
-.example-showcase .el-dropdown + .el-dropdown {
+.example-showcase .elp-dropdown + .elp-dropdown {
   margin-left: 15px;
 }
 </style>

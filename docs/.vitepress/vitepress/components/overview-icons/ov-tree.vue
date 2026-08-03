@@ -6,10 +6,10 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <path
       d="M100.125 80.75L93.875 80.75L97 84.5L100.125 80.75Z"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="108"
@@ -17,7 +17,7 @@
       width="10"
       height="10"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect x="110.5" y="81.5" width="5" height="1" fill="white" />
     <rect
@@ -26,7 +26,7 @@
       width="10"
       height="10"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <path
       fill-rule="evenodd"
@@ -40,7 +40,7 @@
       width="9"
       height="9"
       rx="1.5"
-      fill="var(--el-fill-color-blank)"
+      fill="var(--elp-fill-color-blank)"
     />
     <rect
       x="124.5"
@@ -48,7 +48,7 @@
       width="9"
       height="9"
       rx="1.5"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--elp-border-color-dark)"
     />
     <rect
       x="108.5"
@@ -56,7 +56,7 @@
       width="9"
       height="9"
       rx="1.5"
-      fill="var(--el-fill-color-blank)"
+      fill="var(--elp-fill-color-blank)"
     />
     <rect
       x="108.5"
@@ -64,11 +64,11 @@
       width="9"
       height="9"
       rx="1.5"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--elp-border-color-dark)"
     />
     <path
       d="M95.75 62.875V69.125L99.5 66L95.75 62.875Z"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="126"
@@ -76,7 +76,7 @@
       width="46"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="142"
@@ -84,7 +84,7 @@
       width="46"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="142"
@@ -92,7 +92,7 @@
       width="46"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="126"
@@ -100,7 +100,7 @@
       width="46"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
   </svg>
 </template>

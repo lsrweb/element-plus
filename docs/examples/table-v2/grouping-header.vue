@@ -104,28 +104,28 @@ const CustomizedHeader: FunctionalComponent<
 const headerClass = ({
   headerIndex,
 }: Parameters<HeaderClassNameGetter<any>>[0]) => {
-  if (headerIndex === 1) return 'el-primary-color'
+  if (headerIndex === 1) return 'elp-primary-color'
   return ''
 }
 </script>
 
 <style>
-.el-el-table-v2__header-row .custom-header-cell {
-  border-right: 1px solid var(--el-border-color);
+.elp-table-v2__header-row .custom-header-cell {
+  border-right: 1px solid var(--elp-border-color);
 }
 
-.el-el-table-v2__header-row .custom-header-cell:last-child {
+.elp-table-v2__header-row .custom-header-cell:last-child {
   border-right: none;
 }
 
-.el-primary-color {
-  background-color: var(--el-color-primary);
-  color: var(--el-color-white);
+.elp-primary-color {
+  background-color: var(--elp-color-primary);
+  color: var(--elp-color-white);
   font-size: 14px;
   font-weight: bold;
 }
 
-.el-primary-color .custom-header-cell {
+.elp-primary-color .custom-header-cell {
   padding: 0 4px;
 }
 </style>

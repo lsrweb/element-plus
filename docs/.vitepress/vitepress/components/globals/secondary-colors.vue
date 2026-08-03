@@ -29,7 +29,7 @@ const { copyColor } = useCopyColor()
             class="bg-secondary-sub-item transition cursor-pointer hover:shadow"
             :style="{
               width: `${100 / 6}%`,
-              background: `var(--el-color-${type}-` + level + ')',
+              background: `var(--elp-color-${type}-` + level + ')',
             }"
             @click="copyColor(type + '-' + level)"
           />

@@ -12,8 +12,8 @@ lang: zh-CN
 如果您想要覆盖el-menu的默认高度, 您可以使用下列CSS
 
 ```css
-.el-menu--horizontal {
-  --el-menu-horizontal-height: 100px;
+.elp-menu--horizontal {
+  --elp-menu-horizontal-height: 100px;
 }
 ```
 
@@ -90,9 +90,9 @@ menu/popper-offset
 | popper-style ^(2.11.5)          | 用于所有弹出菜单和标题提示的自定义样式                                                                                            | ^[string] / ^[object]                  | —        |
 | show-timeout ^(2.5.0)           | 菜单出现前的延迟                                                                                                                  | ^[number]                              | 300      |
 | hide-timeout ^(2.5.0)           | 菜单消失前的延迟                                                                                                                  | ^[number]                              | 300      |
-| background-color ^(deprecated)  | 菜单的背景颜色 (十六进制格式) (推荐在样式类中使用 `--el-menu-bg-color`)                                                           | ^[string]                              | #ffffff  |
-| text-color ^(deprecated)        | 菜单的文字颜色 (十六进制格式) (推荐在样式类中使用 `--el-menu-text-color`)                                                         | ^[string]                              | #303133  |
-| active-text-color ^(deprecated) | 活动菜单项的文本颜色（十六进制格式）（推荐使用 css var `--el-menu-active-color`）                                                 | ^[string]                              | #409eff  |
+| background-color ^(deprecated)  | 菜单的背景颜色 (十六进制格式) (推荐在样式类中使用 `--elp-menu-bg-color`)                                                          | ^[string]                              | #ffffff  |
+| text-color ^(deprecated)        | 菜单的文字颜色 (十六进制格式) (推荐在样式类中使用 `--elp-menu-text-color`)                                                        | ^[string]                              | #303133  |
+| active-text-color ^(deprecated) | 活动菜单项的文本颜色（十六进制格式）（推荐使用 css var `--elp-menu-active-color`）                                                | ^[string]                              | #409eff  |
 | persistent ^(2.9.5)             | 当菜单处于非活动状态且 `persistent` 为 `false` 时，下拉菜单将被销毁                                                               | ^[boolean]                             | true     |
 
 ### Menu Events

@@ -10,7 +10,7 @@
 </template>
 
 <style scoped>
-.el-link {
+.elp-link {
   margin-right: 8px;
 }
 </style>

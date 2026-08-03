@@ -73,7 +73,7 @@ const customDraggingVisible = ref(false)
 
 <style scoped>
 :global(.custom-dragging-style.is-dragging) {
-  border: 2px dashed var(--el-color-primary);
+  border: 2px dashed var(--elp-color-primary);
   opacity: 0.65;
 }
 </style>

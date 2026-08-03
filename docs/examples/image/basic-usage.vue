@@ -25,7 +25,7 @@ const url =
 .demo-image .block {
   padding: 30px 0;
   text-align: center;
-  border-right: solid 1px var(--el-border-color);
+  border-right: solid 1px var(--elp-border-color);
   display: inline-block;
   width: 20%;
   min-width: 100px;
@@ -37,7 +37,7 @@ const url =
 }
 .demo-image .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   font-size: 14px;
   margin-bottom: 20px;
 }

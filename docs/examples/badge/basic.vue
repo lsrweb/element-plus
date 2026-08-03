@@ -15,9 +15,9 @@
     <el-button>custom background</el-button>
   </el-badge>
   <el-dropdown trigger="click">
-    <span class="el-dropdown-link">
+    <span class="elp-dropdown-link">
       Click Me
-      <el-icon class="el-icon--right"><caret-bottom /></el-icon>
+      <el-icon class="elp-icon--right"><caret-bottom /></el-icon>
     </span>
     <template #dropdown>
       <el-dropdown-menu>
@@ -44,7 +44,7 @@ import { CaretBottom } from '@element-plus/icons-vue'
   margin-right: 30px;
 }
 
-.el-dropdown {
+.elp-dropdown {
   margin-top: 1.1rem;
 }
 </style>

@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <rect
       x="110"
       y="62"
@@ -14,7 +14,7 @@
       height="3"
       rx="1.5"
       transform="rotate(90 110 62)"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
     />
     <rect
       x="110"
@@ -23,7 +23,7 @@
       height="3"
       rx="1.5"
       transform="rotate(90 110 74)"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="120"
@@ -31,7 +31,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect
       x="120"
@@ -39,7 +39,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="120"
@@ -47,7 +47,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="128"
@@ -55,7 +55,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="128"
@@ -63,7 +63,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
   </svg>
 </template>

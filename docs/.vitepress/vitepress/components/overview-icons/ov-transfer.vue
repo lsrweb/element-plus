@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13099_176887)">
       <rect
         x="42"
@@ -14,7 +14,7 @@
         width="76"
         height="96"
         rx="2"
-        fill="var(--el-bg-color-overlay)"
+        fill="var(--elp-bg-color-overlay)"
       />
       <rect
         x="41.7"
@@ -22,13 +22,13 @@
         width="76.6"
         height="96.6"
         rx="2.3"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
     <path
       d="M42 44C42 42.8954 42.8954 42 44 42L116 42C117.105 42 118 42.8954 118 44V54L42 54V44Z"
-      fill="var(--el-border-color-light)"
+      fill="var(--elp-border-color-light)"
     />
     <rect
       x="50"
@@ -36,7 +36,7 @@
       width="12"
       height="2"
       rx="1"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="50"
@@ -44,7 +44,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="50"
@@ -52,7 +52,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="50"
@@ -60,7 +60,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="50"
@@ -68,7 +68,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <g filter="url(#filter1_d_13099_176887)">
       <rect
@@ -77,7 +77,7 @@
         width="76"
         height="96"
         rx="2"
-        fill="var(--el-bg-color-overlay)"
+        fill="var(--elp-bg-color-overlay)"
       />
       <rect
         x="161.7"
@@ -85,13 +85,13 @@
         width="76.6"
         height="96.6"
         rx="2.3"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
     <path
       d="M162 44C162 42.8954 162.895 42 164 42L236 42C237.105 42 238 42.8954 238 44V54L162 54V44Z"
-      fill="var(--el-border-color-light)"
+      fill="var(--elp-border-color-light)"
     />
     <rect
       x="170"
@@ -99,7 +99,7 @@
       width="12"
       height="2"
       rx="1"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="170"
@@ -107,7 +107,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="170"
@@ -115,7 +115,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="170"
@@ -123,7 +123,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="170"
@@ -131,7 +131,7 @@
       width="40"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <g filter="url(#filter2_d_13099_176887)">
       <rect
@@ -140,7 +140,7 @@
         width="12"
         height="12"
         rx="2"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
     </g>
     <path
@@ -158,7 +158,7 @@
         height="12"
         rx="2"
         transform="rotate(-180 146 106)"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
     </g>
     <path

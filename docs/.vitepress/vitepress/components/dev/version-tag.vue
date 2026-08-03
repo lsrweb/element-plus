@@ -11,7 +11,7 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
-.version-tag.el-zoom-in-center-leave-active {
-  --el-transition-duration: 0s;
+.version-tag.elp-zoom-in-center-leave-active {
+  --elp-transition-duration: 0s;
 }
 </style>

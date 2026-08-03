@@ -81,17 +81,17 @@ const data: Tree[] = [
 </script>
 
 <style>
-.is-penultimate > .el-tree-node__content .el-tree-node__label {
+.is-penultimate > .elp-tree-node__content .elp-tree-node__label {
   color: #626aef;
 }
-.is-penultimate > .el-tree-node__children > div {
+.is-penultimate > .elp-tree-node__children > div {
   display: inline-block;
   margin-right: 4px;
 
-  &:not(:first-child) .el-tree-node__content {
+  &:not(:first-child) .elp-tree-node__content {
     padding-left: 0px !important;
   }
-  .el-tree-node__content {
+  .elp-tree-node__content {
     padding-right: 16px;
   }
 }

@@ -9,7 +9,7 @@
   <el-switch
     v-model="value2"
     class="mb-2"
-    style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
+    style="--elp-switch-on-color: #13ce66; --elp-switch-off-color: #ff4949"
     active-text="Pay by month"
     inactive-text="Pay by year"
   />
@@ -24,7 +24,7 @@
     v-model="value4"
     class="ml-2"
     inline-prompt
-    style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
+    style="--elp-switch-on-color: #13ce66; --elp-switch-off-color: #ff4949"
     active-text="Y"
     inactive-text="N"
   />
@@ -40,7 +40,7 @@
     v-model="value5"
     class="ml-2"
     inline-prompt
-    style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
+    style="--elp-switch-on-color: #13ce66; --elp-switch-off-color: #ff4949"
     active-text="完整展示多个内容"
     inactive-text="多个内容"
   />

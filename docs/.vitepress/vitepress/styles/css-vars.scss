@@ -2,47 +2,34 @@
 
 // css variables
 :root {
-  // Compatibility aliases for documentation assets that still use the
-  // historical `el` CSS variable namespace.
-  --el-bg-color-overlay: var(--elp-bg-color-overlay);
-  --el-border-color-dark: var(--elp-border-color-dark);
-  --el-border-color-light: var(--elp-border-color-light);
-  --el-color-info-light-5: var(--elp-color-info-light-5);
-  --el-color-primary: var(--elp-color-primary);
-  --el-color-primary-light-5: var(--elp-color-primary-light-5);
-  --el-color-primary-light-8: var(--elp-color-primary-light-8);
-  --el-color-success: var(--elp-color-success);
-  --el-fill-color-blank: var(--elp-fill-color-blank);
-  --el-fill-color-light: var(--elp-fill-color-light);
-  --el-text-color-primary: var(--elp-text-color-primary);
   // layouts
   --vp-screen-max-width: 1376px;
 
   // colors
-  --text-color: var(--el-text-color-primary);
-  --text-color-light: var(--el-text-color-regular);
-  --text-color-lighter: var(--el-text-color-secondary);
+  --text-color: var(--elp-text-color-primary);
+  --text-color-light: var(--elp-text-color-regular);
+  --text-color-lighter: var(--elp-text-color-secondary);
 
-  --brand-color: var(--el-color-primary);
-  --brand-color-light: var(--el-color-primary-light-1);
-  --bg-brand-color: var(--el-color-primary-light-9);
+  --brand-color: var(--elp-color-primary);
+  --brand-color-light: var(--elp-color-primary-light-1);
+  --bg-brand-color: var(--elp-color-primary-light-9);
 
-  --bg-color: var(--el-bg-color);
+  --bg-color: var(--elp-bg-color);
   --bg-color-rgb: 255, 255, 255;
   --bg-color-soft: #fafafa;
   --bg-color-mute: #f2f2f2;
-  --border-color: var(--el-border-color);
-  --border-color-light: var(--el-border-color-lighter);
+  --border-color: var(--elp-border-color);
+  --border-color-light: var(--elp-border-color-lighter);
 
-  --font-family: var(--el-font-family);
+  --font-family: var(--elp-font-family);
   --font-family-mono:
     'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 
   // info
-  --success-color: var(--el-color-success);
-  --warning-color: var(--el-color-warning);
-  --danger-color: var(--el-color-danger);
+  --success-color: var(--elp-color-success);
+  --warning-color: var(--elp-color-warning);
+  --danger-color: var(--elp-color-danger);
   --purple-color: #6222c2;
   --purple-color-light: #9065db;
 
@@ -71,19 +58,19 @@
 
   // code block vars
   --code-line-height: 1.4;
-  --code-font-size: var(--el-font-size-base);
-  --code-bg-color: var(--el-fill-color-light);
+  --code-font-size: var(--elp-font-size-base);
+  --code-bg-color: var(--elp-fill-color-light);
   --code-text-color: var(--text-color);
   --code-font-family: var(--font-family-mono);
   --code-tooltip-bg-color: var(--code-bg-color);
   --code-tooltip-color: #0c61c9;
 
   // tip block
-  --block-tip-bg-color: rgba(var(--el-color-primary-rgb), 0.1);
-  --block-warning-bg-color: rgba(var(--el-color-danger-rgb), 0.1);
+  --block-tip-bg-color: rgba(var(--elp-color-primary-rgb), 0.1);
+  --block-warning-bg-color: rgba(var(--elp-color-danger-rgb), 0.1);
 
   // link
-  --link-active-bg-color: rgba(var(--el-color-primary-rgb), 0.1);
+  --link-active-bg-color: rgba(var(--elp-color-primary-rgb), 0.1);
 
   @include respond-to('xxl') {
     --vp-sidebar-width-small: 234px;
@@ -99,7 +86,7 @@
   --bg-color-rgb: 0, 0, 0;
   --bg-color-soft: #242424;
   --bg-color-mute: #2c2c2c;
-  --code-tooltip-bg-color: rgba(var(--el-color-primary-rgb), 0.1);
+  --code-tooltip-bg-color: rgba(var(--elp-color-primary-rgb), 0.1);
   --code-tooltip-color: var(--brand-color);
   --purple-color: #9065db;
   --purple-color-light: #6222c2;

@@ -111,10 +111,10 @@ const handleClear = () => {
 }
 
 .cascader-custom-header-footer > div:not(:last-child) {
-  border-right: 1px solid var(--el-border-color);
+  border-right: 1px solid var(--elp-border-color);
 }
 
-.cascader-custom-header .el-checkbox {
+.cascader-custom-header .elp-checkbox {
   display: flex;
   height: unset;
 }

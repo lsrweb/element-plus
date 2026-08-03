@@ -49,13 +49,13 @@ const value2 = ref('')
 }
 .line {
   width: 1px;
-  background-color: var(--el-border-color);
+  background-color: var(--elp-border-color);
 }
 
 @media (max-width: 768px) {
   .demo-datetime-picker .block {
     flex: 100%;
-    border-bottom: solid 1px var(--el-border-color);
+    border-bottom: solid 1px var(--elp-border-color);
   }
 
   .demo-datetime-picker .block:last-child {
@@ -66,11 +66,11 @@ const value2 = ref('')
     display: none;
   }
 
-  :deep(.el-date-editor.el-input) {
+  :deep(.elp-date-editor.elp-input) {
     width: 100%;
   }
 
-  :deep(.el-date-editor.el-input__wrapper) {
+  :deep(.elp-date-editor.elp-input__wrapper) {
     width: 100%;
     max-width: 300px;
   }

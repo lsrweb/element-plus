@@ -96,11 +96,11 @@ const handleClear = () => {
   flex: 1;
   text-align: center;
 }
-.autocomplete-custom-header-footer > div > :deep(.el-autocomplete) {
+.autocomplete-custom-header-footer > div > :deep(.elp-autocomplete) {
   width: 50%;
 }
 
 .autocomplete-custom-header-footer > div:not(:last-child) {
-  border-right: 1px solid var(--el-border-color);
+  border-right: 1px solid var(--elp-border-color);
 }
 </style>

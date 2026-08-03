@@ -59,16 +59,16 @@ const toTranslation = () => {
 </style>
 
 <style lang="scss">
-.el-dropdown__popper.translation-popup {
-  --el-bg-color-overlay: var(--bg-color);
-  --el-popper-border-radius: 8px;
-  --el-border-color-light: transparent;
+.elp-dropdown__popper.translation-popup {
+  --elp-bg-color-overlay: var(--bg-color);
+  --elp-popper-border-radius: 8px;
+  --elp-border-color-light: transparent;
 
   padding: 7px 0;
   min-width: 192px;
   transition: background-color 0.5s;
 
-  .el-popper__arrow {
+  .elp-popper__arrow {
     display: none;
   }
 
@@ -77,7 +77,7 @@ const toTranslation = () => {
     line-height: 28px;
 
     &.selected {
-      --el-text-color-regular: var(--brand-color);
+      --elp-text-color-regular: var(--brand-color);
     }
   }
 }

@@ -49,7 +49,7 @@ const defaultTime2: [Date, Date] = [
 .block {
   padding: 30px 0;
   text-align: center;
-  border-right: solid 1px var(--el-border-color);
+  border-right: solid 1px var(--elp-border-color);
   flex: 1;
   min-width: 300px;
 }
@@ -60,7 +60,7 @@ const defaultTime2: [Date, Date] = [
 
 .block .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   font-size: 14px;
   margin-bottom: 20px;
 }
@@ -69,18 +69,18 @@ const defaultTime2: [Date, Date] = [
   .block {
     flex: 100%;
     border-right: none;
-    border-bottom: solid 1px var(--el-border-color);
+    border-bottom: solid 1px var(--elp-border-color);
   }
 
   .block:last-child {
     border-bottom: none;
   }
 
-  :deep(.el-date-editor.el-input) {
+  :deep(.elp-date-editor.elp-input) {
     width: 100%;
   }
 
-  :deep(.el-date-editor.el-input__wrapper) {
+  :deep(.elp-date-editor.elp-input__wrapper) {
     width: 100%;
     max-width: 300px;
   }

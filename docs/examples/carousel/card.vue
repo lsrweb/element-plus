@@ -7,7 +7,7 @@
 </template>
 
 <style scoped>
-.el-carousel__item h3 {
+.elp-carousel__item h3 {
   color: #475669;
   opacity: 0.75;
   line-height: 200px;
@@ -15,11 +15,11 @@
   text-align: center;
 }
 
-.el-carousel__item:nth-child(2n) {
+.elp-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
 
-.el-carousel__item:nth-child(2n + 1) {
+.elp-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
 </style>

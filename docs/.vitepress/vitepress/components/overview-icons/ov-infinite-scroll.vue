@@ -6,15 +6,15 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13239_209040)">
       <path
         d="M89 61C89 59.8954 89.8954 59 91 59H189C190.105 59 191 59.8954 191 61V119C191 120.105 190.105 121 189 121H91C89.8954 121 89 120.105 89 119V61Z"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <path
         d="M91 58.7C89.7297 58.7 88.7 59.7297 88.7 61V119C88.7 120.27 89.7297 121.3 91 121.3H189C190.27 121.3 191.3 120.27 191.3 119V61C191.3 59.7297 190.27 58.7 189 58.7H91Z"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
@@ -24,7 +24,7 @@
       width="84"
       height="8"
       rx="1"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
     />
     <rect
       x="96"
@@ -32,7 +32,7 @@
       width="84"
       height="8"
       rx="1"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
       fill-opacity="0.6"
     />
     <rect
@@ -41,7 +41,7 @@
       width="84"
       height="8"
       rx="1"
-      fill="var(--el-color-primary-light-8)"
+      fill="var(--elp-color-primary-light-8)"
       fill-opacity="0.45"
     />
     <g mask="url(#mask0_13239_209040)">
@@ -51,7 +51,7 @@
         width="84"
         height="8"
         rx="1"
-        fill="var(--el-color-primary-light-8)"
+        fill="var(--elp-color-primary-light-8)"
         fill-opacity="0.3"
       />
     </g>
@@ -61,12 +61,12 @@
       width="4"
       height="15"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
-    <path d="M90 67H190V67.8H90V67Z" fill="var(--el-border-color-dark)" />
-    <circle cx="94.5" cy="63.5" r="1.5" fill="var(--el-border-color-dark)" />
-    <circle cx="99.5" cy="63.5" r="1.5" fill="var(--el-border-color-dark)" />
-    <circle cx="104.5" cy="63.5" r="1.5" fill="var(--el-border-color-dark)" />
+    <path d="M90 67H190V67.8H90V67Z" fill="var(--elp-border-color-dark)" />
+    <circle cx="94.5" cy="63.5" r="1.5" fill="var(--elp-border-color-dark)" />
+    <circle cx="99.5" cy="63.5" r="1.5" fill="var(--elp-border-color-dark)" />
+    <circle cx="104.5" cy="63.5" r="1.5" fill="var(--elp-border-color-dark)" />
     <defs>
       <filter
         id="filter0_d_13239_209040"

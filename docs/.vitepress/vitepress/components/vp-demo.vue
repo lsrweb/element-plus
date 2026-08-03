@@ -93,10 +93,10 @@ const copyCode = async () => {
         size="small"
         class="mr-1"
         :style="{
-          '--el-segmented-item-selected-bg-color':
+          '--elp-segmented-item-selected-bg-color':
             tsOrjs === 'TS'
-              ? 'var(--el-color-primary)'
-              : 'var(--el-color-warning)',
+              ? 'var(--elp-color-primary)'
+              : 'var(--elp-color-warning)',
         }"
       />
       <ElTooltip
@@ -163,7 +163,7 @@ const copyCode = async () => {
         <button
           ref="sourceCodeRef"
           :aria-label="sourceVisibilityLabel"
-          class="reset-btn el-icon op-btn"
+          class="reset-btn elp-icon op-btn"
           @click="toggleSourceVisible()"
         >
           <ElIcon :size="16">
@@ -177,7 +177,7 @@ const copyCode = async () => {
       <SourceCode :visible="sourceVisible" :source="source" />
     </ElCollapseTransition>
 
-    <Transition name="el-fade-in-linear">
+    <Transition name="elp-fade-in-linear">
       <div
         v-show="sourceVisible"
         class="example-float-control"
@@ -198,16 +198,16 @@ const copyCode = async () => {
 <style scoped lang="scss">
 .example {
   border: 1px solid var(--border-color);
-  border-radius: var(--el-border-radius-base);
+  border-radius: var(--elp-border-radius-base);
 
   .example-showcase {
     padding: 1.5rem;
     margin: 0.5px;
     background-color: var(--bg-color);
-    border-radius: var(--el-border-radius-base);
+    border-radius: var(--elp-border-radius-base);
     overflow: auto;
 
-    &:has(.el-affix) {
+    &:has(.elp-affix) {
       overflow: visible;
     }
   }
@@ -219,7 +219,7 @@ const copyCode = async () => {
     justify-content: flex-end;
     height: 2.5rem;
 
-    .el-icon {
+    .elp-icon {
       &:hover {
         color: var(--text-color);
       }
@@ -253,7 +253,7 @@ const copyCode = async () => {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     margin-top: -1px;
-    color: var(--el-text-color-secondary);
+    color: var(--elp-text-color-secondary);
     cursor: pointer;
     position: sticky;
     left: 0;
@@ -267,7 +267,7 @@ const copyCode = async () => {
     }
 
     &:hover {
-      color: var(--el-color-primary);
+      color: var(--elp-color-primary);
     }
   }
 }

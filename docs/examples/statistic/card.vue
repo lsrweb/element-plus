@@ -103,18 +103,18 @@ import {
 
 <style scoped>
 :global(h2#card-usage ~ .example .example-showcase) {
-  background-color: var(--el-fill-color) !important;
+  background-color: var(--elp-fill-color) !important;
 }
 
-.el-statistic {
-  --el-statistic-content-font-size: 28px;
+.elp-statistic {
+  --elp-statistic-content-font-size: 28px;
 }
 
 .statistic-card {
   height: 100%;
   padding: 20px;
   border-radius: 4px;
-  background-color: var(--el-bg-color-overlay);
+  background-color: var(--elp-bg-color-overlay);
 }
 
 .statistic-footer {
@@ -123,7 +123,7 @@ import {
   align-items: center;
   flex-wrap: wrap;
   font-size: 12px;
-  color: var(--el-text-color-regular);
+  color: var(--elp-text-color-regular);
   margin-top: 16px;
 }
 
@@ -140,9 +140,9 @@ import {
 }
 
 .green {
-  color: var(--el-color-success);
+  color: var(--elp-color-success);
 }
 .red {
-  color: var(--el-color-error);
+  color: var(--elp-color-error);
 }
 </style>

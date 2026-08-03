@@ -123,6 +123,6 @@ const data = ref(generateData(columns, 200))
 }
 
 .table-v2-inline-editing-trigger:hover {
-  border-color: var(--el-color-primary);
+  border-color: var(--elp-color-primary);
 }
 </style>

@@ -49,10 +49,10 @@ const formatTooltip = (value: number) => `${value} px`
   margin: 10px;
   text-align: center;
   border-radius: 4px;
-  background: var(--el-color-primary-light-9);
-  color: var(--el-color-primary);
+  background: var(--elp-color-primary-light-9);
+  color: var(--elp-color-primary);
 }
-.el-slider {
+.elp-slider {
   margin-top: 20px;
 }
 </style>

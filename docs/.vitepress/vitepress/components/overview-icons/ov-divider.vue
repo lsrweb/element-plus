@@ -6,15 +6,15 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13752_240019)">
       <path
         d="M60 50C60 48.8954 60.8954 48 62 48H218C219.105 48 220 48.8954 220 50V130C220 131.105 219.105 132 218 132H62C60.8954 132 60 131.105 60 130V50Z"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <path
         d="M62 47.7C60.7297 47.7 59.7 48.7297 59.7 50V130C59.7 131.27 60.7297 132.3 62 132.3H218C219.27 132.3 220.3 131.27 220.3 130V50C220.3 48.7297 219.27 47.7 218 47.7H62Z"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
@@ -24,7 +24,7 @@
       width="57"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="70"
@@ -32,7 +32,7 @@
       width="57"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="70"
@@ -40,14 +40,14 @@
       width="57"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <line
       x1="68"
       y1="71.6"
       x2="212"
       y2="71.6"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-width="0.8"
     />
     <line
@@ -55,7 +55,7 @@
       y1="95.6"
       x2="212"
       y2="95.6"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-width="0.8"
       stroke-dasharray="2 2"
     />
@@ -64,7 +64,7 @@
       y1="119.6"
       x2="134"
       y2="119.6"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-width="0.8"
     />
     <line
@@ -72,12 +72,12 @@
       y1="119.6"
       x2="212"
       y2="119.6"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-width="0.8"
     />
     <path
       d="M139 117.5L139.529 118.772L140.902 118.882L139.856 119.778L140.176 121.118L139 120.4L137.824 121.118L138.144 119.778L137.098 118.882L138.471 118.772L139 117.5Z"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <defs>
       <filter

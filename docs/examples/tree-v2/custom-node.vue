@@ -6,7 +6,7 @@
     :height="200"
   >
     <template #default="{ node }">
-      <el-icon class="el-icon--left">
+      <el-icon class="elp-icon--left">
         <Document v-if="node.isLeaf" />
         <Folder v-else-if="!node.expanded" />
         <FolderOpened v-else />
@@ -66,10 +66,10 @@ const data = createData(4, 30, 40)
 
 <style scoped>
 .prefix {
-  color: var(--el-color-primary);
+  color: var(--elp-color-primary);
   margin-right: 10px;
 }
 .prefix.is-leaf {
-  color: var(--el-color-success);
+  color: var(--elp-color-success);
 }
 </style>

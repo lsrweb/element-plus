@@ -11,7 +11,7 @@ lang: zh-CN
 
 :::
 
-Element Plus 提供的默认命名空间为 `el`。 在特殊情况下，我们需要自定义命名空间。
+Element Plus 提供的默认命名空间为 `elp`。 在特殊情况下，我们需要自定义命名空间。
 
 由于我们使用 sass 书写样式，如果您需要自定义所有命名空间， 我们假定用户使用了 sass 书写样式。
 
@@ -34,7 +34,7 @@ Element Plus 提供的默认命名空间为 `el`。 在特殊情况下，我们�
 创建 `styles/element/index.scss`：
 
 ```scss [styles/element/index.scss]
-// we can add this to custom namespace, default is 'el'
+// we can add this to custom namespace, default is 'elp'
 @forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
   $namespace: 'ep'
 );

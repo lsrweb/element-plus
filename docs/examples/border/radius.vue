@@ -12,7 +12,7 @@
           border-radius:
           {{
             radius.type
-              ? useCssVar(`--el-border-radius-${radius.type}`)
+              ? useCssVar(`--elp-border-radius-${radius.type}`)
               : '"0px"'
           }}
         </code>
@@ -21,7 +21,7 @@
         class="radius"
         :style="{
           borderRadius: radius.type
-            ? `var(--el-border-radius-${radius.type})`
+            ? `var(--elp-border-radius-${radius.type})`
             : '',
         }"
       />
@@ -55,19 +55,19 @@ const radiusGroup = ref([
 
 <style scoped>
 .demo-radius .title {
-  color: var(--el-text-color-regular);
+  color: var(--elp-text-color-regular);
   font-size: 18px;
   margin: 10px 0;
 }
 .demo-radius .value {
-  color: var(--el-text-color-primary);
+  color: var(--elp-text-color-primary);
   font-size: 16px;
   margin: 10px 0;
 }
 .demo-radius .radius {
   height: 40px;
   width: 70%;
-  border: 1px solid var(--el-border-color);
+  border: 1px solid var(--elp-border-color);
   border-radius: 0;
   margin-top: 20px;
 }

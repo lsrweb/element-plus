@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_13637_231189)">
       <rect
         x="90"
@@ -14,7 +14,7 @@
         width="100"
         height="114"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <rect
         x="89.7"
@@ -22,7 +22,7 @@
         width="100.6"
         height="114.6"
         rx="2.3"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
@@ -32,7 +32,7 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="98"
@@ -40,7 +40,7 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="108"
@@ -48,14 +48,14 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="90"
       y="83"
       width="100"
       height="16"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <rect x="108" y="89" width="24" height="4" rx="2" fill="white" />
     <rect
@@ -64,7 +64,7 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <rect
       x="98"
@@ -72,11 +72,11 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--elp-color-primary)"
     />
     <path
       d="M180.4 55.7998C180.933 55.2665 182 54.1998 182 54.1998L183.6 55.7998"
-      stroke="var(--el-color-primary)"
+      stroke="var(--elp-color-primary)"
       stroke-width="0.5"
       stroke-linecap="round"
       stroke-linejoin="round"

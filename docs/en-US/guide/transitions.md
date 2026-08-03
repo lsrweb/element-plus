@@ -10,7 +10,7 @@ Before that, please read the [transition docs](https://vuejs.org/guide/built-ins
 
 ## Fade
 
-:::demo We have two fading effects: `el-fade-in-linear` and `el-fade-in`.
+:::demo We have two fading effects: `elp-fade-in-linear` and `elp-fade-in`.
 
 transitions/fade
 

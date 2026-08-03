@@ -1,7 +1,7 @@
 <template>
   <el-menu
     :default-active="activeIndex"
-    class="el-menu-demo"
+    class="elp-menu-demo"
     mode="horizontal"
     :ellipsis="false"
     @select="handleSelect"
@@ -39,7 +39,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </script>
 
 <style scoped>
-.el-menu--horizontal > .el-menu-item:nth-child(1) {
+.elp-menu--horizontal > .elp-menu-item:nth-child(1) {
   margin-right: auto;
 }
 </style>

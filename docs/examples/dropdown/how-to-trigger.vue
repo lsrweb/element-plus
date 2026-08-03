@@ -3,8 +3,8 @@
     <el-col :span="8">
       <span class="demonstration">hover to trigger</span>
       <el-dropdown>
-        <span class="el-dropdown-link">
-          Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+        <span class="elp-dropdown-link">
+          Dropdown List<el-icon class="elp-icon--right"><arrow-down /></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -22,8 +22,8 @@
     <el-col :span="8">
       <span class="demonstration">click to trigger</span>
       <el-dropdown trigger="click">
-        <span class="el-dropdown-link">
-          Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+        <span class="elp-dropdown-link">
+          Dropdown List<el-icon class="elp-icon--right"><arrow-down /></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -41,8 +41,8 @@
     <el-col :span="8">
       <span class="demonstration">right click to trigger</span>
       <el-dropdown trigger="contextmenu">
-        <span class="el-dropdown-link">
-          Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+        <span class="elp-dropdown-link">
+          Dropdown List<el-icon class="elp-icon--right"><arrow-down /></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -74,12 +74,12 @@ import {
 <style scoped>
 .block-col-2 .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-.block-col-2 .el-dropdown-link {
+.block-col-2 .elp-dropdown-link {
   display: flex;
   align-items: center;
 }

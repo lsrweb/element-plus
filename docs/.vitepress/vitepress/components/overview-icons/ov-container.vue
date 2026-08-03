@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter0_d_12403_168960)">
       <rect
         x="105"
@@ -14,7 +14,7 @@
         width="71"
         height="48"
         rx="2"
-        fill="var(--el-fill-color-blank)"
+        fill="var(--elp-fill-color-blank)"
       />
       <rect
         x="104.7"
@@ -22,21 +22,21 @@
         width="71.6"
         height="48.6"
         rx="2.3"
-        stroke="var(--el-border-color-dark)"
+        stroke="var(--elp-border-color-dark)"
         stroke-width="0.6"
       />
     </g>
     <path
       d="M105 68C105 66.8954 105.895 66 107 66H174C175.105 66 176 66.8954 176 68V74H105V68Z"
-      fill="var(--el-border-color-dark)"
+      fill="var(--elp-border-color-dark)"
     />
     <path
       d="M120 74L120 114L107 114C105.895 114 105 113.105 105 112L105 74L120 74Z"
-      fill="var(--el-border-color-light)"
+      fill="var(--elp-border-color-light)"
     />
     <path
       d="M176 74L176 112C176 113.105 175.105 114 174 114L120 114L120 74L176 74Z"
-      fill="var(--el-fill-color-blank)"
+      fill="var(--elp-fill-color-blank)"
     />
     <defs>
       <filter

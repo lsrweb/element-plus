@@ -1,6 +1,9 @@
 <template>
   <div
-    style="height: 250px; box-shadow: var(--el-border-color-light) 0px 0px 10px"
+    style="
+      height: 250px;
+      box-shadow: var(--elp-border-color-light) 0px 0px 10px;
+    "
   >
     <el-splitter>
       <el-splitter-panel size="30%">

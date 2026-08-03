@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+    <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
     <g filter="url(#filter1_d_12777_163851)">
       <rect
         x="91"
@@ -14,7 +14,7 @@
         width="96"
         height="77"
         rx="2"
-        fill="var(--el-bg-color-overlay)"
+        fill="var(--elp-bg-color-overlay)"
       />
     </g>
     <rect
@@ -146,7 +146,7 @@
         y2="127"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--el-color-primary)" />
+        <stop stop-color="var(--elp-color-primary)" />
         <stop offset="1" stop-color="white" stop-opacity="0" />
       </linearGradient>
       <linearGradient
@@ -157,10 +157,10 @@
         y2="95"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--el-color-primary)" />
+        <stop stop-color="var(--elp-color-primary)" />
         <stop
           offset="1"
-          stop-color="var(--el-color-primary)"
+          stop-color="var(--elp-color-primary)"
           stop-opacity="0"
         />
       </linearGradient>
@@ -175,7 +175,7 @@
         <stop />
         <stop
           offset="1"
-          stop-color="var(--el-color-primary)"
+          stop-color="var(--elp-color-primary)"
           stop-opacity="0"
         />
       </linearGradient>

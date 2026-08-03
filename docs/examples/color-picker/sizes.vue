@@ -13,7 +13,7 @@ const color = ref('#409EFF')
 </script>
 
 <style>
-.demo-color-sizes .el-color-picker:not(:last-child) {
+.demo-color-sizes .elp-color-picker:not(:last-child) {
   margin-right: 16px;
 }
 </style>

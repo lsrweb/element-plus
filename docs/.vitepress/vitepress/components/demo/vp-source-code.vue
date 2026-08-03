@@ -146,7 +146,7 @@ watch(decoded, async () => {
     border: none;
     background: transparent;
     cursor: pointer;
-    color: var(--el-text-color-secondary);
+    color: var(--elp-text-color-secondary);
     opacity: 0;
     transition: opacity 0.2s;
 
@@ -155,12 +155,12 @@ watch(decoded, async () => {
     }
 
     &:hover {
-      color: var(--el-text-color-primary);
+      color: var(--elp-text-color-primary);
     }
 
     &:focus-visible {
       opacity: 1;
-      outline: 1px solid var(--el-color-primary);
+      outline: 1px solid var(--elp-color-primary);
       border-radius: 2px;
     }
   }
@@ -181,14 +181,14 @@ watch(decoded, async () => {
     margin-left: 6px;
     padding: 0 6px;
     border-radius: 4px;
-    background-color: var(--el-fill-color);
-    color: var(--el-text-color-secondary);
+    background-color: var(--elp-fill-color);
+    color: var(--elp-text-color-secondary);
     cursor: pointer;
     user-select: none;
 
     &:hover {
-      background-color: var(--el-fill-color-dark);
-      color: var(--el-text-color-primary);
+      background-color: var(--elp-fill-color-dark);
+      color: var(--elp-text-color-primary);
     }
   }
 }

@@ -7,7 +7,7 @@
     @select="handleSelect"
   >
     <template #suffix>
-      <el-icon class="el-input__icon" @click="handleIconClick">
+      <el-icon class="elp-input__icon" @click="handleIconClick">
         <edit />
       </el-icon>
     </template>

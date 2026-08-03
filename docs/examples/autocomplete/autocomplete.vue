@@ -88,7 +88,7 @@ onMounted(() => {
 
 .demo-title {
   font-size: 0.875rem;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   min-height: 2.5em;
   display: flex;
   align-items: center;

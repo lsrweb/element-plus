@@ -74,11 +74,11 @@ Row.inheritAttrs = false
 </script>
 
 <style>
-.el-table-v2__row-depth-0 {
+.elp-table-v2__row-depth-0 {
   height: 50px;
 }
 
-.el-table-v2__cell-text {
+.elp-table-v2__cell-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

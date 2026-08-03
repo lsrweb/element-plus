@@ -7,7 +7,7 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_12777_163869)">
-      <rect width="280" height="180" fill="var(--el-fill-color-light)" />
+      <rect width="280" height="180" fill="var(--elp-fill-color-light)" />
       <g filter="url(#filter1_d_12777_163869)">
         <rect
           x="60"
@@ -15,7 +15,7 @@
           width="150"
           height="98"
           rx="2"
-          fill="var(--el-bg-color-overlay)"
+          fill="var(--elp-bg-color-overlay)"
         />
         <rect
           x="59.7"
@@ -23,13 +23,13 @@
           width="150.6"
           height="98.6"
           rx="2.3"
-          stroke="var(--el-border-color-dark)"
+          stroke="var(--elp-border-color-dark)"
           stroke-width="0.6"
         />
       </g>
       <path
         d="M60 43C60 41.8954 60.8954 41 62 41H208C209.105 41 210 41.8954 210 43V57H60V43Z"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="170"
@@ -37,7 +37,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="190"
@@ -45,7 +45,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="170"
@@ -53,7 +53,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="90"
@@ -61,7 +61,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="130"
@@ -69,7 +69,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="150"
@@ -77,7 +77,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="190"
@@ -85,7 +85,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="110"
@@ -93,7 +93,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="70"
@@ -101,7 +101,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="150"
@@ -109,7 +109,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-color-primary)"
+        fill="var(--elp-color-primary)"
       />
       <rect
         x="147.5"
@@ -117,7 +117,7 @@
         width="13"
         height="13"
         rx="1.5"
-        stroke="var(--el-color-primary)"
+        stroke="var(--elp-color-primary)"
       />
       <rect
         x="170"
@@ -125,7 +125,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="90"
@@ -133,7 +133,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="130"
@@ -141,7 +141,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="190"
@@ -149,7 +149,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="110"
@@ -157,7 +157,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="150"
@@ -165,7 +165,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="70"
@@ -173,7 +173,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="170"
@@ -181,7 +181,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="90"
@@ -189,7 +189,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="130"
@@ -197,7 +197,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="190"
@@ -205,7 +205,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="110"
@@ -213,7 +213,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="150"
@@ -221,7 +221,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="70"
@@ -229,7 +229,7 @@
         width="8"
         height="8"
         rx="2"
-        fill="var(--el-border-color-light)"
+        fill="var(--elp-border-color-light)"
       />
       <rect
         x="72"
@@ -237,7 +237,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="92"
@@ -245,7 +245,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="112"
@@ -253,7 +253,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="132"
@@ -261,7 +261,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="152"
@@ -269,7 +269,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="172"
@@ -277,7 +277,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
       <rect
         x="192"
@@ -285,7 +285,7 @@
         width="6"
         height="2"
         rx="1"
-        fill="var(--el-border-color-dark)"
+        fill="var(--elp-border-color-dark)"
       />
     </g>
     <defs>

@@ -1,29 +1,29 @@
 .common-layout {
-  .el-header,
-  .el-footer,
-  .el-main,
-  .el-aside {
+  .elp-header,
+  .elp-footer,
+  .elp-main,
+  .elp-aside {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .el-header,
-  .el-footer {
-    background-color: var(--el-color-primary-light-7);
-    color: var(--el-text-color-primary);
+  .elp-header,
+  .elp-footer {
+    background-color: var(--elp-color-primary-light-7);
+    color: var(--elp-text-color-primary);
     text-align: center;
   }
 
-  .el-aside {
-    background-color: var(--el-color-primary-light-8);
-    color: var(--el-text-color-primary);
+  .elp-aside {
+    background-color: var(--elp-color-primary-light-8);
+    color: var(--elp-text-color-primary);
     text-align: center;
   }
 
-  .el-main {
-    background-color: var(--el-color-primary-light-9);
-    color: var(--el-text-color-primary);
+  .elp-main {
+    background-color: var(--elp-color-primary-light-9);
+    color: var(--elp-text-color-primary);
     text-align: center;
 
     height: 150px;

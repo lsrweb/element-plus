@@ -23,7 +23,7 @@ const value1 = ref()
 .demo-date-picker .block {
   padding: 30px 0;
   text-align: center;
-  border-right: solid 1px var(--el-border-color);
+  border-right: solid 1px var(--elp-border-color);
   flex: 1;
 }
 .demo-date-picker .block:last-child {
@@ -31,7 +31,7 @@ const value1 = ref()
 }
 .demo-date-picker .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--elp-text-color-secondary);
   font-size: 14px;
   margin-bottom: 20px;
 }

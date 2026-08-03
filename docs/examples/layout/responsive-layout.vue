@@ -16,7 +16,7 @@
 </template>
 
 <style>
-.el-col {
+.elp-col {
   border-radius: 4px;
 }
 

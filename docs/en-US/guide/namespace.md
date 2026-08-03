@@ -12,7 +12,7 @@ Just check it.
 
 :::
 
-Default namespace is `el`.
+Default namespace is `elp`.
 In special cases, we may need to customize its namespace.
 
 Since we use sass to write styles, if you want to customize all namespaces.
@@ -37,7 +37,7 @@ Use `ElConfigProvider` wrap your root component.
 Create `styles/element/index.scss`:
 
 ```scss [styles/element/index.scss]
-// we can add this to custom namespace, default is 'el'
+// we can add this to custom namespace, default is 'elp'
 @forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
   $namespace: 'ep'
 );

@@ -75,7 +75,7 @@ const handleTabsEdit = (
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs > .elp-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

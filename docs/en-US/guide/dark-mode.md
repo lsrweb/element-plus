@@ -44,7 +44,7 @@ For example, new file `styles/dark/css-vars.css`:
 ```css
 html.dark {
   /* custom dark bg color */
-  --el-bg-color: #626aef;
+  --elp-bg-color: #626aef;
 }
 ```
 
