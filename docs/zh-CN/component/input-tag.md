@@ -131,34 +131,34 @@ input-tag/prefix-suffix
 
 ### 属性
 
-| 名称                            | 详情                                                                                                          | 类型                             | 默认                       |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| model-value / v-model           | 绑定值                                                                                                        | ^[array]`string[]`               | —                          |
-| max                             | 可添加标签的最大数量                                                                                          | ^[number]                        | —                          |
-| tag-type                        | 标签类型                                                                                                      | ^[enum]`'' \\                    | 'success' \\               | 'info' \\ | 'warning' \\ | 'danger'` | info |
-| tag-effect                      | 标签效果                                                                                                      | ^[enum]`'' \\                    | 'light' \\                 | 'dark' \\ | 'plain'`     | light     |
-| effect ^(2.13.2)                | tooltip 主题，内置了 <code>dark</code> / <code>light</code> 两种                                              | ^[enum]<code>'dark' \\           | 'light'</code> / ^[string] | light     |
-| trigger                         | 触发输入标签的按键                                                                                            | ^[enum]`'Enter' \\               | 'Space'`                   | Enter     |
-| draggable                       | 是否可以拖动标签                                                                                              | ^[boolean]                       | false                      |
-| delimiter ^(2.9.9)              | 在匹配分隔符时添加标签                                                                                        | ^[string] / ^[regex]             | —                          |
-| size                            | 输入框尺寸                                                                                                    | ^[enum]`'large' \\               | 'default' \\               | 'small'`  | —            |
-| collapse-tags ^(2.11.0)         | 多选时是否将选中值按文字的形式展示                                                                            | ^[boolean]                       | false                      |
-| collapse-tags-tooltip ^(2.11.0) | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此功能，<code>collapse-tags</code>的值必须为true | ^[boolean]                       | false                      |
-| save-on-blur ^(2.9.7)           | 当输入失去焦点时是否保存输入值                                                                                | ^[boolean]                       | true                       |
-| clearable                       | 是否显示清除按钮                                                                                              | ^[boolean]                       | false                      |
-| clear-icon ^(2.11.0)            | 自定义清除图标                                                                                                | ^[string] / ^[object]`Component` | CircleClose                |
-| disabled                        | 是否禁用                                                                                                      | ^[boolean]                       | false                      |
-| validate-event                  | 是否触发表单验证                                                                                              | ^[boolean]                       | true                       |
-| readonly                        | 等价于原生 <code>readonly</code> 属性                                                                         | ^[boolean]                       | false                      |
-| autofocus                       | 等价于原生 <code> autofocus </code> 属性                                                                      | ^[boolean]                       | false                      |
-| id                              | 等价于原生 input <code>id</code> 属性                                                                         | ^[string]                        | —                          |
-| tabindex                        | 等价于原生 <code> tabindex </code> 属性                                                                       | ^[string] / ^[number]            | —                          |
-| max-collapse-tags ^(2.11.0)     | 需要显示的 Tag 的最大数量 要使用此功能，<code>collapse-tags</code>的值必须为true                              | ^[number]                        | 1                          |
-| maxlength                       | 等价于原生 <code> maxlength </code> 属性                                                                      | ^[string] / ^[number]            | —                          |
-| minlength                       | 等价于原生 <code> minlength </code> 属性                                                                      | ^[string] / ^[number]            | —                          |
-| placeholder                     | 输入框占位文本                                                                                                | ^[string]                        | —                          |
-| autocomplete                    | 等价于原生 <code> autocomplete </code> 属性                                                                   | ^[string]                        | off                        |
-| aria-label ^(a11y)              | 等价于原生 <code> aria-label </code> 属性                                                                     | ^[string]                        | —                          |
+| 名称                            | 详情                                                                                                          | 类型                                                        | 默认        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ----------- |
+| model-value / v-model           | 绑定值                                                                                                        | ^[array]`string[]`                                          | —           |
+| max                             | 可添加标签的最大数量                                                                                          | ^[number]                                                   | —           |
+| tag-type                        | 标签类型                                                                                                      | ^[enum]`'' or 'success' or 'info' or 'warning' or 'danger'` | info        |
+| tag-effect                      | 标签效果                                                                                                      | ^[enum]`'' or 'light' or 'dark' or 'plain'`                 | light       |
+| effect ^(2.13.2)                | tooltip 主题，内置了 <code>dark</code> / <code>light</code> 两种                                              | ^[enum]<code>'dark' or 'light'</code> / ^[string]           | light       |
+| trigger                         | 触发输入标签的按键                                                                                            | ^[enum]`'Enter' or 'Space'`                                 | Enter       |
+| draggable                       | 是否可以拖动标签                                                                                              | ^[boolean]                                                  | false       |
+| delimiter ^(2.9.9)              | 在匹配分隔符时添加标签                                                                                        | ^[string] / ^[regex]                                        | —           |
+| size                            | 输入框尺寸                                                                                                    | ^[enum]`'large' or 'default' or 'small'`                    | —           |
+| collapse-tags ^(2.11.0)         | 多选时是否将选中值按文字的形式展示                                                                            | ^[boolean]                                                  | false       |
+| collapse-tags-tooltip ^(2.11.0) | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此功能，<code>collapse-tags</code>的值必须为true | ^[boolean]                                                  | false       |
+| save-on-blur ^(2.9.7)           | 当输入失去焦点时是否保存输入值                                                                                | ^[boolean]                                                  | true        |
+| clearable                       | 是否显示清除按钮                                                                                              | ^[boolean]                                                  | false       |
+| clear-icon ^(2.11.0)            | 自定义清除图标                                                                                                | ^[string] / ^[object]`Component`                            | CircleClose |
+| disabled                        | 是否禁用                                                                                                      | ^[boolean]                                                  | false       |
+| validate-event                  | 是否触发表单验证                                                                                              | ^[boolean]                                                  | true        |
+| readonly                        | 等价于原生 <code>readonly</code> 属性                                                                         | ^[boolean]                                                  | false       |
+| autofocus                       | 等价于原生 <code> autofocus </code> 属性                                                                      | ^[boolean]                                                  | false       |
+| id                              | 等价于原生 input <code>id</code> 属性                                                                         | ^[string]                                                   | —           |
+| tabindex                        | 等价于原生 <code> tabindex </code> 属性                                                                       | ^[string] / ^[number]                                       | —           |
+| max-collapse-tags ^(2.11.0)     | 需要显示的 Tag 的最大数量 要使用此功能，<code>collapse-tags</code>的值必须为true                              | ^[number]                                                   | 1           |
+| maxlength                       | 等价于原生 <code> maxlength </code> 属性                                                                      | ^[string] / ^[number]                                       | —           |
+| minlength                       | 等价于原生 <code> minlength </code> 属性                                                                      | ^[string] / ^[number]                                       | —           |
+| placeholder                     | 输入框占位文本                                                                                                | ^[string]                                                   | —           |
+| autocomplete                    | 等价于原生 <code> autocomplete </code> 属性                                                                   | ^[string]                                                   | off         |
+| aria-label ^(a11y)              | 等价于原生 <code> aria-label </code> 属性                                                                     | ^[string]                                                   | —           |
 
 ### 事件
 
@@ -166,7 +166,7 @@ input-tag/prefix-suffix
 | ------------------ | ----------------------- | ------------------------------------------------------------------------ |
 | change             | 绑定值变化时触发的事件  | ^[Function]`(value: string[]) => void`                                   |
 | input              | 在 Input 值改变时触发   | ^[Function]`(value: string) => void`                                     |
-| add-tag            | tag 被添加时触发        | ^[Function]`(value: string \\                                            | string []) => void` |
+| add-tag            | tag 被添加时触发        | ^[Function]`(value: string or string[]) => void`                         |
 | remove-tag         | tag 被移除时触发        | ^[Function]`(value: string, index: number) => void`                      |
 | drag-tag ^(2.11.3) | tag 被拖动时触发        | ^[Function]`(oldIndex: number, newIndex: number, value: string) => void` |
 | focus              | 在 Input 获得焦点时触发 | ^[Function]`(event: FocusEvent) => void`                                 |
