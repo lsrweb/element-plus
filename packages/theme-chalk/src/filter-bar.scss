@@ -1,0 +1,372 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/function' as *;
+
+@include b(filter-bar) {
+  --#{$namespace}-filter-bar-height: 32px;
+  --#{$namespace}-filter-bar-label-width: 88px;
+  --#{$namespace}-filter-bar-item-width: 260px;
+  --#{$namespace}-filter-bar-gap: 8px;
+
+  width: 100%;
+  color: getCssVar('text-color', 'regular');
+
+  @include m(large) {
+    --#{$namespace}-filter-bar-height: 40px;
+  }
+
+  @include m(small) {
+    --#{$namespace}-filter-bar-height: 24px;
+  }
+
+  @include e(surface) {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--#{$namespace}-filter-bar-gap);
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid getCssVar('border-color', 'lighter');
+    border-radius: getCssVar('border-radius', 'base');
+    background: getCssVar('bg-color');
+    box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
+  }
+
+  @include e(fields) {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--#{$namespace}-filter-bar-gap);
+    min-width: 0;
+  }
+
+  @include e(actions) {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 6px;
+    min-height: var(--#{$namespace}-filter-bar-height);
+    white-space: nowrap;
+
+    .#{$namespace}-button + .#{$namespace}-button {
+      margin-left: 0;
+    }
+  }
+
+  @include e(toggle-icon) {
+    margin-left: 2px;
+    transition: transform getCssVar('transition-duration', 'fast') ease;
+
+    @include when(active) {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include e(advanced) {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+      grid-template-rows getCssVar('transition-duration') ease,
+      opacity getCssVar('transition-duration', 'fast') ease;
+
+    @include when(expanded) {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+  }
+
+  @include e(advanced-clip) {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  @include e(advanced-fields) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--#{$namespace}-filter-bar-gap);
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid getCssVar('border-color', 'lighter');
+    border-radius: getCssVar('border-radius', 'base');
+    background-color: getCssVar('fill-color', 'extra-light');
+  }
+}
+
+@include b(filter-bar-item) {
+  display: inline-flex;
+  flex: 0 1 var(--#{$namespace}-filter-bar-item-width);
+  align-items: stretch;
+  box-sizing: border-box;
+  width: var(--#{$namespace}-filter-bar-item-width);
+  min-width: var(--#{$namespace}-filter-bar-item-min-width, 180px);
+  height: var(--#{$namespace}-filter-bar-height);
+  vertical-align: middle;
+
+  @include when(grow) {
+    flex-grow: 1;
+  }
+
+  @include e(label) {
+    display: inline-flex;
+    flex: 0 0 var(--#{$namespace}-filter-bar-label-width);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: var(--#{$namespace}-filter-bar-label-width);
+    padding: 0 10px;
+    overflow: hidden;
+    color: getCssVar('text-color', 'secondary');
+    font-size: getCssVar('font-size', 'extra-small');
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: getCssVar('fill-color', 'light');
+    border: 1px solid getCssVar('border-color');
+    border-right: 0;
+    border-radius: getCssVar('border-radius', 'base') 0 0
+      getCssVar('border-radius', 'base');
+  }
+
+  @include e(control) {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: stretch;
+    min-width: 0;
+    position: relative;
+
+    &:focus-within {
+      z-index: 2;
+    }
+
+    > * {
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 0;
+      height: 100%;
+      border-radius: 0 getCssVar('border-radius', 'base')
+        getCssVar('border-radius', 'base') 0;
+    }
+
+    .#{$namespace}-input,
+    .#{$namespace}-select,
+    .#{$namespace}-cascader,
+    .#{$namespace}-date-editor,
+    .#{$namespace}-input-number {
+      width: 100%;
+    }
+
+    .#{$namespace}-input__wrapper,
+    .#{$namespace}-select__wrapper,
+    .#{$namespace}-input-number,
+    .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
+    .#{$namespace}-segmented {
+      min-height: var(--#{$namespace}-filter-bar-height);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .#{$namespace}-segmented {
+      padding: 0;
+      overflow: hidden;
+      color: getCssVar('text-color', 'regular');
+      background: getCssVar('bg-color');
+      border: 1px solid getCssVar('border-color');
+    }
+
+    .#{$namespace}-segmented__item {
+      position: relative;
+      padding: 0 12px;
+      border-radius: 0;
+
+      + .#{$namespace}-segmented__item {
+        box-shadow: inset 1px 0 getCssVar('border-color', 'lighter');
+      }
+
+      @include when(selected) {
+        color: getCssVar('color-primary');
+        font-weight: 600;
+      }
+    }
+
+    .#{$namespace}-segmented__item-selected {
+      border-radius: 0;
+      background: getCssVar('color-primary', 'light-9');
+      box-shadow: inset 0 0 0 1px getCssVar('color-primary');
+    }
+  }
+
+  @include e(append) {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 0 1 var(--#{$namespace}-filter-bar-append-width, 42%);
+    align-items: stretch;
+    min-width: 0;
+    margin-left: -1px;
+
+    &:focus-within,
+    &:hover {
+      z-index: 3;
+    }
+
+    > * {
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 0;
+      height: 100%;
+      border-radius: 0 getCssVar('border-radius', 'base')
+        getCssVar('border-radius', 'base') 0;
+    }
+
+    .#{$namespace}-input,
+    .#{$namespace}-select,
+    .#{$namespace}-cascader,
+    .#{$namespace}-date-editor,
+    .#{$namespace}-input-number {
+      width: 100%;
+    }
+
+    .#{$namespace}-input__wrapper,
+    .#{$namespace}-select__wrapper,
+    .#{$namespace}-input-number,
+    .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
+    .#{$namespace}-button,
+    .#{$namespace}-segmented {
+      min-height: var(--#{$namespace}-filter-bar-height);
+      border-radius: 0 getCssVar('border-radius', 'base')
+        getCssVar('border-radius', 'base') 0;
+    }
+  }
+
+  @include when(label-left) {
+    @include e(label) {
+      justify-content: flex-start;
+    }
+  }
+
+  @include when(label-right) {
+    @include e(label) {
+      justify-content: flex-end;
+    }
+  }
+
+  @include when(label-control) {
+    @include e(label) {
+      position: relative;
+      z-index: 1;
+      align-items: stretch;
+      padding: 0;
+      margin-right: -1px;
+      overflow: visible;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+
+      &:focus-within,
+      &:hover {
+        z-index: 3;
+      }
+
+      > * {
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        border-radius: getCssVar('border-radius', 'base') 0 0
+          getCssVar('border-radius', 'base');
+      }
+
+      .#{$namespace}-input,
+      .#{$namespace}-select,
+      .#{$namespace}-cascader,
+      .#{$namespace}-date-editor,
+      .#{$namespace}-input-number {
+        width: 100%;
+      }
+
+      .#{$namespace}-input__wrapper,
+      .#{$namespace}-select__wrapper,
+      .#{$namespace}-input-number,
+      .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
+      .#{$namespace}-button,
+      .#{$namespace}-segmented {
+        min-height: var(--#{$namespace}-filter-bar-height);
+        border-radius: getCssVar('border-radius', 'base') 0 0
+          getCssVar('border-radius', 'base');
+      }
+    }
+  }
+
+  @include when(with-append) {
+    @include e(control) {
+      > * {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .#{$namespace}-input__wrapper,
+      .#{$namespace}-select__wrapper,
+      .#{$namespace}-input-number,
+      .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
+      .#{$namespace}-button,
+      .#{$namespace}-segmented {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  @include when(without-label) {
+    @include e(control) {
+      > * {
+        border-top-left-radius: getCssVar('border-radius', 'base');
+        border-bottom-left-radius: getCssVar('border-radius', 'base');
+      }
+
+      .#{$namespace}-input__wrapper,
+      .#{$namespace}-select__wrapper,
+      .#{$namespace}-input-number,
+      .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
+      .#{$namespace}-button,
+      .#{$namespace}-segmented {
+        border-top-left-radius: getCssVar('border-radius', 'base');
+        border-bottom-left-radius: getCssVar('border-radius', 'base');
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  @include b(filter-bar) {
+    @include e(surface) {
+      flex-direction: column;
+    }
+
+    @include e(fields) {
+      width: 100%;
+    }
+
+    @include e(actions) {
+      margin-left: 0;
+    }
+  }
+
+  @include b(filter-bar-item) {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @include b(filter-bar) {
+    @include e(toggle-icon) {
+      transition: none;
+    }
+
+    @include e(advanced) {
+      transition: none;
+    }
+  }
+}

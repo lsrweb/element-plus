@@ -15,7 +15,9 @@ function getComponentsSideBar() {
   return Object.fromEntries(
     Object.entries(componentLocale).map(([lang, val]) => [
       lang,
-      Object.values(val).map((item) => mapPrefix(item, lang, '/component')),
+      withBusinessCategory(Object.values(val), lang).map((item) =>
+        mapPrefix(item, lang, '/component')
+      ),
     ])
   )
 }
@@ -33,6 +35,30 @@ type Item = {
   text: string
   children?: Item[]
   link?: string
+  promotion?: string
+}
+
+function withBusinessCategory(items: Item[], lang: string): Item[] {
+  if (lang !== 'zh-CN') return items
+
+  const categories = [...items]
+  const formIndex = categories.findIndex((item) =>
+    item.children?.some((child) => child.link === '/form')
+  )
+  const businessCategory: Item = {
+    text: '业务组件',
+    children: [
+      {
+        link: '/filter-bar',
+        text: 'Filter Bar 并联筛选',
+        promotion: '2.14.1',
+      },
+    ],
+  }
+
+  categories.splice(formIndex + 1, 0, businessCategory)
+
+  return categories
 }
 
 function mapPrefix(item: Item, lang: string, prefix = '') {
