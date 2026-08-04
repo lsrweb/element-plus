@@ -1,5 +1,9 @@
 import { buildProps, definePropType } from '@element-plus/utils'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
+import {
+  defaultNamespace,
+  useEmptyValuesProps,
+  useSizeProp,
+} from '@element-plus/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Language } from '@element-plus/locale'
@@ -85,7 +89,7 @@ export const configProviderProps = buildProps({
    */
   namespace: {
     type: String,
-    default: 'el',
+    default: defaultNamespace,
   },
   /**
    * @description table related configuration, [see the following table](https://element-plus.org/en-US/component/config-provider.html#table-attribute)

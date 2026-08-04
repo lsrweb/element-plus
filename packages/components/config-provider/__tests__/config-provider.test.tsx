@@ -130,11 +130,11 @@ describe('config-provider', () => {
 
       await nextTick()
       expect(
-        wrapper.find('.el-button .el-button__text--expand').exists()
+        wrapper.find('.elp-button .elp-button__text--expand').exists()
       ).toBeTruthy()
       await wrapper.find('.toggle').trigger('click')
       expect(
-        wrapper.find('.el-button .el-button__text--expand').exists()
+        wrapper.find('.elp-button .elp-button__text--expand').exists()
       ).toBeFalsy()
     })
     it('fully configured', async () => {
@@ -156,7 +156,7 @@ describe('config-provider', () => {
       expect(
         wrapper
           .find(
-            '.el-button.el-button--warning.is-plain.is-round.is-text.is-dashed .el-button__text--expand'
+            '.elp-button.elp-button--warning.is-plain.is-round.is-text.is-dashed .elp-button__text--expand'
           )
           .exists()
       ).toBe(true)
@@ -176,10 +176,10 @@ describe('config-provider', () => {
         </ConfigProvider>
       ))
       await nextTick()
-      expect(wrapper.find('.el-card.is-hover-shadow').exists()).toBe(true)
+      expect(wrapper.find('.elp-card.is-hover-shadow').exists()).toBe(true)
       overrideShadow.value = 'never'
       await nextTick()
-      expect(wrapper.find('.el-card.is-never-shadow').exists()).toBe(true)
+      expect(wrapper.find('.elp-card.is-never-shadow').exists()).toBe(true)
     })
   })
 
@@ -196,7 +196,9 @@ describe('config-provider', () => {
         </ConfigProvider>
       ))
       await nextTick()
-      expect(wrapper.find('.el-link--success.is-underline').exists()).toBe(true)
+      expect(wrapper.find('.elp-link--success.is-underline').exists()).toBe(
+        true
+      )
     })
   })
 
@@ -215,7 +217,7 @@ describe('config-provider', () => {
       ))
 
       await nextTick()
-      const overlay = wrapper.find('.el-overlay-dialog')
+      const overlay = wrapper.find('.elp-overlay-dialog')
       expect(overlay.exists()).toBe(true)
       expect(overlay.attributes('style') || '').toContain('display: flex')
     })
@@ -234,7 +236,7 @@ describe('config-provider', () => {
       ))
 
       await nextTick()
-      const dialog = wrapper.find('.el-dialog')
+      const dialog = wrapper.find('.elp-dialog')
       expect(dialog.exists()).toBe(true)
       expect(dialog.classes()).toContain('is-draggable')
     })
@@ -294,7 +296,7 @@ describe('config-provider', () => {
       ))
 
       await nextTick()
-      expect(wrapper.find('button').classes().join('')).toBe('el-button')
+      expect(wrapper.find('button').classes().join('')).toBe('elp-button')
       namespace.value = 'ep'
       await nextTick()
       expect(wrapper.find('button').classes().join('')).toBe('ep-button')
@@ -324,21 +326,21 @@ describe('config-provider', () => {
       ))
 
       await nextTick()
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
       await nextTick()
-      expect(document.querySelectorAll('.el-message').length).toBe(3)
+      expect(document.querySelectorAll('.elp-message').length).toBe(3)
 
       config.max = 10
       await nextTick()
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
       await nextTick()
-      expect(document.querySelectorAll('.el-message').length).toBe(7)
+      expect(document.querySelectorAll('.elp-message').length).toBe(7)
     })
 
     it('new config parameters effective', async () => {
@@ -360,12 +362,12 @@ describe('config-provider', () => {
 
       await rAF()
 
-      wrapper.find('.el-button').trigger('click')
-      wrapper.find('.el-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
+      wrapper.find('.elp-button').trigger('click')
       await nextTick()
-      const elements = document.querySelectorAll('.el-message')
+      const elements = document.querySelectorAll('.elp-message')
       expect(elements.length).toBe(1)
-      expect(document.querySelectorAll('.el-message__closeBtn').length).toBe(1)
+      expect(document.querySelectorAll('.elp-message__closeBtn').length).toBe(1)
       expect(document.querySelectorAll('.is-plain').length).toBe(1)
 
       const getTopValue = (elm: Element): number =>
@@ -396,9 +398,9 @@ describe('config-provider', () => {
       const wrapper = mount(() => <TestComponent />)
 
       await rAF()
-      await wrapper.find('.el-button').trigger('click')
+      await wrapper.find('.elp-button').trigger('click')
       await nextTick()
-      expect(document.querySelectorAll('.el-message').length).toBe(1)
+      expect(document.querySelectorAll('.elp-message').length).toBe(1)
     })
 
     it('multiple config-provider config override', async () => {
@@ -422,12 +424,12 @@ describe('config-provider', () => {
       ))
 
       await rAF()
-      await wrapper.find('.el-button').trigger('click')
-      await wrapper.find('.el-button').trigger('click')
-      await wrapper.find('.el-button').trigger('click')
+      await wrapper.find('.elp-button').trigger('click')
+      await wrapper.find('.elp-button').trigger('click')
+      await wrapper.find('.elp-button').trigger('click')
       await nextTick()
-      const messages = document.querySelectorAll('.el-message')
-      expect(document.querySelectorAll('.el-message').length).toBe(1)
+      const messages = document.querySelectorAll('.elp-message')
+      expect(document.querySelectorAll('.elp-message').length).toBe(1)
 
       const classList = messages[0].classList
       expect(classList.contains('is-left')).toBe(true)
