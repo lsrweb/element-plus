@@ -1,9 +1,9 @@
 import { buildProps } from '@element-plus/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type FilterBarItem from './filter-bar-item.vue'
+import type QueryItem from './query-item.vue'
 
-export interface FilterBarItemProps {
+export interface QueryItemProps {
   label?: string
   labelMode?: 'text' | 'control'
   labelAlign?: 'left' | 'center' | 'right'
@@ -15,7 +15,7 @@ export interface FilterBarItemProps {
   ariaLabel?: string
 }
 
-export const filterBarItemProps = buildProps({
+export const queryItemProps = buildProps({
   label: {
     type: String,
     default: '',
@@ -46,7 +46,5 @@ export const filterBarItemProps = buildProps({
   ariaLabel: String,
 } as const)
 
-export type FilterBarItemPropsPublic = ExtractPublicPropTypes<
-  typeof filterBarItemProps
->
-export type FilterBarItemInstance = InstanceType<typeof FilterBarItem> & unknown
+export type QueryItemPropsPublic = ExtractPublicPropTypes<typeof queryItemProps>
+export type QueryItemInstance = InstanceType<typeof QueryItem> & unknown

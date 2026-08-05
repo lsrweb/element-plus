@@ -1,20 +1,20 @@
 <template>
-  <elp-filter-bar
+  <elp-query
     :show-search="false"
     :show-reset="false"
     :label-width="96"
     :item-width="300"
   >
-    <elp-filter-bar-item
+    <elp-query-item
       label="固定宽度"
       label-align="right"
       width="300"
       aria-label="固定宽度筛选项"
     >
       <elp-input v-model="fixedValue" placeholder="width: 300" />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item
+    <elp-query-item
       label="自动扩展"
       label-align="left"
       width="320"
@@ -36,9 +36,9 @@
           clearable
         />
       </template>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item
+    <elp-query-item
       label-mode="control"
       label-width="170"
       width="620"
@@ -60,8 +60,8 @@
       <template #append>
         <elp-input v-model="customValue" placeholder="输入筛选值" />
       </template>
-    </elp-filter-bar-item>
-  </elp-filter-bar>
+    </elp-query-item>
+  </elp-query>
 </template>
 
 <script lang="ts" setup>

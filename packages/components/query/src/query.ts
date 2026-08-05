@@ -3,9 +3,9 @@ import { buildProps } from '@element-plus/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { ComponentSize } from '@element-plus/constants'
-import type FilterBar from './filter-bar.vue'
+import type Query from './query.vue'
 
-export interface FilterBarProps {
+export interface QueryProps {
   expanded?: boolean
   size?: ComponentSize
   labelWidth?: string | number
@@ -22,7 +22,7 @@ export interface FilterBarProps {
   ariaLabel?: string
 }
 
-export const filterBarProps = buildProps({
+export const queryProps = buildProps({
   expanded: Boolean,
   size: {
     type: String,
@@ -72,16 +72,16 @@ export const filterBarProps = buildProps({
   },
   ariaLabel: {
     type: String,
-    default: 'Filter conditions',
+    default: 'Query conditions',
   },
 } as const)
 
-export const filterBarEmits = {
+export const queryEmits = {
   search: () => true,
   reset: () => true,
   'update:expanded': (expanded: boolean) => typeof expanded === 'boolean',
 }
 
-export type FilterBarPropsPublic = ExtractPublicPropTypes<typeof filterBarProps>
-export type FilterBarEmits = typeof filterBarEmits
-export type FilterBarInstance = InstanceType<typeof FilterBar> & unknown
+export type QueryPropsPublic = ExtractPublicPropTypes<typeof queryProps>
+export type QueryEmits = typeof queryEmits
+export type QueryInstance = InstanceType<typeof Query> & unknown

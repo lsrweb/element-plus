@@ -49,8 +49,8 @@ function withBusinessCategory(items: Item[], lang: string): Item[] {
     text: '业务组件',
     children: [
       {
-        link: '/filter-bar',
-        text: 'Filter Bar 并联筛选',
+        link: '/query',
+        text: 'Query 查询栏',
         promotion: '2.14.1',
       },
     ],

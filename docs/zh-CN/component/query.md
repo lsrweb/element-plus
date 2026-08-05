@@ -1,19 +1,19 @@
 ---
-title: Filter Bar 并联筛选
+title: Query 查询栏
 lang: zh-CN
 ---
 
-# Filter Bar 并联筛选 ^(2.14.1)
+# Query 查询栏 ^(2.14.1)
 
 用于后台列表页的高密度筛选条。它通过组合式结构连接标签与任意 Vue 3 表单控件，并统一处理布局、操作区和高级筛选。
 
 ## 基础用法
 
-使用 `FilterBarItem` 组织每个筛选条件。组件不会接管字段数据，表单状态仍由业务通过 `v-model` 管理。默认仅显示筛选按钮；示例通过 `show-reset` 额外启用了重置按钮。操作按钮会跟随最后一个筛选项参与换行。
+使用 `QueryItem` 组织每个筛选条件。组件不会接管字段数据，表单状态仍由业务通过 `v-model` 管理。默认仅显示筛选按钮；示例通过 `show-reset` 额外启用了重置按钮。操作按钮会跟随最后一个筛选项参与换行。
 
 :::demo
 
-filter-bar/basic
+query/basic
 
 :::
 
@@ -23,17 +23,17 @@ filter-bar/basic
 
 :::demo
 
-filter-bar/mixed-controls
+query/mixed-controls
 
 :::
 
 ## 三段并联
 
-`FilterBarItem` 可以组合左侧标签、中间默认插槽和右侧 `append` 插槽。三个区域都支持自定义内容；组件会处理常用表单控件的边框重叠、外侧圆角和聚焦层级。左侧需要放置 Select、Input 或业务组件时，将 `label-mode` 设置为 `control`，再通过 `label` 插槽传入组件。
+`QueryItem` 可以组合左侧标签、中间默认插槽和右侧 `append` 插槽。三个区域都支持自定义内容；组件会处理常用表单控件的边框重叠、外侧圆角和聚焦层级。左侧需要放置 Select、Input 或业务组件时，将 `label-mode` 设置为 `control`，再通过 `label` 插槽传入组件。
 
 :::demo
 
-filter-bar/joined-controls
+query/joined-controls
 
 :::
 
@@ -43,7 +43,7 @@ filter-bar/joined-controls
 
 :::demo
 
-filter-bar/sizes
+query/sizes
 
 :::
 
@@ -53,7 +53,7 @@ filter-bar/sizes
 
 :::demo
 
-filter-bar/label-alignment
+query/label-alignment
 
 :::
 
@@ -63,7 +63,7 @@ filter-bar/label-alignment
 
 :::demo
 
-filter-bar/advanced
+query/advanced
 
 :::
 
@@ -73,7 +73,7 @@ filter-bar/advanced
 
 :::demo
 
-filter-bar/custom-actions
+query/custom-actions
 
 :::
 
@@ -83,40 +83,40 @@ filter-bar/custom-actions
 
 :::demo
 
-filter-bar/configurable
+query/configurable
 
 :::
 
-## Filter Bar Item 属性总览
+## Query Item 属性总览
 
-下面集中展示 `FilterBarItem` 的属性和插槽。第二个筛选项启用 `grow` 后，会在保留 `min-width` 的前提下占满当前行的剩余空间；第三个筛选项展示左、中、右三个区域都使用表单控件的写法。
+下面集中展示 `QueryItem` 的属性和插槽。第二个筛选项启用 `grow` 后，会在保留 `min-width` 的前提下占满当前行的剩余空间；第三个筛选项展示左、中、右三个区域都使用表单控件的写法。
 
 :::demo
 
-filter-bar/item-properties
+query/item-properties
 
 :::
 
-## Filter Bar API ^(2.14.1)
+## Query API ^(2.14.1)
 
 ### 属性
 
-| 名称                        | 说明                     | 类型                                           | 默认值            |
-| --------------------------- | ------------------------ | ---------------------------------------------- | ----------------- |
-| expanded / v-model:expanded | 高级筛选是否展开         | ^[boolean]                                     | false             |
-| size                        | 内部控件与按钮尺寸       | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | default           |
-| label-width                 | 默认标签宽度             | ^[string] / ^[number]                          | 88                |
-| item-width                  | 默认筛选项宽度           | ^[string] / ^[number]                          | 260               |
-| gap                         | 筛选项之间的间距         | ^[string] / ^[number]                          | 8                 |
-| loading                     | 搜索按钮是否处于加载状态 | ^[boolean]                                     | false             |
-| show-search                 | 是否显示默认搜索按钮     | ^[boolean]                                     | true              |
-| show-reset                  | 是否显示默认重置按钮     | ^[boolean]                                     | false             |
-| collapsible                 | 是否显示高级筛选展开按钮 | ^[boolean]                                     | false             |
-| search-text                 | 搜索按钮文案             | ^[string]                                      | Search            |
-| reset-text                  | 重置按钮文案             | ^[string]                                      | Reset             |
-| expand-text                 | 展开按钮文案             | ^[string]                                      | More              |
-| collapse-text               | 收起按钮文案             | ^[string]                                      | Less              |
-| aria-label                  | 筛选区域的无障碍标签     | ^[string]                                      | Filter conditions |
+| 名称                        | 说明                     | 类型                                           | 默认值           |
+| --------------------------- | ------------------------ | ---------------------------------------------- | ---------------- |
+| expanded / v-model:expanded | 高级筛选是否展开         | ^[boolean]                                     | false            |
+| size                        | 内部控件与按钮尺寸       | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | default          |
+| label-width                 | 默认标签宽度             | ^[string] / ^[number]                          | 88               |
+| item-width                  | 默认筛选项宽度           | ^[string] / ^[number]                          | 260              |
+| gap                         | 筛选项之间的间距         | ^[string] / ^[number]                          | 8                |
+| loading                     | 搜索按钮是否处于加载状态 | ^[boolean]                                     | false            |
+| show-search                 | 是否显示默认搜索按钮     | ^[boolean]                                     | true             |
+| show-reset                  | 是否显示默认重置按钮     | ^[boolean]                                     | false            |
+| collapsible                 | 是否显示高级筛选展开按钮 | ^[boolean]                                     | false            |
+| search-text                 | 搜索按钮文案             | ^[string]                                      | Search           |
+| reset-text                  | 重置按钮文案             | ^[string]                                      | Reset            |
+| expand-text                 | 展开按钮文案             | ^[string]                                      | More             |
+| collapse-text               | 收起按钮文案             | ^[string]                                      | Less             |
+| aria-label                  | 查询区域的无障碍标签     | ^[string]                                      | Query conditions |
 
 ### 事件
 
@@ -142,7 +142,7 @@ filter-bar/item-properties
 | expand   | 展开高级筛选         | ^[Function]`() => void` |
 | collapse | 收起高级筛选         | ^[Function]`() => void` |
 
-## Filter Bar Item API ^(2.14.1)
+## Query Item API ^(2.14.1)
 
 ### 属性
 

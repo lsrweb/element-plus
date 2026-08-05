@@ -1,12 +1,12 @@
 <template>
-  <elp-filter-bar
+  <elp-query
     :label-width="96"
     search-text="筛选"
     reset-text="清空"
     show-reset
     @reset="reset"
   >
-    <elp-filter-bar-item label="客户筛选" width="600" append-width="230">
+    <elp-query-item label="客户筛选" width="600" append-width="230">
       <elp-select v-model="customerType" placeholder="客户类型">
         <elp-option label="全部客户" value="all" />
         <elp-option label="企业客户" value="company" />
@@ -16,9 +16,9 @@
       <template #append>
         <elp-input v-model="keyword" placeholder="名称 / 手机号" clearable />
       </template>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item width="560" append-width="200">
+    <elp-query-item width="560" append-width="200">
       <template #label>
         <span class="channel-label">渠道</span>
       </template>
@@ -36,9 +36,9 @@
           <elp-option label="华北" value="north" />
         </elp-select>
       </template>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item
+    <elp-query-item
       label-mode="control"
       label-width="180"
       width="650"
@@ -62,8 +62,8 @@
       <template #append>
         <elp-input v-model="customValue" placeholder="输入筛选值" clearable />
       </template>
-    </elp-filter-bar-item>
-  </elp-filter-bar>
+    </elp-query-item>
+  </elp-query>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <elp-filter-bar
+  <elp-query
     search-text="查询"
     reset-text="清空"
     show-reset
@@ -7,45 +7,45 @@
     @search="handleSearch"
     @reset="handleReset"
   >
-    <elp-filter-bar-item label="数据范围" width="220">
+    <elp-query-item label="数据范围" width="220">
       <elp-select v-model="filters.scope" placeholder="全部">
         <elp-option label="全部" value="all" />
         <elp-option label="仅自己" value="mine" />
         <elp-option label="本部门" value="department" />
       </elp-select>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="关键词" width="300">
+    <elp-query-item label="关键词" width="300">
       <elp-input
         v-model="filters.keyword"
         placeholder="昵称 / wxid / 机器人备注"
         clearable
       />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="状态筛选" width="255">
+    <elp-query-item label="状态筛选" width="255">
       <elp-select v-model="filters.status" placeholder="全部" clearable>
         <elp-option label="全部" value="" />
         <elp-option label="在线" value="online" />
         <elp-option label="离线" value="offline" />
       </elp-select>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="分组搜索" width="255">
+    <elp-query-item label="分组搜索" width="255">
       <elp-select v-model="filters.group" placeholder="选择分组" clearable>
         <elp-option label="默认分组" value="default" />
         <elp-option label="重点客户" value="important" />
       </elp-select>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="到期筛选" width="255">
+    <elp-query-item label="到期筛选" width="255">
       <elp-select v-model="filters.expire" placeholder="全部" clearable>
         <elp-option label="7 天内" value="7" />
         <elp-option label="30 天内" value="30" />
         <elp-option label="已过期" value="expired" />
       </elp-select>
-    </elp-filter-bar-item>
-  </elp-filter-bar>
+    </elp-query-item>
+  </elp-query>
 
   <p class="filter-result">{{ result }}</p>
 </template>

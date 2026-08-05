@@ -73,16 +73,16 @@ import { ElConfigProvider } from '@element-plus/components/config-provider'
 import { ElIcon } from '@element-plus/components/icon'
 import { addUnit } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
-import { filterBarEmits, filterBarProps } from './filter-bar'
+import { queryEmits, queryProps } from './query'
 
 defineOptions({
-  name: 'ElFilterBar',
+  name: 'ElQuery',
 })
 
-const props = defineProps(filterBarProps)
-const emit = defineEmits(filterBarEmits)
+const props = defineProps(queryProps)
+const emit = defineEmits(queryEmits)
 const slots = useSlots()
-const ns = useNamespace('filter-bar')
+const ns = useNamespace('query')
 const namespace = ns.namespace
 
 const hasAdvanced = computed(() => Boolean(slots.advanced))

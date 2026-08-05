@@ -1,27 +1,27 @@
 @use 'mixins/mixins' as *;
 @use 'mixins/function' as *;
 
-@include b(filter-bar) {
-  --#{$namespace}-filter-bar-height: 32px;
-  --#{$namespace}-filter-bar-label-width: 88px;
-  --#{$namespace}-filter-bar-item-width: 260px;
-  --#{$namespace}-filter-bar-gap: 8px;
+@include b(query) {
+  --#{$namespace}-query-height: 32px;
+  --#{$namespace}-query-label-width: 88px;
+  --#{$namespace}-query-item-width: 260px;
+  --#{$namespace}-query-gap: 8px;
 
   width: 100%;
   color: getCssVar('text-color', 'regular');
 
   @include m(large) {
-    --#{$namespace}-filter-bar-height: 40px;
+    --#{$namespace}-query-height: 40px;
   }
 
   @include m(small) {
-    --#{$namespace}-filter-bar-height: 24px;
+    --#{$namespace}-query-height: 24px;
   }
 
   @include e(surface) {
     display: flex;
     align-items: flex-start;
-    gap: var(--#{$namespace}-filter-bar-gap);
+    gap: var(--#{$namespace}-query-gap);
     min-width: 0;
     padding: 10px;
     border: 1px solid getCssVar('border-color', 'lighter');
@@ -35,7 +35,7 @@
     flex: 1 1 auto;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--#{$namespace}-filter-bar-gap);
+    gap: var(--#{$namespace}-query-gap);
     min-width: 0;
   }
 
@@ -44,7 +44,7 @@
     flex: 0 0 auto;
     align-items: center;
     gap: 6px;
-    min-height: var(--#{$namespace}-filter-bar-height);
+    min-height: var(--#{$namespace}-query-height);
     white-space: nowrap;
 
     .#{$namespace}-button + .#{$namespace}-button {
@@ -84,7 +84,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--#{$namespace}-filter-bar-gap);
+    gap: var(--#{$namespace}-query-gap);
     margin-top: 8px;
     padding: 12px;
     border: 1px solid getCssVar('border-color', 'lighter');
@@ -93,14 +93,14 @@
   }
 }
 
-@include b(filter-bar-item) {
+@include b(query-item) {
   display: inline-flex;
-  flex: 0 1 var(--#{$namespace}-filter-bar-item-width);
+  flex: 0 1 var(--#{$namespace}-query-item-width);
   align-items: stretch;
   box-sizing: border-box;
-  width: var(--#{$namespace}-filter-bar-item-width);
-  min-width: var(--#{$namespace}-filter-bar-item-min-width, 180px);
-  height: var(--#{$namespace}-filter-bar-height);
+  width: var(--#{$namespace}-query-item-width);
+  min-width: var(--#{$namespace}-query-item-min-width, 180px);
+  height: var(--#{$namespace}-query-height);
   vertical-align: middle;
 
   @include when(grow) {
@@ -109,11 +109,11 @@
 
   @include e(label) {
     display: inline-flex;
-    flex: 0 0 var(--#{$namespace}-filter-bar-label-width);
+    flex: 0 0 var(--#{$namespace}-query-label-width);
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: var(--#{$namespace}-filter-bar-label-width);
+    width: var(--#{$namespace}-query-label-width);
     padding: 0 10px;
     overflow: hidden;
     color: getCssVar('text-color', 'secondary');
@@ -162,7 +162,7 @@
     .#{$namespace}-input-number,
     .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
     .#{$namespace}-segmented {
-      min-height: var(--#{$namespace}-filter-bar-height);
+      min-height: var(--#{$namespace}-query-height);
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -202,7 +202,7 @@
     position: relative;
     z-index: 1;
     display: flex;
-    flex: 0 1 var(--#{$namespace}-filter-bar-append-width, 42%);
+    flex: 0 1 var(--#{$namespace}-query-append-width, 42%);
     align-items: stretch;
     min-width: 0;
     margin-left: -1px;
@@ -235,7 +235,7 @@
     .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
     .#{$namespace}-button,
     .#{$namespace}-segmented {
-      min-height: var(--#{$namespace}-filter-bar-height);
+      min-height: var(--#{$namespace}-query-height);
       border-radius: 0 getCssVar('border-radius', 'base')
         getCssVar('border-radius', 'base') 0;
     }
@@ -293,7 +293,7 @@
       .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
       .#{$namespace}-button,
       .#{$namespace}-segmented {
-        min-height: var(--#{$namespace}-filter-bar-height);
+        min-height: var(--#{$namespace}-query-height);
         border-radius: getCssVar('border-radius', 'base') 0 0
           getCssVar('border-radius', 'base');
       }
@@ -340,7 +340,7 @@
 }
 
 @media (max-width: 768px) {
-  @include b(filter-bar) {
+  @include b(query) {
     @include e(surface) {
       flex-direction: column;
     }
@@ -354,14 +354,14 @@
     }
   }
 
-  @include b(filter-bar-item) {
+  @include b(query-item) {
     flex-basis: 100%;
     width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  @include b(filter-bar) {
+  @include b(query) {
     @include e(toggle-icon) {
       transition: none;
     }

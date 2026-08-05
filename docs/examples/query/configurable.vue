@@ -22,7 +22,7 @@
     <label>加载状态 <elp-switch v-model="config.loading" /></label>
   </div>
 
-  <elp-filter-bar
+  <elp-query
     v-model:expanded="expanded"
     :size="config.size"
     :label-width="100"
@@ -38,7 +38,7 @@
     collapse-text="收起条件"
     aria-label="可配置筛选条件"
   >
-    <elp-filter-bar-item
+    <elp-query-item
       label="业务筛选"
       :label-align="config.labelAlign"
       width="560"
@@ -55,17 +55,17 @@
       <template #append>
         <elp-input v-model="form.keyword" placeholder="输入关键词" clearable />
       </template>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
     <template #advanced>
-      <elp-filter-bar-item label="归属部门" label-align="left">
+      <elp-query-item label="归属部门" label-align="left">
         <elp-select v-model="form.department" placeholder="全部部门" clearable>
           <elp-option label="销售部" value="sales" />
           <elp-option label="运营部" value="operation" />
         </elp-select>
-      </elp-filter-bar-item>
+      </elp-query-item>
     </template>
-  </elp-filter-bar>
+  </elp-query>
 </template>
 
 <script lang="ts" setup>

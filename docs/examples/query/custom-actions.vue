@@ -1,28 +1,28 @@
 <template>
-  <elp-filter-bar
+  <elp-query
     :show-search="false"
     :show-reset="false"
     aria-label="订单筛选"
     @search="message = '订单列表已刷新'"
     @reset="reset"
   >
-    <elp-filter-bar-item width="360" grow>
+    <elp-query-item width="360" grow>
       <template #label>
         <span class="label-with-dot"><i />订单检索</span>
       </template>
       <elp-input v-model="keyword" placeholder="订单号 / 客户名称" clearable />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="风险状态" width="250">
+    <elp-query-item label="风险状态" width="250">
       <elp-segmented v-model="risk" :options="['全部', '正常', '异常']" block />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
     <template #actions="{ search, reset: resetFilters }">
       <elp-button @click="exportData">导出</elp-button>
       <elp-button @click="resetFilters">清空</elp-button>
       <elp-button type="primary" @click="search">刷新列表</elp-button>
     </template>
-  </elp-filter-bar>
+  </elp-query>
 
   <p class="filter-result">{{ message }}</p>
 </template>

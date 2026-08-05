@@ -28,31 +28,31 @@
 import { computed, useSlots } from 'vue'
 import { addUnit } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
-import { filterBarItemProps } from './filter-bar-item'
+import { queryItemProps } from './query-item'
 
 defineOptions({
-  name: 'ElFilterBarItem',
+  name: 'ElQueryItem',
 })
 
-const props = defineProps(filterBarItemProps)
+const props = defineProps(queryItemProps)
 const slots = useSlots()
-const ns = useNamespace('filter-bar-item')
-const barNs = useNamespace('filter-bar')
+const ns = useNamespace('query-item')
+const queryNs = useNamespace('query')
 
 const hasLabel = computed(() => Boolean(props.label || slots.label))
 const hasAppend = computed(() => Boolean(slots.append))
 const itemStyle = computed(() => ({
   ...(props.labelWidth
-    ? { [barNs.cssVarBlockName('label-width')]: addUnit(props.labelWidth) }
+    ? { [queryNs.cssVarBlockName('label-width')]: addUnit(props.labelWidth) }
     : {}),
   ...(props.width
-    ? { [barNs.cssVarBlockName('item-width')]: addUnit(props.width) }
+    ? { [queryNs.cssVarBlockName('item-width')]: addUnit(props.width) }
     : {}),
   ...(props.minWidth
-    ? { [barNs.cssVarBlockName('item-min-width')]: addUnit(props.minWidth) }
+    ? { [queryNs.cssVarBlockName('item-min-width')]: addUnit(props.minWidth) }
     : {}),
   ...(props.appendWidth
-    ? { [barNs.cssVarBlockName('append-width')]: addUnit(props.appendWidth) }
+    ? { [queryNs.cssVarBlockName('append-width')]: addUnit(props.appendWidth) }
     : {}),
 }))
 </script>

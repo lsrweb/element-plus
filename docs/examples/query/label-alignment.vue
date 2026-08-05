@@ -1,22 +1,22 @@
 <template>
-  <elp-filter-bar
+  <elp-query
     :show-search="false"
     :show-reset="false"
     :label-width="90"
     :item-width="300"
   >
-    <elp-filter-bar-item label="左对齐" label-align="left">
+    <elp-query-item label="左对齐" label-align="left">
       <elp-input v-model="left" placeholder="label-align: left" />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="居中" label-align="center">
+    <elp-query-item label="居中" label-align="center">
       <elp-input v-model="center" placeholder="label-align: center" />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="右对齐" label-align="right">
+    <elp-query-item label="右对齐" label-align="right">
       <elp-input v-model="right" placeholder="label-align: right" />
-    </elp-filter-bar-item>
-  </elp-filter-bar>
+    </elp-query-item>
+  </elp-query>
 </template>
 
 <script lang="ts" setup>

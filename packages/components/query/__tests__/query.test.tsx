@@ -1,12 +1,12 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import FilterBar from '../src/filter-bar.vue'
-import FilterBarItem from '../src/filter-bar-item.vue'
+import Query from '../src/query.vue'
+import QueryItem from '../src/query-item.vue'
 
-describe('FilterBar', () => {
+describe('Query', () => {
   test('renders fields and forwards layout variables', () => {
-    const wrapper = mount(FilterBar, {
+    const wrapper = mount(Query, {
       props: {
         labelWidth: 96,
         itemWidth: 320,
@@ -17,32 +17,32 @@ describe('FilterBar', () => {
       },
     })
 
-    expect(wrapper.classes()).toContain('elp-filter-bar')
+    expect(wrapper.classes()).toContain('elp-query')
     expect(wrapper.find('.field').exists()).toBe(true)
     expect(wrapper.attributes('style')).toContain(
-      '--elp-filter-bar-label-width: 96px'
+      '--elp-query-label-width: 96px'
     )
     expect(wrapper.attributes('style')).toContain(
-      '--elp-filter-bar-item-width: 320px'
+      '--elp-query-item-width: 320px'
     )
-    expect(wrapper.attributes('style')).toContain('--elp-filter-bar-gap: 12px')
+    expect(wrapper.attributes('style')).toContain('--elp-query-gap: 12px')
   })
 
   test('keeps nested controls in the current namespace', () => {
-    const wrapper = mount(FilterBar, {
+    const wrapper = mount(Query, {
       slots: {
-        default: () => <FilterBarItem label="Status">content</FilterBarItem>,
+        default: () => <QueryItem label="Status">content</QueryItem>,
       },
     })
 
-    expect(wrapper.find('.elp-filter-bar-item').exists()).toBe(true)
-    expect(wrapper.find('.el-filter-bar-item').exists()).toBe(false)
+    expect(wrapper.find('.elp-query-item').exists()).toBe(true)
+    expect(wrapper.find('.el-query-item').exists()).toBe(false)
   })
 
   test('emits search and reset events', async () => {
     const onSearch = vi.fn()
     const onReset = vi.fn()
-    const wrapper = mount(FilterBar, {
+    const wrapper = mount(Query, {
       props: {
         searchText: 'Query',
         resetText: 'Clear',
@@ -65,7 +65,7 @@ describe('FilterBar', () => {
   })
 
   test('controls advanced filters', async () => {
-    const wrapper = mount(FilterBar, {
+    const wrapper = mount(Query, {
       props: {
         expanded: false,
         collapsible: true,
@@ -75,10 +75,10 @@ describe('FilterBar', () => {
       },
     })
 
-    expect(
-      wrapper.find('.elp-filter-bar__advanced').attributes('aria-hidden')
-    ).toBe('true')
-    expect(wrapper.find('.elp-filter-bar__advanced').attributes('inert')).toBe(
+    expect(wrapper.find('.elp-query__advanced').attributes('aria-hidden')).toBe(
+      'true'
+    )
+    expect(wrapper.find('.elp-query__advanced').attributes('inert')).toBe(
       'true'
     )
 
@@ -91,19 +91,19 @@ describe('FilterBar', () => {
 
     await wrapper.setProps({ expanded: true })
     await nextTick()
-    expect(wrapper.find('.elp-filter-bar__advanced').classes()).toContain(
+    expect(wrapper.find('.elp-query__advanced').classes()).toContain(
       'is-expanded'
     )
+    expect(wrapper.find('.elp-query__advanced').attributes('aria-hidden')).toBe(
+      'false'
+    )
     expect(
-      wrapper.find('.elp-filter-bar__advanced').attributes('aria-hidden')
-    ).toBe('false')
-    expect(
-      wrapper.find('.elp-filter-bar__advanced').attributes('inert')
+      wrapper.find('.elp-query__advanced').attributes('inert')
     ).toBeUndefined()
   })
 
   test('exposes expansion controls', () => {
-    const wrapper = mount(FilterBar)
+    const wrapper = mount(Query)
 
     wrapper.vm.expand()
     wrapper.vm.collapse()
@@ -117,35 +117,35 @@ describe('FilterBar', () => {
   })
 
   test('supports custom actions', () => {
-    const wrapper = mount(FilterBar, {
+    const wrapper = mount(Query, {
       slots: {
         actions: '<button class="custom-action">Export</button>',
       },
     })
 
     expect(wrapper.find('.custom-action').text()).toBe('Export')
-    expect(wrapper.findAll('.elp-filter-bar__actions button')).toHaveLength(1)
+    expect(wrapper.findAll('.elp-query__actions button')).toHaveLength(1)
   })
 
   test('places enabled actions after the last field', () => {
-    const wrapper = mount(FilterBar, {
+    const wrapper = mount(Query, {
       slots: {
         default: '<div class="last-field">field</div>',
       },
     })
 
-    const fields = wrapper.find('.elp-filter-bar__fields')
+    const fields = wrapper.find('.elp-query__fields')
     expect(fields.element.lastElementChild).toBe(
-      wrapper.find('.elp-filter-bar__actions').element
+      wrapper.find('.elp-query__actions').element
     )
-    expect(wrapper.findAll('.elp-filter-bar__actions button')).toHaveLength(1)
+    expect(wrapper.findAll('.elp-query__actions button')).toHaveLength(1)
     expect(wrapper.text()).not.toContain('Reset')
   })
 })
 
-describe('FilterBarItem', () => {
+describe('QueryItem', () => {
   test('renders label and control content', () => {
-    const wrapper = mount(FilterBarItem, {
+    const wrapper = mount(QueryItem, {
       props: {
         label: 'Status',
         labelWidth: 100,
@@ -157,17 +157,17 @@ describe('FilterBarItem', () => {
       },
     })
 
-    expect(wrapper.find('.elp-filter-bar-item__label').text()).toBe('Status')
+    expect(wrapper.find('.elp-query-item__label').text()).toBe('Status')
     expect(wrapper.find('.control').exists()).toBe(true)
     expect(wrapper.attributes('role')).toBe('group')
     expect(wrapper.attributes('aria-label')).toBe('Status')
     expect(wrapper.attributes('style')).toContain(
-      '--elp-filter-bar-item-width: 300px'
+      '--elp-query-item-width: 300px'
     )
   })
 
   test('supports label slot and grow mode', () => {
-    const wrapper = mount(FilterBarItem, {
+    const wrapper = mount(QueryItem, {
       props: { grow: true },
       slots: {
         label: '<strong>Keyword</strong>',
@@ -182,7 +182,7 @@ describe('FilterBarItem', () => {
   })
 
   test('supports a joined append control and label alignment', () => {
-    const wrapper = mount(FilterBarItem, {
+    const wrapper = mount(QueryItem, {
       props: {
         label: 'Customer',
         labelAlign: 'right',
@@ -199,12 +199,12 @@ describe('FilterBarItem', () => {
     expect(wrapper.find('.middle-control').exists()).toBe(true)
     expect(wrapper.find('.append-control').exists()).toBe(true)
     expect(wrapper.attributes('style')).toContain(
-      '--elp-filter-bar-append-width: 180px'
+      '--elp-query-append-width: 180px'
     )
   })
 
   test('supports an arbitrary component in the leading label region', () => {
-    const wrapper = mount(FilterBarItem, {
+    const wrapper = mount(QueryItem, {
       props: {
         labelMode: 'control',
         ariaLabel: 'Filter field',

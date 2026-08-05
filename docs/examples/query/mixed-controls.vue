@@ -1,5 +1,5 @@
 <template>
-  <elp-filter-bar
+  <elp-query
     :label-width="96"
     :item-width="280"
     search-text="应用筛选"
@@ -8,16 +8,16 @@
     @search="message = '筛选条件已应用'"
     @reset="reset"
   >
-    <elp-filter-bar-item
+    <elp-query-item
       label="任务名称"
       min-width="280"
       aria-label="按任务名称筛选"
       grow
     >
       <elp-input v-model="form.name" placeholder="输入任务名称" clearable />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="渠道" width="320">
+    <elp-query-item label="渠道" width="320">
       <elp-select
         v-model="form.channels"
         placeholder="选择渠道"
@@ -29,9 +29,9 @@
         <elp-option label="公众号" value="official" />
         <elp-option label="小程序" value="mini" />
       </elp-select>
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="创建时间" width="390">
+    <elp-query-item label="创建时间" width="390">
       <elp-date-picker
         v-model="form.range"
         type="daterange"
@@ -39,16 +39,16 @@
         start-placeholder="开始日期"
         end-placeholder="结束日期"
       />
-    </elp-filter-bar-item>
+    </elp-query-item>
 
-    <elp-filter-bar-item label="最低数量" width="230">
+    <elp-query-item label="最低数量" width="230">
       <elp-input-number
         v-model="form.minimum"
         :min="0"
         controls-position="right"
       />
-    </elp-filter-bar-item>
-  </elp-filter-bar>
+    </elp-query-item>
+  </elp-query>
 
   <p class="filter-result">{{ message }}</p>
 </template>
