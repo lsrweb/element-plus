@@ -1,6 +1,7 @@
 import consola from 'consola'
 import { REPO_BRANCH, REPO_PATH } from '@element-plus/build-constants'
 import { docsDirName } from '@element-plus/build-utils'
+import { defaultNamespace } from '@element-plus/hooks/use-namespace'
 import { languages } from '../utils/lang'
 import { features } from './features'
 import { head } from './head'
@@ -40,6 +41,7 @@ const buildTransformers = () => {
 consola.debug(`DOC_ENV: ${process.env.DOC_ENV}`)
 
 const locales = {}
+const popperContainerPrefix = `#${defaultNamespace}-popper-container-`
 languages.forEach((lang) => {
   locales[`/${lang}`] = {
     label: lang,
@@ -95,7 +97,7 @@ const setupConfig = (configEnv) => {
       if (context.teleports) {
         const body = Object.entries(context.teleports).reduce(
           (all, [key, value]) => {
-            if (key.startsWith('#el-popper-container-')) {
+            if (key.startsWith(popperContainerPrefix)) {
               return `${all}<div id="${key.slice(1)}">${value}</div>`
             }
             return all

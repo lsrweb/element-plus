@@ -105,7 +105,7 @@ onMounted(() => {
 
 :::tip
 
-如果您修改了 [Namespace](./namespace.md) 或 `append-to` 属性，您需要调整 `#el-popper-container-` 值。
+如果您修改了 [Namespace](./namespace.md) 或 `append-to` 属性，您需要调整 `#elp-popper-container-` 值。
 
 :::
 
@@ -127,7 +127,7 @@ export async function render(url, manifest) {
 function renderTeleports(teleports) {
   if (!teleports) return ''
   return Object.entries(teleports).reduce((all, [key, value]) => {
-    if (key.startsWith('#el-popper-container-')) {
+    if (key.startsWith('#elp-popper-container-')) {
       return `${all}<div id="${key.slice(1)}">${value}</div>`
     }
     return all
