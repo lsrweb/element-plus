@@ -16,22 +16,25 @@
 
   @include m(compact) {
     --#{$namespace}-query-height: 28px;
+
+    .#{$namespace}-query-item {
+      .#{$namespace}-input__wrapper,
+      .#{$namespace}-select__wrapper,
+      .#{$namespace}-input-number,
+      .#{$namespace}-date-editor.#{$namespace}-input__wrapper,
+      .#{$namespace}-button,
+      .#{$namespace}-segmented {
+        min-height: var(--#{$namespace}-query-height);
+      }
+    }
+
+    .#{$namespace}-query__actions .#{$namespace}-button {
+      min-height: var(--#{$namespace}-query-height);
+    }
   }
 
   @include m(small) {
     --#{$namespace}-query-height: 24px;
-  }
-
-  @include e(surface) {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--#{$namespace}-query-gap);
-    min-width: 0;
-    padding: 10px;
-    border: 1px solid getCssVar('border-color', 'lighter');
-    border-radius: getCssVar('border-radius', 'base');
-    background: getCssVar('bg-color');
-    box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
   }
 
   @include e(fields) {
@@ -89,11 +92,6 @@
     flex-wrap: wrap;
     align-items: center;
     gap: var(--#{$namespace}-query-gap);
-    margin-top: 8px;
-    padding: 12px;
-    border: 1px solid getCssVar('border-color', 'lighter');
-    border-radius: getCssVar('border-radius', 'base');
-    background-color: getCssVar('fill-color', 'extra-light');
   }
 }
 
@@ -345,16 +343,8 @@
 
 @media (max-width: 768px) {
   @include b(query) {
-    @include e(surface) {
-      flex-direction: column;
-    }
-
     @include e(fields) {
       width: 100%;
-    }
-
-    @include e(actions) {
-      margin-left: 0;
     }
   }
 

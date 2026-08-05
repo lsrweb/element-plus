@@ -137,7 +137,10 @@ export const imageProps = buildProps({
   /**
    * @description whether to append image-viewer to body. A nested parent element attribute transform should have this attribute set to `true`.
    */
-  previewTeleported: Boolean,
+  previewTeleported: {
+    type: Boolean,
+    default: true,
+  },
   /**
    * @description set image preview z-index.
    */

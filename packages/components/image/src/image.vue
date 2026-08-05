@@ -93,6 +93,7 @@ const props = withDefaults(defineProps<ImageProps>(), {
   src: '',
   fit: '',
   previewSrcList: () => [],
+  previewTeleported: true,
   initialIndex: 0,
   infinite: true,
   closeOnPressEscape: true,

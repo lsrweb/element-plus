@@ -14,6 +14,16 @@ async function doubleWait() {
 }
 
 describe('<image-viewer />', () => {
+  test('teleports preview to body by default', async () => {
+    const wrapper = mount(<ImageViewer urlList={[IMAGE_SUCCESS]} />)
+
+    await doubleWait()
+    expect(wrapper.get('.el-image-viewer__wrapper').element.parentElement).toBe(
+      document.body
+    )
+    wrapper.unmount()
+  })
+
   test('big image preview', async () => {
     const wrapper = mount(<ImageViewer urlList={[IMAGE_SUCCESS]} />)
 

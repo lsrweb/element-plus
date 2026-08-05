@@ -170,6 +170,7 @@ defineOptions({
 
 const props = withDefaults(defineProps<ImageViewerProps>(), {
   urlList: () => [],
+  teleported: true,
   initialIndex: 0,
   infinite: true,
   closeOnPressEscape: true,

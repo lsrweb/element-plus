@@ -106,7 +106,10 @@ export const imageViewerProps = buildProps({
   /**
    * @description whether to append image itself to body. A nested parent element attribute transform should have this attribute set to `true`.
    */
-  teleported: Boolean,
+  teleported: {
+    type: Boolean,
+    default: true,
+  },
   /**
    * @description whether the image-viewer can be closed by pressing ESC.
    */

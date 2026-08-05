@@ -98,7 +98,7 @@ image/custom-progress
 | z-index                | 设置图片预览的 z-index                                                                                                    | ^[number]                                                               | —      |
 | initial-index          | 初始预览图像索引，小于 `url-list` 的长度                                                                                  | ^[number]                                                               | 0      |
 | close-on-press-escape  | 是否可以通过按下 ESC 关闭 Image Viewer                                                                                    | ^[boolean]                                                              | true   |
-| preview-teleported     | image-viewer 是否插入至 body 元素上。 嵌套的父元素属性会发生修改时应该将此属性设置为 `true`                               | ^[boolean]                                                              | false  |
+| preview-teleported     | image-viewer 是否插入至 body 元素上，可避免嵌套容器的层级与 transform 影响预览                                            | ^[boolean]                                                              | true   |
 | infinite               | 是否可以无限循环预览                                                                                                      | ^[boolean]                                                              | true   |
 | zoom-rate              | 图像查看器缩放事件的缩放速率。                                                                                            | ^[number]                                                               | 1.2    |
 | scale ^(2.11.3)        | 预览图像缩放。                                                                                                            | ^[number]                                                               | 1      |
@@ -134,20 +134,20 @@ image/custom-progress
 
 ### Image Viewer Attributes
 
-| 事件名                 | 说明                                                                                     | Type                  | 默认值 |
-| ---------------------- | ---------------------------------------------------------------------------------------- | --------------------- | ------ |
-| url-list               | 用于预览的图片链接列表                                                                   | ^[array]`string[]`    | []     |
-| z-index                | 预览时遮罩层的 z-index                                                                   | ^[number] / ^[string] | —      |
-| initial-index          | 初始预览图像索引，小于 `url-list` 的长度                                                 | ^[number]             | 0      |
-| infinite               | 是否可以无限循环预览                                                                     | ^[boolean]            | true   |
-| hide-on-click-modal    | 是否可以通过点击遮罩层关闭预览                                                           | ^[boolean]            | false  |
-| teleported             | image 自身是否插入至 body 元素上。 嵌套的父元素属性会发生修改时应该将此属性设置为 `true` | ^[boolean]            | false  |
-| zoom-rate ^(2.2.27)    | 图像查看器缩放事件的缩放速率。                                                           | ^[number]             | 1.2    |
-| scale ^(2.11.3)        | 预览图像缩放。                                                                           | ^[number]             | 1      |
-| min-scale ^(2.4.0)     | 图像查看器缩放事件的最小缩放比例                                                         | ^[number]             | 0.2    |
-| max-scale ^(2.4.0)     | 图像查看器缩放事件的最大缩放比例                                                         | ^[number]             | 7      |
-| close-on-press-escape  | 是否可以通过按下 ESC 关闭 Image Viewer                                                   | ^[boolean]            | true   |
-| show-progress ^(2.9.4) | 是否显示预览图片的进度条内容                                                             | ^[boolean]            | false  |
+| 事件名                 | 说明                                                                           | Type                  | 默认值 |
+| ---------------------- | ------------------------------------------------------------------------------ | --------------------- | ------ |
+| url-list               | 用于预览的图片链接列表                                                         | ^[array]`string[]`    | []     |
+| z-index                | 预览时遮罩层的 z-index                                                         | ^[number] / ^[string] | —      |
+| initial-index          | 初始预览图像索引，小于 `url-list` 的长度                                       | ^[number]             | 0      |
+| infinite               | 是否可以无限循环预览                                                           | ^[boolean]            | true   |
+| hide-on-click-modal    | 是否可以通过点击遮罩层关闭预览                                                 | ^[boolean]            | false  |
+| teleported             | image-viewer 是否插入至 body 元素上，可避免嵌套容器的层级与 transform 影响预览 | ^[boolean]            | true   |
+| zoom-rate ^(2.2.27)    | 图像查看器缩放事件的缩放速率。                                                 | ^[number]             | 1.2    |
+| scale ^(2.11.3)        | 预览图像缩放。                                                                 | ^[number]             | 1      |
+| min-scale ^(2.4.0)     | 图像查看器缩放事件的最小缩放比例                                               | ^[number]             | 0.2    |
+| max-scale ^(2.4.0)     | 图像查看器缩放事件的最大缩放比例                                               | ^[number]             | 7      |
+| close-on-press-escape  | 是否可以通过按下 ESC 关闭 Image Viewer                                         | ^[boolean]            | true   |
+| show-progress ^(2.9.4) | 是否显示预览图片的进度条内容                                                   | ^[boolean]            | false  |
 
 ### Image Viewer Events
 
