@@ -31,6 +31,21 @@
     </div>
 
     <div>
+      <p>Compact</p>
+      <elp-query size="compact" :show-search="false" :show-reset="false">
+        <elp-query-item label="客户" width="100%" append-width="45%">
+          <elp-select v-model="compact.type" placeholder="客户类型">
+            <elp-option label="全部" value="all" />
+            <elp-option label="企业" value="company" />
+          </elp-select>
+          <template #append>
+            <elp-input v-model="compact.keyword" placeholder="输入关键词" />
+          </template>
+        </elp-query-item>
+      </elp-query>
+    </div>
+
+    <div>
       <p>Small</p>
       <elp-query size="small" :show-search="false" :show-reset="false">
         <elp-query-item label="客户" width="100%" append-width="45%">
@@ -52,6 +67,7 @@ import { reactive } from 'vue'
 
 const large = reactive({ type: 'all', keyword: '' })
 const normal = reactive({ type: 'all', keyword: '' })
+const compact = reactive({ type: 'all', keyword: '' })
 const small = reactive({ type: 'all', keyword: '' })
 </script>
 

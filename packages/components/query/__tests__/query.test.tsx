@@ -39,6 +39,15 @@ describe('Query', () => {
     expect(wrapper.find('.el-query-item').exists()).toBe(false)
   })
 
+  test('supports a compact size between default and small', () => {
+    const wrapper = mount(Query, {
+      props: { size: 'compact' },
+    })
+
+    expect(wrapper.classes()).toContain('elp-query--compact')
+    expect(wrapper.find('.elp-button').classes()).toContain('elp-button--small')
+  })
+
   test('emits search and reset events', async () => {
     const onSearch = vi.fn()
     const onReset = vi.fn()

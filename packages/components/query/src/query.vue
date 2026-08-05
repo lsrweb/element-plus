@@ -5,7 +5,7 @@
     role="search"
     :aria-label="ariaLabel"
   >
-    <el-config-provider :namespace="namespace" :size="size">
+    <el-config-provider :namespace="namespace" :size="innerSize">
       <div :class="ns.e('surface')">
         <div :class="ns.e('fields')">
           <slot />
@@ -75,6 +75,8 @@ import { addUnit } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { queryEmits, queryProps } from './query'
 
+import type { ComponentSize } from '@element-plus/constants'
+
 defineOptions({
   name: 'ElQuery',
 })
@@ -84,6 +86,9 @@ const emit = defineEmits(queryEmits)
 const slots = useSlots()
 const ns = useNamespace('query')
 const namespace = ns.namespace
+const innerSize = computed<ComponentSize>(() =>
+  props.size === 'compact' ? 'small' : props.size
+)
 
 const hasAdvanced = computed(() => Boolean(slots.advanced))
 const hasActions = computed(

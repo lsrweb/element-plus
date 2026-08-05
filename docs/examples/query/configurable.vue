@@ -5,6 +5,7 @@
       <elp-select v-model="config.size" style="width: 110px">
         <elp-option label="Large" value="large" />
         <elp-option label="Default" value="default" />
+        <elp-option label="Compact" value="compact" />
         <elp-option label="Small" value="small" />
       </elp-select>
     </label>
@@ -73,7 +74,7 @@ import { reactive, ref } from 'vue'
 
 const expanded = ref(false)
 const config = reactive({
-  size: 'default' as 'large' | 'default' | 'small',
+  size: 'default' as 'large' | 'default' | 'compact' | 'small',
   labelAlign: 'left' as 'left' | 'center' | 'right',
   showSearch: true,
   showReset: false,

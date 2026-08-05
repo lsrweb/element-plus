@@ -5,9 +5,12 @@ import type { ExtractPublicPropTypes } from 'vue'
 import type { ComponentSize } from '@element-plus/constants'
 import type Query from './query.vue'
 
+export const querySizes = [...componentSizes, 'compact'] as const
+export type QuerySize = ComponentSize | 'compact'
+
 export interface QueryProps {
   expanded?: boolean
-  size?: ComponentSize
+  size?: QuerySize
   labelWidth?: string | number
   itemWidth?: string | number
   gap?: string | number
@@ -26,7 +29,7 @@ export const queryProps = buildProps({
   expanded: Boolean,
   size: {
     type: String,
-    values: componentSizes,
+    values: querySizes,
     default: 'default',
   },
   labelWidth: {

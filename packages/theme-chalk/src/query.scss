@@ -14,6 +14,10 @@
     --#{$namespace}-query-height: 40px;
   }
 
+  @include m(compact) {
+    --#{$namespace}-query-height: 28px;
+  }
+
   @include m(small) {
     --#{$namespace}-query-height: 24px;
   }
