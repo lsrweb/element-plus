@@ -5,6 +5,7 @@ import { IMAGE_FAIL, IMAGE_SUCCESS } from '@element-plus/test-utils/mock'
 import ImageViewer from '../src/image-viewer.vue'
 import triggerEvent from '@element-plus/test-utils/trigger-event'
 import { EVENT_CODE } from '@element-plus/constants'
+import { defaultNamespace } from '@element-plus/hooks/use-namespace'
 
 import type { ImageViewerInstance } from '../src/image-viewer'
 
@@ -14,41 +15,52 @@ async function doubleWait() {
 }
 
 describe('<image-viewer />', () => {
+  const viewerWrapper = `.${defaultNamespace}-image-viewer__wrapper`
+
   test('teleports preview to body by default', async () => {
     const wrapper = mount(<ImageViewer urlList={[IMAGE_SUCCESS]} />)
 
     await doubleWait()
-    expect(wrapper.get('.el-image-viewer__wrapper').element.parentElement).toBe(
-      document.body
-    )
+    const viewer = document.body.querySelector(viewerWrapper)
+    expect(viewer?.parentElement).toBe(document.body)
     wrapper.unmount()
   })
 
   test('big image preview', async () => {
-    const wrapper = mount(<ImageViewer urlList={[IMAGE_SUCCESS]} />)
+    const wrapper = mount(
+      <ImageViewer urlList={[IMAGE_SUCCESS]} teleported={false} />
+    )
 
     await doubleWait()
-    const viewer = wrapper.find('.el-image-viewer__wrapper')
+    const viewer = wrapper.find(viewerWrapper)
     expect(viewer.exists()).toBe(true)
-    await wrapper.find('.el-image-viewer__close').trigger('click')
+    await wrapper
+      .find(`.${defaultNamespace}-image-viewer__close`)
+      .trigger('click')
     expect(wrapper.emitted('close')).toEqual([[]])
     wrapper.unmount()
   })
 
   test('image preview hide-click-on-modal', async () => {
-    const wrapper = mount(<ImageViewer urlList={[IMAGE_SUCCESS]} />)
+    const wrapper = mount(
+      <ImageViewer urlList={[IMAGE_SUCCESS]} teleported={false} />
+    )
 
     await doubleWait()
-    const viewer = wrapper.find('.el-image-viewer__wrapper')
+    const viewer = wrapper.find(viewerWrapper)
     expect(viewer.exists()).toBe(true)
-    await wrapper.find('.el-image-viewer__mask').trigger('click')
+    await wrapper
+      .find(`.${defaultNamespace}-image-viewer__mask`)
+      .trigger('click')
     expect(wrapper.emitted('close')).toBeUndefined()
 
     await wrapper.setProps({
       hideOnClickModal: true,
     })
 
-    await wrapper.find('.el-image-viewer__mask').trigger('click')
+    await wrapper
+      .find(`.${defaultNamespace}-image-viewer__mask`)
+      .trigger('click')
     expect(wrapper.emitted('close')).toBeDefined()
     wrapper.unmount()
   })
@@ -67,34 +79,40 @@ describe('<image-viewer />', () => {
 
     triggerEvent(document.body, 'keydown', EVENT_CODE.esc)
     await nextTick()
-    expect(document.querySelector('.el-image-viewer__wrapper')).toBeDefined()
+    expect(onClose).not.toHaveBeenCalled()
 
     await wrapper.setProps({ closeOnPressEscape: true })
     triggerEvent(document.body, 'keydown', EVENT_CODE.esc)
-    await nextTick()
+    await doubleWait()
 
-    expect(document.querySelector('.el-image-viewer__wrapper')).toBeNull()
     expect(onClose).toHaveBeenCalledTimes(1)
+    wrapper.unmount()
   })
 
   test('manually switch image', async () => {
     const wrapper = mount(
-      <ImageViewer urlList={[IMAGE_SUCCESS, IMAGE_FAIL]} initialIndex={0} />
+      <ImageViewer
+        urlList={[IMAGE_SUCCESS, IMAGE_FAIL]}
+        initialIndex={0}
+        teleported={false}
+      />
     ) as unknown as VueWrapper<ImageViewerInstance>
 
     await doubleWait()
-    const viewer = wrapper.find('.el-image-viewer__wrapper')
+    const viewer = wrapper.find(viewerWrapper)
     expect(viewer.exists()).toBe(true)
 
-    const img = wrapper.find('.el-image-viewer__img')
+    const img = wrapper.find(`.${defaultNamespace}-image-viewer__img`)
     expect(img.attributes('src')).toBe(IMAGE_SUCCESS)
 
     wrapper.vm.setActiveItem(1)
     await doubleWait()
-    expect(wrapper.find('.el-image-viewer__img').attributes('src')).toBe(
-      IMAGE_FAIL
-    )
-    expect(wrapper.findAll('.el-image-viewer__img').length).toBe(1)
+    expect(
+      wrapper.find(`.${defaultNamespace}-image-viewer__img`).attributes('src')
+    ).toBe(IMAGE_FAIL)
+    expect(
+      wrapper.findAll(`.${defaultNamespace}-image-viewer__img`).length
+    ).toBe(1)
     wrapper.unmount()
   })
 
@@ -104,15 +122,20 @@ describe('<image-viewer />', () => {
         showProgress
         urlList={[IMAGE_SUCCESS, IMAGE_SUCCESS]}
         initial-index={1}
+        teleported={false}
       />
     )
 
     await doubleWait()
-    const viewer = wrapper.find('.el-image-viewer__wrapper')
+    const viewer = wrapper.find(viewerWrapper)
     expect(viewer.exists()).toBe(true)
-    await wrapper.find('.el-image-viewer__next').trigger('click')
+    await wrapper
+      .find(`.${defaultNamespace}-image-viewer__next`)
+      .trigger('click')
     await doubleWait()
-    const innerText = wrapper.find('.el-image-viewer__progress').text()
+    const innerText = wrapper
+      .find(`.${defaultNamespace}-image-viewer__progress`)
+      .text()
     expect(innerText).toBe('1 / 2')
     wrapper.unmount()
   })
@@ -122,6 +145,7 @@ describe('<image-viewer />', () => {
       props: {
         urlList: [IMAGE_SUCCESS],
         initialIndex: 1,
+        teleported: false,
       },
       slots: {
         'viewer-error': () => (
@@ -131,9 +155,10 @@ describe('<image-viewer />', () => {
     })
 
     await doubleWait()
-    const img = wrapper.find('.el-image-viewer__wrapper img')
+    const img = wrapper.find(`${viewerWrapper} img`)
     await img.trigger('error')
     await doubleWait()
     expect(wrapper.find('.load-failed-slot').exists()).toBe(true)
+    wrapper.unmount()
   })
 })
