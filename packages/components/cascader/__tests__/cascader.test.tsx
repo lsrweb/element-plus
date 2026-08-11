@@ -1,11 +1,11 @@
 import { Comment, h, nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
-import { afterEach, describe, expect, it, test, vi } from 'vitest'
+import { afterEach, beforeAll, describe, expect, it, test, vi } from 'vitest'
 import { EVENT_CODE } from '@element-plus/constants'
 import triggerEvent from '@element-plus/test-utils/trigger-event'
 import { rAF } from '@element-plus/test-utils/tick'
 import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
-import { usePopperContainerId } from '@element-plus/hooks'
+import { defaultNamespace, usePopperContainerId } from '@element-plus/hooks'
 import { hasClass } from '@element-plus/utils'
 import ElForm, { ElFormItem } from '@element-plus/components/form'
 import ElScrollbar from '@element-plus/components/scrollbar'
@@ -59,14 +59,18 @@ const OPTIONS = [
 
 const AXIOM = 'Rem is the best girl'
 
-const TRIGGER = '.el-cascader'
-const MENU = '.el-cascader-menu'
-const NODE = '.el-cascader-node'
-const NODE_LABEL = '.el-cascader-node__label'
-const TAG = '.el-tag'
-const SUGGESTION_ITEM = '.el-cascader__suggestion-item'
-const SUGGESTION_PANEL = '.el-cascader__suggestion-panel'
-const DROPDOWN = '.el-cascader__dropdown'
+const TRIGGER = `.${defaultNamespace}-cascader`
+const MENU = `.${defaultNamespace}-cascader-menu`
+const NODE = `.${defaultNamespace}-cascader-node`
+const NODE_LABEL = `.${defaultNamespace}-cascader-node__label`
+const TAG = `.${defaultNamespace}-tag`
+const SUGGESTION_ITEM = `.${defaultNamespace}-cascader__suggestion-item`
+const SUGGESTION_PANEL = `.${defaultNamespace}-cascader__suggestion-panel`
+const DROPDOWN = `.${defaultNamespace}-cascader__dropdown`
+
+beforeAll(() => {
+  HTMLCanvasElement.prototype.getContext = vi.fn(() => null)
+})
 
 const _mount = (render: () => VNode) =>
   mount(render, {
@@ -270,7 +274,7 @@ describe('Cascader.vue', () => {
     expect(tags.length).toBe(2)
     expect(firstTag.text()).toBe('Zhejiang / Hangzhou')
     expect(secondTag.text()).toBe('Zhejiang / Ningbo')
-    await firstTag.find('.el-tag__close').trigger('click')
+    await firstTag.find(`.${defaultNamespace}-tag__close`).trigger('click')
     expect(wrapper.findAll(TAG).length).toBe(1)
     expect(value.value).toEqual([['zhejiang', 'ningbo']])
   })
@@ -316,7 +320,7 @@ describe('Cascader.vue', () => {
 
     await nextTick()
     const tooltipTags = document.querySelectorAll(
-      `.el-cascader__collapse-tags ${TAG}`
+      `.${defaultNamespace}-cascader__collapse-tags ${TAG}`
     )
     expect(tooltipTags.length).toBe(2)
     expect(tooltipTags[0].textContent).toBe('Zhejiang / Ningbo')
@@ -349,7 +353,7 @@ describe('Cascader.vue', () => {
     expect(secondTag.text()).toBe('Zhejiang / Ningbo')
     expect(thirdTag.text()).toBe('+ 1')
     const tooltipTags = document.querySelectorAll(
-      `.el-cascader__collapse-tags ${TAG}`
+      `.${defaultNamespace}-cascader__collapse-tags ${TAG}`
     )
     expect(tooltipTags.length).toBe(1)
     max.value = 1
@@ -360,7 +364,7 @@ describe('Cascader.vue', () => {
     expect(_firstTag.text()).toBe('Zhejiang / Hangzhou')
     expect(_secondTag.text()).toBe('+ 2')
     const _tooltipTags = document.querySelectorAll(
-      `.el-cascader__collapse-tags ${TAG}`
+      `.${defaultNamespace}-cascader__collapse-tags ${TAG}`
     )
     expect(_tooltipTags.length).toBe(2)
   })
@@ -390,7 +394,7 @@ describe('Cascader.vue', () => {
     expect(secondTag.text()).toBe('Zhejiang / Ningbo')
     expect(thirdTag.text()).toBe('+ 1')
     const tooltipTags = document.querySelectorAll(
-      `.el-cascader__collapse-tags ${TAG}`
+      `.${defaultNamespace}-cascader__collapse-tags ${TAG}`
     )
     expect(tooltipTags.length).toBe(1)
   })
@@ -470,7 +474,7 @@ describe('Cascader.vue', () => {
     const collapseTag = collapseTags[0]
     await collapseTag.trigger('hover')
     const scrollbars = wrapper.findAllComponents(ElScrollbar).filter((item) => {
-      return !hasClass(item.element, 'el-cascader-menu')
+      return !hasClass(item.element, `${defaultNamespace}-cascader-menu`)
     })
     expect(scrollbars.length).toBe(1)
     const scrollbar = scrollbars[0]
@@ -480,7 +484,9 @@ describe('Cascader.vue', () => {
     expect(tooltip).toBeDefined()
     await tooltip.trigger('hover')
     expect(
-      scrollbar?.find('.el-scrollbar__wrap').attributes('style')
+      scrollbar
+        ?.find(`.${defaultNamespace}-scrollbar__wrap`)
+        .attributes('style')
     ).toContain('max-height: 200px;')
   })
 
@@ -496,7 +502,9 @@ describe('Cascader.vue', () => {
     ))
 
     await nextTick()
-    expect(wrapper.find('.el-tag').classes()).toContain('el-tag--success')
+    expect(wrapper.find(TAG).classes()).toContain(
+      `${defaultNamespace}-tag--success`
+    )
   })
 
   test('tag effect', async () => {
@@ -511,7 +519,9 @@ describe('Cascader.vue', () => {
     ))
 
     await nextTick()
-    expect(wrapper.find('.el-tag').classes()).toContain('el-tag--dark')
+    expect(wrapper.find(TAG).classes()).toContain(
+      `${defaultNamespace}-tag--dark`
+    )
   })
 
   test('should expose delete-tag through slot & be able to delete a value', async () => {
@@ -593,7 +603,8 @@ describe('Cascader.vue', () => {
     const wrapper = _mount(() => (
       <Cascader filterable fitInputWidth options={OPTIONS} />
     ))
-    const inputWrapperEl = wrapper.find('.el-input').element as HTMLElement
+    const inputWrapperEl = wrapper.find(`.${defaultNamespace}-input`)
+      .element as HTMLElement
     const mockGetBoundingClientRect = vi
       .spyOn(inputWrapperEl, 'getBoundingClientRect')
       .mockReturnValue({ width: 221 } as DOMRect)
@@ -624,7 +635,7 @@ describe('Cascader.vue', () => {
       />
     ))
 
-    const input = wrapper.find('.el-cascader__search-input')
+    const input = wrapper.find(`.${defaultNamespace}-cascader__search-input`)
     ;(input.element as HTMLInputElement).value = 'Ha'
     await input.trigger('input')
     await nextTick()
@@ -883,7 +894,9 @@ describe('Cascader.vue', () => {
     expect(dropdown?.style.display).not.toBe('none')
   })
   test('height should be changed by size when multiple', async () => {
-    const cascaderSize = ref<'small' | 'default' | 'large'>('default')
+    const cascaderSize = ref<'small' | 'medium' | 'default' | 'large'>(
+      'default'
+    )
     const props = { multiple: true }
     const wrapper = _mount(() => (
       <Cascader props={props} size={cascaderSize.value} />
@@ -891,14 +904,18 @@ describe('Cascader.vue', () => {
     await nextTick()
     const inputEl = wrapper.find('input').element as HTMLElement
     const sizeMap: Record<string, number> = {
-      small: 24,
+      small: 28,
+      medium: 36,
       default: 32,
       large: 40,
     }
 
     for (const size in sizeMap) {
-      cascaderSize.value = size as 'small' | 'default' | 'large'
-      inputEl.style.setProperty('--el-input-height', `${sizeMap[size]}px`)
+      cascaderSize.value = size as 'small' | 'medium' | 'default' | 'large'
+      inputEl.style.setProperty(
+        `--${defaultNamespace}-input-height`,
+        `${sizeMap[size]}px`
+      )
       // first is wait for the watch callback function of realSize which is to be called after nextTick
       await nextTick()
       // second is wait for input to set the height attribute
@@ -955,7 +972,9 @@ describe('Cascader.vue', () => {
     expect(handleFocus).toHaveBeenCalledTimes(1)
     expect(handleBlur).not.toHaveBeenCalled()
 
-    const firstNode = document.querySelector(`.el-checkbox`) as HTMLElement
+    const firstNode = document.querySelector(
+      `.${defaultNamespace}-checkbox`
+    ) as HTMLElement
     firstNode.click()
     await nextTick()
     await cascader.trigger('mouseenter')
@@ -1020,7 +1039,7 @@ describe('Cascader.vue', () => {
 
     await input.trigger('focus')
     expect(handleFocus).toHaveBeenCalledTimes(1)
-    const tagCloseIcons = wrapper.findAll('.el-tag__close')
+    const tagCloseIcons = wrapper.findAll(`.${defaultNamespace}-tag__close`)
     await tagCloseIcons[1].trigger('click')
     await tagCloseIcons[0].trigger('click')
     expect(handleFocus).toHaveBeenCalledTimes(1)
@@ -1041,7 +1060,7 @@ describe('Cascader.vue', () => {
     const input = cascader.find('input')
     await input.trigger('focus')
 
-    const inputWrapper = wrapper.find('.el-input')
+    const inputWrapper = wrapper.find(`.${defaultNamespace}-input`)
 
     expect(inputWrapper.classes()).toContain('is-focus')
 
@@ -1064,7 +1083,7 @@ describe('Cascader.vue', () => {
 
       await wrapper.find(TRIGGER).trigger('click')
       const emptySlotEl = document.querySelector(
-        '.el-cascader-menu__empty-text'
+        `.${defaultNamespace}-cascader-menu__empty-text`
       )
       expect(emptySlotEl?.textContent).toBe('-=-empty-=-')
     })
@@ -1081,7 +1100,7 @@ describe('Cascader.vue', () => {
       const input = wrapper.find('input')
       await input.trigger('focus')
       const emptySlotEl = document.querySelector(
-        '.el-cascader-menu__empty-text'
+        `.${defaultNamespace}-cascader-menu__empty-text`
       )
       expect(emptySlotEl?.textContent).toBe('-=-empty-=-no-data')
     })
@@ -1098,7 +1117,7 @@ describe('Cascader.vue', () => {
       ))
 
       await wrapper.find(TRIGGER).trigger('click')
-      const defaultSlotEl = document.querySelector('.el-cascader-node__label')
+      const defaultSlotEl = document.querySelector(NODE_LABEL)
       expect(defaultSlotEl?.textContent).toBe('default slot!')
     })
 
@@ -1112,7 +1131,7 @@ describe('Cascader.vue', () => {
       ))
 
       await wrapper.find(TRIGGER).trigger('click')
-      const defaultSlotEl = document.querySelector('.el-cascader-node__label')
+      const defaultSlotEl = document.querySelector(NODE_LABEL)
       expect(defaultSlotEl?.textContent).toBe(OPTIONS[0].label)
     })
 
@@ -1126,7 +1145,7 @@ describe('Cascader.vue', () => {
       ))
 
       await wrapper.find(TRIGGER).trigger('click')
-      const defaultSlotEl = document.querySelector('.el-cascader-node__label')
+      const defaultSlotEl = document.querySelector(NODE_LABEL)
       expect(defaultSlotEl?.textContent).toBe(OPTIONS[0].label)
     })
   })
@@ -1141,7 +1160,9 @@ describe('Cascader.vue', () => {
         </Cascader>
       ))
 
-      const prefixSlotEl = document.querySelector('.el-input__prefix-inner')
+      const prefixSlotEl = document.querySelector(
+        `.${defaultNamespace}-input__prefix-inner`
+      )
       expect(prefixSlotEl?.textContent).toBe('-=-prefix-=-')
     })
   })
@@ -1191,7 +1212,7 @@ describe('Cascader.vue', () => {
       ]
       await nextTick()
       await nextTick()
-      const tags = wrapper.findAll('span.el-tag')
+      const tags = wrapper.findAll(`span${TAG}`)
       expect(tags.length).toBe(1)
       expect(tags[0].text()).toContain('Zhejiang')
     })
@@ -1222,7 +1243,7 @@ describe('Cascader.vue', () => {
           teleported={false}
         />
       ))
-      const cascaderNodes = wrapper.findAll('.el-cascader-node')
+      const cascaderNodes = wrapper.findAll(NODE)
 
       expect(cascaderNodes.length).toBe(3)
       expect(cascaderNodes[0].text()).toBe('Guide')
@@ -1234,7 +1255,7 @@ describe('Cascader.vue', () => {
         label: 'Testing',
       })
       await nextTick()
-      const newCascaderNodes = wrapper.findAll('.el-cascader-node')
+      const newCascaderNodes = wrapper.findAll(NODE)
       expect(newCascaderNodes.length).toBe(4)
       expect(newCascaderNodes[3].text()).toBe('Testing')
     })
@@ -1397,7 +1418,7 @@ describe('Cascader.vue', () => {
     ))
     await nextTick()
 
-    const input = wrapper.find('.el-input__inner')
+    const input = wrapper.find(`.${defaultNamespace}-input__inner`)
     await input.trigger('click')
 
     const firstNode = document.querySelector(NODE)!

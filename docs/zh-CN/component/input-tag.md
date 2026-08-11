@@ -141,7 +141,7 @@ input-tag/prefix-suffix
 | trigger                         | 触发输入标签的按键                                                                                            | ^[enum]`'Enter' or 'Space'`                                 | Enter       |
 | draggable                       | 是否可以拖动标签                                                                                              | ^[boolean]                                                  | false       |
 | delimiter ^(2.9.9)              | 在匹配分隔符时添加标签                                                                                        | ^[string] / ^[regex]                                        | —           |
-| size                            | 输入框尺寸                                                                                                    | ^[enum]`'large' or 'default' or 'small'`                    | —           |
+| size                            | 输入框尺寸                                                                                                    | ^[enum]`'large' or 'medium' or 'default' or 'small'`        | —           |
 | collapse-tags ^(2.11.0)         | 多选时是否将选中值按文字的形式展示                                                                            | ^[boolean]                                                  | false       |
 | collapse-tags-tooltip ^(2.11.0) | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此功能，<code>collapse-tags</code>的值必须为true | ^[boolean]                                                  | false       |
 | save-on-blur ^(2.9.7)           | 当输入失去焦点时是否保存输入值                                                                                | ^[boolean]                                                  | true        |

@@ -7,6 +7,7 @@ $descriptions-item-label-margin-right: () !default;
 $descriptions-item-label-margin-right: map.merge(
   (
     'large': 16px,
+    'medium': 16px,
     'default': 16px,
     'small': 12px,
   ),
@@ -17,6 +18,7 @@ $descriptions-item-vertical-label-padding-bottom: () !default;
 $descriptions-item-vertical-label-padding-bottom: map.merge(
   (
     'large': 8px,
+    'medium': 7px,
     'default': 6px,
     'small': 4px,
   ),
@@ -56,7 +58,7 @@ $descriptions-item-vertical-label-padding-bottom: map.merge(
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       @include e(label) {
         &:not(.is-bordered-label) {

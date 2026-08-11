@@ -84,7 +84,7 @@ tag/checkable
 | disable-transitions | 是否禁用渐变动画 | ^[boolean]                                                         | false   |
 | hit                 | 是否有边框描边   | ^[boolean]                                                         | false   |
 | color               | 背景色           | ^[string]                                                          | —       |
-| size                | Tag 的尺寸       | ^[enum]`'large' \| 'default' \| 'small'`                           | —       |
+| size                | Tag 的尺寸       | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`               | —       |
 | effect              | Tag 的主题       | ^[enum]`'dark' \| 'light' \| 'plain'`                              | light   |
 | round               | Tag 是否为圆形   | ^[boolean]                                                         | false   |
 

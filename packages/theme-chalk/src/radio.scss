@@ -9,6 +9,7 @@ $radio-font-size: () !default;
 $radio-font-size: map.merge(
   (
     'large': 14px,
+    'medium': 14px,
     'small': 12px,
   ),
   $radio-font-size
@@ -32,7 +33,7 @@ $radio-font-size: map.merge(
   margin-right: 30px;
   height: map.get($radio-height, 'default');
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     &.#{$namespace}-radio--#{$size} {
       height: map.get($radio-height, $size);
     }
@@ -56,7 +57,7 @@ $radio-font-size: map.merge(
       border-color: getCssVar('border-color-lighter');
     }
 
-    @each $size in (large, small) {
+    @each $size in (large, medium, small) {
       &.#{$namespace}-radio--#{$size} {
         padding: 0
           map.get($checkbox-bordered-padding-right, $size)-$border-width
@@ -205,7 +206,7 @@ $radio-font-size: map.merge(
     padding-left: 8px;
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     &.#{$namespace}-radio--#{$size} {
       @include e(label) {
         font-size: map.get($radio-font-size, $size);

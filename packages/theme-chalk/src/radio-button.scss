@@ -150,7 +150,7 @@
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       & .#{$namespace}-radio-button__inner {
         @include button-size(

@@ -218,6 +218,16 @@
       width: 160px;
     }
   }
+
+  @include m(medium) {
+    .btn-prev,
+    .btn-next,
+    .#{$namespace}-pager li {
+      height: getCssVar('pagination-button-height-medium');
+      line-height: getCssVar('pagination-button-height-medium');
+      min-width: getCssVar('pagination-button-width-medium');
+    }
+  }
 }
 
 @include b(pager) {

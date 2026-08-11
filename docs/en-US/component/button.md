@@ -143,7 +143,7 @@ button/custom
 
 | Name              | Description                                                                                                                                          | Type                                                                                                         | Default |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------- |
-| size              | button size                                                                                                                                          | ^[enum]`'large' \| 'default' \| 'small'`                                                                     | —       |
+| size              | button size                                                                                                                                          | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`                                                         | —       |
 | type              | button type, when setting `color`, the latter prevails                                                                                               | ^[enum]`'default' \| 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| '' \| 'text' (deprecated)` | —       |
 | plain             | determine whether it's a plain button                                                                                                                | ^[boolean]                                                                                                   | false   |
 | text ^(2.2.0)     | determine whether it's a text button                                                                                                                 | ^[boolean]                                                                                                   | false   |
@@ -187,7 +187,7 @@ button/custom
 
 | Name                | Description                                      | Type                                                               | Default    |
 | ------------------- | ------------------------------------------------ | ------------------------------------------------------------------ | ---------- |
-| size                | control the size of buttons in this button-group | ^[enum]`'large' \| 'default' \| 'small'`                           | —          |
+| size                | control the size of buttons in this button-group | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`               | —          |
 | type                | control the type of buttons in this button-group | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | —          |
 | direction ^(2.11.9) | display direction                                | ^[enum]`'horizontal' \| 'vertical'`                                | horizontal |
 

@@ -9,8 +9,9 @@ $switch-height: () !default;
 $switch-height: map.merge(
   (
     'large': 40px,
+    'medium': 36px,
     'default': 32px,
-    'small': 24px,
+    'small': 28px,
   ),
   $switch-height
 );
@@ -19,6 +20,7 @@ $switch-font-size: () !default;
 $switch-font-size: map.merge(
   (
     'large': 14px,
+    'medium': 14px,
     'default': 14px,
     'small': 12px,
   ),
@@ -29,6 +31,7 @@ $switch-core-border-radius: () !default;
 $switch-core-border-radius: map.merge(
   (
     'large': 12px,
+    'medium': 11px,
     'default': 10px,
     'small': 8px,
   ),
@@ -39,8 +42,9 @@ $switch-core-width: () !default;
 $switch-core-width: map.merge(
   (
     'large': 50px,
+    'medium': 45px,
     'default': 40px,
-    'small': 30px,
+    'small': 34px,
   ),
   $switch-core-width
 );
@@ -49,8 +53,9 @@ $switch-core-height: () !default;
 $switch-core-height: map.merge(
   (
     'large': 24px,
+    'medium': 22px,
     'default': 20px,
-    'small': 16px,
+    'small': 18px,
   ),
   $switch-core-height
 );
@@ -59,8 +64,9 @@ $switch-button-size: () !default;
 $switch-button-size: map.merge(
   (
     'large': 20px,
+    'medium': 18px,
     'default': 16px,
-    'small': 12px,
+    'small': 14px,
   ),
   $switch-button-size
 );
@@ -69,6 +75,7 @@ $switch-content-padding: () !default;
 $switch-content-padding: map.merge(
   (
     'large': 6px,
+    'medium': 5px,
     'default': 4px,
     'small': 2px,
   ),
@@ -245,7 +252,7 @@ $switch-content-padding: map.merge(
     opacity: 0;
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       font-size: map.get($switch-font-size, $size);
       line-height: map.get($switch-core-height, $size);

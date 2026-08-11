@@ -54,7 +54,7 @@ text/mixed
 | Name                | Description        | Type                                                               | Default |
 | ------------------- | ------------------ | ------------------------------------------------------------------ | ------- |
 | type                | text type          | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | —       |
-| size                | text size          | ^[enum]`'large' \| 'default' \| 'small'`                           | default |
+| size                | text size          | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`               | default |
 | truncated           | render ellipsis    | ^[boolean]                                                         | false   |
 | line-clamp ^(2.4.0) | maximum lines      | ^[string] / ^[number]                                              | —       |
 | tag                 | custom element tag | ^[string]                                                          | span    |

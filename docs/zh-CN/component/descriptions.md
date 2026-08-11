@@ -51,15 +51,15 @@ descriptions/customized-style
 
 ### Descriptions Attributes
 
-| 属性名               | 说明                            | 类型                                           | 默认       |
-| -------------------- | ------------------------------- | ---------------------------------------------- | ---------- |
-| border               | 是否带有边框                    | ^[boolean]                                     | false      |
-| column               | 一行 `Descriptions Item` 的数量 | ^[number]                                      | 3          |
-| direction            | 排列的方向                      | ^[enum]`'vertical' \| 'horizontal'`            | horizontal |
-| size                 | 列表的尺寸                      | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | —          |
-| title                | 标题文本，显示在左上方          | ^[string]                                      | ''         |
-| extra                | 操作区文本，显示在右上方        | ^[string]                                      | ''         |
-| label-width ^(2.8.8) | 每一列的标签宽度                | ^[string] / ^[number]                          | —          |
+| 属性名               | 说明                            | 类型                                                       | 默认       |
+| -------------------- | ------------------------------- | ---------------------------------------------------------- | ---------- |
+| border               | 是否带有边框                    | ^[boolean]                                                 | false      |
+| column               | 一行 `Descriptions Item` 的数量 | ^[number]                                                  | 3          |
+| direction            | 排列的方向                      | ^[enum]`'vertical' \| 'horizontal'`                        | horizontal |
+| size                 | 列表的尺寸                      | ^[enum]`'' \| 'large' \| 'medium' \| 'default' \| 'small'` | —          |
+| title                | 标题文本，显示在左上方          | ^[string]                                                  | ''         |
+| extra                | 操作区文本，显示在右上方        | ^[string]                                                  | ''         |
+| label-width ^(2.8.8) | 每一列的标签宽度                | ^[string] / ^[number]                                      | —          |
 
 ### Descriptions Slots
 

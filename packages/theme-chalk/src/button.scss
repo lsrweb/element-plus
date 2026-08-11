@@ -9,6 +9,7 @@ $button-icon-span-gap: () !default;
 $button-icon-span-gap: map.merge(
   (
     'large': 8px,
+    'medium': 7px,
     'default': 6px,
     'small': 4px,
   ),
@@ -291,7 +292,7 @@ $button-icon-span-gap: map.merge(
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       @include set-css-var-value(
         ('button', 'size'),

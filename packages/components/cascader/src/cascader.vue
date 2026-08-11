@@ -405,6 +405,7 @@ const nsCascader = useNamespace('cascader')
 const nsInput = useNamespace('input')
 const sizeMapPadding = {
   small: 7,
+  medium: 13,
   default: 11,
   large: 15,
 }

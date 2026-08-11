@@ -8,8 +8,9 @@ $rate-height: () !default;
 $rate-height: map.merge(
   (
     'large': 40px,
+    'medium': 36px,
     'default': 32px,
-    'small': 24px,
+    'small': 28px,
   ),
   $rate-height
 );
@@ -102,7 +103,7 @@ $rate-size: map.merge(
     color: getCssVar('rate', 'text-color');
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       height: map.get($rate-height, $size);
 

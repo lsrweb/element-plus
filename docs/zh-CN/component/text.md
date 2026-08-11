@@ -54,7 +54,7 @@ text/mixed
 | 属性名              | 描述           | 类型                                                               | 默认值  |
 | ------------------- | -------------- | ------------------------------------------------------------------ | ------- |
 | type                | 类型           | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | —       |
-| size                | 大小           | ^[enum]`'large' \| 'default' \| 'small'`                           | default |
+| size                | 大小           | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`               | default |
 | truncated           | 显示省略号     | ^[boolean]                                                         | false   |
 | line-clamp ^(2.4.0) | 最大行数       | ^[string] / ^[number]                                              | —       |
 | tag                 | 自定义元素标签 | ^[string]                                                          | span    |

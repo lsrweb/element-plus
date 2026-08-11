@@ -64,7 +64,7 @@ avatar/group
 | 名称    | 说明                                         | 类型                                                              | 默认值 |
 | ------- | -------------------------------------------- | ----------------------------------------------------------------- | ------ |
 | icon    | 设置 Avatar 的图标类型，具体参考 Icon 组件   | ^[string] / ^[Component]                                          | —      |
-| size    | Avatar 大小                                  | ^[number] / ^[enum]`'large' \| 'default' \| 'small'`              | —      |
+| size    | Avatar 大小                                  | ^[number] / ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`  | —      |
 | shape   | Avatar 形状                                  | ^[enum]`'circle' \| 'square'`                                     | —      |
 | src     | Avatar 图片的源地址                          | `string`                                                          | —      |
 | src-set | 图片 Avatar 的原生 `srcset` 属性             | `string`                                                          | string |
@@ -89,7 +89,7 @@ avatar/group
 
 | 方法名                   | 详情                                                                                             | Type                                                                                                                                                                        | 默认  |
 | ------------------------ | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| size                     | 控制头像组中的头像大小                                                                           | ^[number] / ^[enum]`'large' \| 'default' \| 'small'`                                                                                                                        | —     |
+| size                     | 控制头像组中的头像大小                                                                           | ^[number] / ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`                                                                                                            | —     |
 | shape                    | 控制头像组中的头像形状                                                                           | ^[enum]`'circle' \| 'square'`                                                                                                                                               | —     |
 | collapse-avatars         | 是否折叠头像                                                                                     | ^[boolean]                                                                                                                                                                  | false |
 | collapse-avatars-tooltip | 是否在鼠标悬停折叠头像的文字时显示所有折叠头像。 若要使用此功能， `collapse-avatars` 必须为 true | ^[boolean]                                                                                                                                                                  | false |

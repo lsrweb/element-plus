@@ -91,15 +91,15 @@ radio/radio-button
 
 ### Radio Attributes
 
-| Name                  | Description                                                            | Type                                     | Default |
-| --------------------- | ---------------------------------------------------------------------- | ---------------------------------------- | ------- |
-| model-value / v-model | binding value                                                          | ^[string] / ^[number] / ^[boolean]       | —       |
-| value ^(2.6.0)        | the value of Radio                                                     | ^[string] / ^[number] / ^[boolean]       | —       |
-| label                 | the label of Radio. If there's no `value`, `label` will act as `value` | ^[string] / ^[number] / ^[boolean]       | —       |
-| disabled              | whether Radio is disabled                                              | ^[boolean]                               | false   |
-| border                | whether to add a border around Radio                                   | ^[boolean]                               | false   |
-| size                  | size of the Radio                                                      | ^[enum]`'large' \| 'default' \| 'small'` | —       |
-| name                  | native `name` attribute                                                | ^[string]                                | —       |
+| Name                  | Description                                                            | Type                                                 | Default |
+| --------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- | ------- |
+| model-value / v-model | binding value                                                          | ^[string] / ^[number] / ^[boolean]                   | —       |
+| value ^(2.6.0)        | the value of Radio                                                     | ^[string] / ^[number] / ^[boolean]                   | —       |
+| label                 | the label of Radio. If there's no `value`, `label` will act as `value` | ^[string] / ^[number] / ^[boolean]                   | —       |
+| disabled              | whether Radio is disabled                                              | ^[boolean]                                           | false   |
+| border                | whether to add a border around Radio                                   | ^[boolean]                                           | false   |
+| size                  | size of the Radio                                                      | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'` | —       |
+| name                  | native `name` attribute                                                | ^[string]                                            | —       |
 
 ### Radio Events
 

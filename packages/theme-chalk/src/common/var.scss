@@ -234,8 +234,9 @@ $common-component-size: () !default;
 $common-component-size: map.merge(
   (
     'large': 40px,
+    'medium': 36px,
     'default': 32px,
-    'small': 24px,
+    'small': 28px,
   ),
   $common-component-size
 );
@@ -306,6 +307,7 @@ $checkbox-bordered-padding-left: () !default;
 $checkbox-bordered-padding-left: map.merge(
   (
     'large': 12px,
+    'medium': 11px,
     'default': 10px,
     'small': 8px,
   ),
@@ -316,6 +318,7 @@ $checkbox-bordered-padding-right: () !default;
 $checkbox-bordered-padding-right: map.merge(
   (
     'large': 20px,
+    'medium': 18px,
     'default': 16px,
     'small': 12px,
   ),
@@ -382,6 +385,7 @@ $radio-bordered-input-height: () !default;
 $radio-bordered-input-height: map.merge(
   (
     'large': 14px,
+    'medium': 13px,
     'default': 12px,
     'small': 12px,
   ),
@@ -392,6 +396,7 @@ $radio-bordered-input-width: () !default;
 $radio-bordered-input-width: map.merge(
   (
     'large': 14px,
+    'medium': 13px,
     'default': 12px,
     'small': 12px,
   ),
@@ -458,6 +463,7 @@ $select-wrapper-padding: () !default;
 $select-wrapper-padding: map.merge(
   (
     'large': 8px 16px,
+    'medium': 6px 14px,
     'default': 4px 12px,
     'small': 2px 8px,
   ),
@@ -468,6 +474,7 @@ $select-near-margin-left: () !default;
 $select-near-margin-left: map.merge(
   (
     'large': -8px,
+    'medium': -8px,
     'default': -8px,
     'small': -6px,
   ),
@@ -478,6 +485,7 @@ $select-item-gap: () !default;
 $select-item-gap: map.merge(
   (
     'large': 6px,
+    'medium': 6px,
     'default': 6px,
     'small': 4px,
   ),
@@ -489,6 +497,7 @@ $select-item-height: () !default;
 $select-item-height: map.merge(
   (
     'large': 24px,
+    'medium': 24px,
     'default': 24px,
     'small': 20px,
   ),
@@ -612,6 +621,7 @@ $input-font-size: () !default;
 $input-font-size: map.merge(
   (
     'large': 14px,
+    'medium': 14px,
     'default': 14px,
     'small': 12px,
   ),
@@ -628,6 +638,7 @@ $input-number-width: () !default;
 $input-number-width: map.merge(
   (
     'large': 180px,
+    'medium': 165px,
     'default': 150px,
     'small': 120px,
   ),
@@ -638,6 +649,7 @@ $input-otp-gap: () !default;
 $input-otp-gap: map.merge(
   (
     'large': 12px,
+    'medium': 10px,
     'default': 8px,
     'small': 6px,
   ),
@@ -656,6 +668,7 @@ $input-padding-horizontal: () !default;
 $input-padding-horizontal: map.merge(
   (
     'large': 16px,
+    'medium': 14px,
     'default': 12px,
     'small': 8px,
   ),
@@ -686,6 +699,7 @@ $cascader-item-gap: () !default;
 $cascader-item-gap: map.merge(
   (
     'large': 6px,
+    'medium': 6px,
     'default': 6px,
     'small': 4px,
   ),
@@ -696,6 +710,7 @@ $cascader-wrapper-padding: () !default;
 $cascader-wrapper-padding: map.merge(
   (
     'large': 8px,
+    'medium': 6px,
     'default': 4px,
     'small': 2px,
   ),
@@ -706,6 +721,7 @@ $cascader-item-height: () !default;
 $cascader-item-height: map.merge(
   (
     'large': 24px,
+    'medium': 24px,
     'default': 24px,
     'small': 20px,
   ),
@@ -716,6 +732,7 @@ $cascader-search-input-margin-left: () !default;
 $cascader-search-input-margin-left: map.merge(
   (
     'large': 7px,
+    'medium': 7px,
     'default': 7px,
     'small': 5px,
   ),
@@ -802,6 +819,7 @@ $button-font-size: () !default;
 $button-font-size: map.merge(
   (
     'large': getCssVar('font-size', 'base'),
+    'medium': getCssVar('font-size', 'base'),
     'default': getCssVar('font-size', 'base'),
     'small': 12px,
   ),
@@ -812,6 +830,7 @@ $button-border-radius: () !default;
 $button-border-radius: map.merge(
   (
     'large': getCssVar('border-radius', 'base'),
+    'medium': getCssVar('border-radius', 'base'),
     'default': getCssVar('border-radius', 'base'),
     'small': calc(#{getCssVar('border-radius', 'base')} - 1px),
   ),
@@ -822,6 +841,7 @@ $button-padding-vertical: () !default;
 $button-padding-vertical: map.merge(
   (
     'large': 13px,
+    'medium': 11px,
     'default': 9px,
     'small': 6px,
   ),
@@ -832,6 +852,7 @@ $button-padding-horizontal: () !default;
 $button-padding-horizontal: map.merge(
   (
     'large': 20px,
+    'medium': 18px,
     'default': 16px,
     'small': 12px,
   ),
@@ -970,6 +991,7 @@ $input-tag-padding: () !default;
 $input-tag-padding: map.merge(
   (
     'large': 8px,
+    'medium': 6px,
     'default': 4px,
     'small': 2px,
   ),
@@ -980,6 +1002,7 @@ $input-tag-inner-padding: () !default;
 $input-tag-inner-padding: map.merge(
   (
     'large': 8px,
+    'medium': 8px,
     'default': 8px,
     'small': 6px,
   ),
@@ -990,6 +1013,7 @@ $input-tag-gap: () !default;
 $input-tag-gap: map.merge(
   (
     'large': 6px,
+    'medium': 6px,
     'default': 6px,
     'small': 4px,
   ),
@@ -1023,6 +1047,7 @@ $table-font-size: () !default;
 $table-font-size: map.merge(
   (
     'large': getCssVar('font-size', 'base'),
+    'medium': getCssVar('font-size', 'base'),
     'default': getCssVar('font-size', 'base'),
     'small': getCssVar('font-size', 'extra-small'),
   ),
@@ -1033,6 +1058,7 @@ $table-padding: () !default;
 $table-padding: map.merge(
   (
     'large': 12px 0,
+    'medium': 10px 0,
     'default': 8px 0,
     'small': 4px 0,
   ),
@@ -1043,6 +1069,7 @@ $table-cell-padding: () !default;
 $table-cell-padding: map.merge(
   (
     'large': 0 16px,
+    'medium': 0 14px,
     'default': 0 12px,
     'small': 0 8px,
   ),
@@ -1066,8 +1093,10 @@ $pagination: map.merge(
     'button-bg-color': getCssVar('fill-color'),
     'hover-color': getCssVar('color-primary'),
     'font-size-small': 12px,
-    'button-width-small': 24px,
-    'button-height-small': 24px,
+    'button-width-small': 28px,
+    'button-height-small': 28px,
+    'button-width-medium': 36px,
+    'button-height-medium': 36px,
     'button-width-large': 40px,
     'button-height-large': 40px,
     'item-gap': 16px,
@@ -1141,6 +1170,7 @@ $tag-height: () !default;
 $tag-height: map.merge(
   (
     'large': 32px,
+    'medium': 28px,
     'default': 24px,
     'small': 20px,
   ),
@@ -1151,6 +1181,7 @@ $tag-padding: () !default;
 $tag-padding: map.merge(
   (
     'large': 12px,
+    'medium': 11px,
     'default': 10px,
     'small': 8px,
   ),
@@ -1161,6 +1192,7 @@ $tag-icon-size: () !default;
 $tag-icon-size: map.merge(
   (
     'large': 16px,
+    'medium': 15px,
     'default': 14px,
     'small': 12px,
   ),
@@ -1182,6 +1214,7 @@ $text-font-size: () !default;
 $text-font-size: map.merge(
   (
     'large': getCssVar('font-size', 'medium'),
+    'medium': getCssVar('font-size', 'base'),
     'default': getCssVar('font-size', 'base'),
     'small': getCssVar('font-size', 'extra-small'),
   ),
@@ -1536,6 +1569,7 @@ $avatar-size: () !default;
 $avatar-size: map.merge(
   (
     'large': 56px,
+    'medium': 48px,
     'default': 40px,
     'small': 24px,
   ),

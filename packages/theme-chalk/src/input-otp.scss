@@ -29,7 +29,7 @@
     map.get($input-height, default)
   );
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       @include set-css-var-value(
         ('input-otp', 'gap'),

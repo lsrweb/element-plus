@@ -8,6 +8,7 @@ $descriptions-header-margin-bottom: () !default;
 $descriptions-header-margin-bottom: map.merge(
   (
     'large': 20px,
+    'medium': 18px,
     'default': 16px,
     'small': 12px,
   ),
@@ -18,6 +19,7 @@ $descriptions-title-font-size: () !default;
 $descriptions-title-font-size: map.merge(
   (
     'large': 16px,
+    'medium': 16px,
     'default': 16px,
     'small': 14px,
   ),
@@ -28,6 +30,7 @@ $descriptions-cell-padding-bottom: () !default;
 $descriptions-cell-padding-bottom: map.merge(
   (
     'large': 16px,
+    'medium': 14px,
     'default': 12px,
     'small': 8px,
   ),
@@ -38,6 +41,7 @@ $descriptions-bordered-cell-padding: () !default;
 $descriptions-bordered-cell-padding: map.merge(
   (
     'large': 12px 15px,
+    'medium': 10px 13px,
     'default': 8px 11px,
     'small': 4px 7px,
   ),
@@ -48,6 +52,7 @@ $descriptions-cell-font-size: () !default;
 $descriptions-cell-font-size: map.merge(
   (
     'large': 14px,
+    'medium': 14px,
     'default': 14px,
     'small': 12px,
   ),
@@ -115,7 +120,7 @@ $descriptions-cell-font-size: map.merge(
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       font-size: map.get($input-font-size, $size);
 

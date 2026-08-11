@@ -101,22 +101,22 @@ query/item-properties
 
 ### 属性
 
-| 名称                        | 说明                     | 类型                                                        | 默认值           |
-| --------------------------- | ------------------------ | ----------------------------------------------------------- | ---------------- |
-| expanded / v-model:expanded | 高级筛选是否展开         | ^[boolean]                                                  | false            |
-| size                        | 内部控件与按钮尺寸       | ^[enum]`'' \| 'large' \| 'default' \| 'compact' \| 'small'` | default          |
-| label-width                 | 默认标签宽度             | ^[string] / ^[number]                                       | 88               |
-| item-width                  | 默认筛选项宽度           | ^[string] / ^[number]                                       | 260              |
-| gap                         | 筛选项之间的间距         | ^[string] / ^[number]                                       | 8                |
-| loading                     | 搜索按钮是否处于加载状态 | ^[boolean]                                                  | false            |
-| show-search                 | 是否显示默认搜索按钮     | ^[boolean]                                                  | true             |
-| show-reset                  | 是否显示默认重置按钮     | ^[boolean]                                                  | false            |
-| collapsible                 | 是否显示高级筛选展开按钮 | ^[boolean]                                                  | false            |
-| search-text                 | 搜索按钮文案             | ^[string]                                                   | Search           |
-| reset-text                  | 重置按钮文案             | ^[string]                                                   | Reset            |
-| expand-text                 | 展开按钮文案             | ^[string]                                                   | More             |
-| collapse-text               | 收起按钮文案             | ^[string]                                                   | Less             |
-| aria-label                  | 查询区域的无障碍标签     | ^[string]                                                   | Query conditions |
+| 名称                        | 说明                     | 类型                                                                    | 默认值           |
+| --------------------------- | ------------------------ | ----------------------------------------------------------------------- | ---------------- |
+| expanded / v-model:expanded | 高级筛选是否展开         | ^[boolean]                                                              | false            |
+| size                        | 内部控件与按钮尺寸       | ^[enum]`'' \| 'large' \| 'medium' \| 'default' \| 'compact' \| 'small'` | default          |
+| label-width                 | 默认标签宽度             | ^[string] / ^[number]                                                   | 88               |
+| item-width                  | 默认筛选项宽度           | ^[string] / ^[number]                                                   | 260              |
+| gap                         | 筛选项之间的间距         | ^[string] / ^[number]                                                   | 8                |
+| loading                     | 搜索按钮是否处于加载状态 | ^[boolean]                                                              | false            |
+| show-search                 | 是否显示默认搜索按钮     | ^[boolean]                                                              | true             |
+| show-reset                  | 是否显示默认重置按钮     | ^[boolean]                                                              | false            |
+| collapsible                 | 是否显示高级筛选展开按钮 | ^[boolean]                                                              | false            |
+| search-text                 | 搜索按钮文案             | ^[string]                                                               | Search           |
+| reset-text                  | 重置按钮文案             | ^[string]                                                               | Reset            |
+| expand-text                 | 展开按钮文案             | ^[string]                                                               | More             |
+| collapse-text               | 收起按钮文案             | ^[string]                                                               | Less             |
+| aria-label                  | 查询区域的无障碍标签     | ^[string]                                                               | Query conditions |
 
 ### 事件
 

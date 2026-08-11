@@ -74,7 +74,7 @@ import { reactive, ref } from 'vue'
 
 const expanded = ref(false)
 const config = reactive({
-  size: 'default' as 'large' | 'default' | 'compact' | 'small',
+  size: 'default' as 'large' | 'medium' | 'default' | 'compact' | 'small',
   labelAlign: 'left' as 'left' | 'center' | 'right',
   showSearch: true,
   showReset: false,

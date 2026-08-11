@@ -51,15 +51,15 @@ descriptions/customized-style
 
 ### Descriptions Attributes
 
-| Name                 | Description                                | Type                                           | Default    |
-| -------------------- | ------------------------------------------ | ---------------------------------------------- | ---------- |
-| border               | with or without border                     | ^[boolean]                                     | false      |
-| column               | numbers of `Descriptions Item` in one line | ^[number]                                      | 3          |
-| direction            | direction of list                          | ^[enum]`'vertical' \| 'horizontal'`            | horizontal |
-| size                 | size of list                               | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | —          |
-| title                | title text, display on the top left        | ^[string]                                      | ''         |
-| extra                | extra text, display on the top right       | ^[string]                                      | ''         |
-| label-width ^(2.8.8) | label width of every column                | ^[string] / ^[number]                          | —          |
+| Name                 | Description                                | Type                                                       | Default    |
+| -------------------- | ------------------------------------------ | ---------------------------------------------------------- | ---------- |
+| border               | with or without border                     | ^[boolean]                                                 | false      |
+| column               | numbers of `Descriptions Item` in one line | ^[number]                                                  | 3          |
+| direction            | direction of list                          | ^[enum]`'vertical' \| 'horizontal'`                        | horizontal |
+| size                 | size of list                               | ^[enum]`'' \| 'large' \| 'medium' \| 'default' \| 'small'` | —          |
+| title                | title text, display on the top left        | ^[string]                                                  | ''         |
+| extra                | extra text, display on the top right       | ^[string]                                                  | ''         |
+| label-width ^(2.8.8) | label width of every column                | ^[string] / ^[number]                                      | —          |
 
 ### Descriptions Slots
 

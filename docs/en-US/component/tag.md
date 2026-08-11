@@ -84,7 +84,7 @@ tag/checkable
 | disable-transitions | whether to disable animations        | ^[boolean]                                                         | false   |
 | hit                 | whether Tag has a highlighted border | ^[boolean]                                                         | false   |
 | color               | background color of the Tag          | ^[string]                                                          | —       |
-| size                | size of Tag                          | ^[enum]`'large' \| 'default' \| 'small'`                           | —       |
+| size                | size of Tag                          | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`               | —       |
 | effect              | theme of Tag                         | ^[enum]`'dark' \| 'light' \| 'plain'`                              | light   |
 | round               | whether Tag is rounded               | ^[boolean]                                                         | false   |
 

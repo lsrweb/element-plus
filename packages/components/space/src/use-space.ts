@@ -7,6 +7,7 @@ import type { CSSProperties, StyleValue } from 'vue'
 
 const SIZE_MAP = {
   small: 8,
+  medium: 14,
   default: 12,
   large: 16,
 } as const

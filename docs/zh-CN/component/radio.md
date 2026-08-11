@@ -90,15 +90,15 @@ radio/radio-button
 
 ### Radio Attributes
 
-| 属性名                | 说明                                                        | 类型                                     | 默认值 |
-| --------------------- | ----------------------------------------------------------- | ---------------------------------------- | ------ |
-| model-value / v-model | 选中项绑定值                                                | ^[string] / ^[number] / ^[boolean]       | —      |
-| value ^(2.6.0)        | 单选框的值                                                  | ^[string] / ^[number] / ^[boolean]       | :::    |
-| label                 | 单选框的 label 如果`value`没有值， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean]       | :::    |
-| disabled              | 是否禁用单选框                                              | ^[boolean]                               | false  |
-| border                | 是否显示边框                                                | ^[boolean]                               | false  |
-| size                  | 单选框的尺寸                                                | ^[enum]`'large' \| 'default' \| 'small'` | —      |
-| name                  | 原始 `name` 属性                                            | ^[string]                                | —      |
+| 属性名                | 说明                                                        | 类型                                                 | 默认值 |
+| --------------------- | ----------------------------------------------------------- | ---------------------------------------------------- | ------ |
+| model-value / v-model | 选中项绑定值                                                | ^[string] / ^[number] / ^[boolean]                   | —      |
+| value ^(2.6.0)        | 单选框的值                                                  | ^[string] / ^[number] / ^[boolean]                   | :::    |
+| label                 | 单选框的 label 如果`value`没有值， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean]                   | :::    |
+| disabled              | 是否禁用单选框                                              | ^[boolean]                                           | false  |
+| border                | 是否显示边框                                                | ^[boolean]                                           | false  |
+| size                  | 单选框的尺寸                                                | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'` | —      |
+| name                  | 原始 `name` 属性                                            | ^[string]                                            | —      |
 
 ### Radio Events
 

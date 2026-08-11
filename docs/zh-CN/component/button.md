@@ -139,7 +139,7 @@ button/custom
 
 | 属性名            | 说明                                                                      | 类型                                                                                                         | 默认值  |
 | ----------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------- |
-| size              | 尺寸                                                                      | ^[enum]`'large' \| 'default' \| 'small'`                                                                     | —       |
+| size              | 尺寸                                                                      | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`                                                         | —       |
 | type              | 按钮类型，在设置`color`时，后者优先。                                     | ^[enum]`'default' \| 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| '' \| 'text' (deprecated)` | —       |
 | plain             | 是否为朴素按钮                                                            | ^[boolean]                                                                                                   | false   |
 | text ^(2.2.0)     | 是否为文字按钮                                                            | ^[boolean]                                                                                                   | false   |
@@ -183,7 +183,7 @@ button/custom
 
 | 属性名              | 说明                         | 类型                                                               | 默认值     |
 | ------------------- | ---------------------------- | ------------------------------------------------------------------ | ---------- |
-| size                | 用于控制该按钮组内按钮的大小 | ^[enum]`'large' \| 'default' \| 'small'`                           | —          |
+| size                | 用于控制该按钮组内按钮的大小 | ^[enum]`'large' \| 'medium' \| 'default' \| 'small'`               | —          |
 | type                | 用于控制该按钮组内按钮的类型 | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | —          |
 | direction ^(2.11.9) | 展示的方向                   | ^[enum]`'horizontal' \| 'vertical'`                                | horizontal |
 

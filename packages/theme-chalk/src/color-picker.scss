@@ -74,7 +74,7 @@ $color-picker-size: map.merge($common-component-size, $color-picker-size);
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       height: map.get($color-picker-size, $size);
       width: map.get($color-picker-size, $size);

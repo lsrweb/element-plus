@@ -8,6 +8,7 @@ $dropdown-item-line-height: () !default;
 $dropdown-item-line-height: map.merge(
   (
     'large': 22px,
+    'medium': 22px,
     'default': 22px,
     'small': 20px,
   ),
@@ -18,6 +19,7 @@ $dropdown-item-padding: () !default;
 $dropdown-item-padding: map.merge(
   (
     'large': 7px 20px,
+    'medium': 6px 18px,
     'default': 5px 16px,
     'small': 2px 12px,
   ),
@@ -28,6 +30,7 @@ $dropdown-item-divided-margin: () !default;
 $dropdown-item-divided-margin: map.merge(
   (
     'large': 8px 0,
+    'medium': 7px 0,
     'default': 6px 0,
     'small': 4px 0,
   ),
@@ -125,7 +128,7 @@ $dropdown-divider-width: 1px !default;
     outline: none;
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       .#{$namespace}-dropdown__caret-button {
         width: map.get($dropdown-caret-width, $size);
@@ -138,6 +141,7 @@ $dropdown-menu-padding-vertical: () !default;
 $dropdown-menu-padding-vertical: map.merge(
   (
     'large': 8px,
+    'medium': 7px,
     'default': 6px,
     'small': 4px,
   ),
@@ -190,7 +194,7 @@ $dropdown-menu-padding-vertical: map.merge(
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       padding: map.get($dropdown-menu-padding-vertical, $size)-$border-width 0;
 

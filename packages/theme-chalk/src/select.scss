@@ -237,7 +237,7 @@
     overflow: hidden;
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       @include e(wrapper) {
         gap: map.get($select-item-gap, $size);

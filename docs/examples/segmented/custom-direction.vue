@@ -60,7 +60,7 @@ const directionOptions = [
   { label: 'Vertical', value: 'vertical' },
 ]
 
-const sizeOptions = ['large', 'default', 'small']
+const sizeOptions = ['large', 'medium', 'default', 'small']
 
 const options = [
   {

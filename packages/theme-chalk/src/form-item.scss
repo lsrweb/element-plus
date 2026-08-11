@@ -8,6 +8,7 @@ $form-item-margin-bottom: () !default;
 $form-item-margin-bottom: map.merge(
   (
     'large': 22px,
+    'medium': 20px,
     'default': 18px,
     'small': 18px,
   ),
@@ -18,8 +19,9 @@ $form-item-line-height: () !default;
 $form-item-line-height: map.merge(
   (
     'large': 40px,
+    'medium': 36px,
     'default': 32px,
-    'small': 24px,
+    'small': 28px,
   ),
   $form-item-line-height
 );
@@ -67,7 +69,7 @@ $form-item-label-top-margin-bottom: map.merge(
     display: none;
   }
 
-  @each $size in (large, default, small) {
+  @each $size in (large, medium, default, small) {
     @include m($size) {
       --font-size: #{map.get($input-font-size, $size)};
       @include set-css-var-value(('form', 'label-font-size'), var(--font-size));

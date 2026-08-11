@@ -169,7 +169,7 @@
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       line-height: getCssVar('component-size', $size);
 

@@ -99,7 +99,7 @@
     }
   }
 
-  @each $size in (large, small) {
+  @each $size in (large, medium, small) {
     @include m($size) {
       width: map.get($input-number-width, $size);
       line-height: #{map.get($input-height, $size) - 2};
@@ -177,7 +177,7 @@
       border-radius: 0 0 getCssVar('border-radius-base') 0;
     }
 
-    @each $size in (large, small) {
+    @each $size in (large, medium, small) {
       &[class*='#{$size}'] {
         [class*='increase'],
         [class*='decrease'] {
