@@ -138,6 +138,20 @@ $form-item-label-top-margin-bottom: map.merge(
     box-sizing: border-box;
   }
 
+  @include e(label-tooltip) {
+    align-self: center;
+    cursor: help;
+
+    @include m(before) {
+      margin-right: 4px;
+      margin-left: calc(-1em - 4px);
+    }
+
+    @include m(after) {
+      margin-left: 4px;
+    }
+  }
+
   @include e(content) {
     display: flex;
     flex-wrap: wrap;

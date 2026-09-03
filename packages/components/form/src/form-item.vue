@@ -11,15 +11,45 @@
     >
       <component
         :is="labelFor ? 'label' : 'div'"
-        v-if="!!(label || $slots.label)"
+        v-if="!!(label || $slots.label || labelTooltipContent)"
         :id="labelId"
         :for="labelFor"
         :class="ns.e('label')"
         :style="labelStyle"
       >
+        <el-tooltip
+          v-if="labelTooltipContent && labelTooltipPosition === 'before'"
+          :content="labelTooltipContent"
+          :effect="labelTooltipEffect"
+          :popper-class="labelTooltipPopperClass"
+        >
+          <el-icon
+            :class="[ns.e('label-tooltip'), ns.em('label-tooltip', 'before')]"
+            :style="{ color: labelTooltipIconColor }"
+            tabindex="0"
+            :aria-label="labelTooltipContent"
+          >
+            <question-filled />
+          </el-icon>
+        </el-tooltip>
         <slot name="label" :label="currentLabel">
           {{ currentLabel }}
         </slot>
+        <el-tooltip
+          v-if="labelTooltipContent && labelTooltipPosition === 'after'"
+          :content="labelTooltipContent"
+          :effect="labelTooltipEffect"
+          :popper-class="labelTooltipPopperClass"
+        >
+          <el-icon
+            :class="[ns.e('label-tooltip'), ns.em('label-tooltip', 'after')]"
+            :style="{ color: labelTooltipIconColor }"
+            tabindex="0"
+            :aria-label="labelTooltipContent"
+          >
+            <question-filled />
+          </el-icon>
+        </el-tooltip>
       </component>
     </form-label-wrap>
 
@@ -51,6 +81,7 @@ import {
   watch,
 } from 'vue'
 import AsyncValidator from 'async-validator'
+import { QuestionFilled } from '@element-plus/icons-vue'
 import { refDebounced } from '@vueuse/core'
 import {
   addUnit,
@@ -61,6 +92,8 @@ import {
   isFunction,
 } from '@element-plus/utils'
 import { useId, useNamespace } from '@element-plus/hooks'
+import ElIcon from '@element-plus/components/icon'
+import ElTooltip from '@element-plus/components/tooltip'
 import { useFormSize } from './hooks'
 import FormLabelWrap from './form-label-wrap'
 import { formContextKey, formItemContextKey } from './constants'
@@ -86,6 +119,16 @@ const props = withDefaults(defineProps<FormItemProps>(), {
   inlineMessage: undefined,
 })
 const slots = useSlots()
+
+const labelTooltipContent = computed(() => props.labelTooltip?.content)
+const labelTooltipPosition = computed(
+  () => props.labelTooltip?.position ?? 'after'
+)
+const labelTooltipIconColor = computed(
+  () => props.labelTooltip?.iconColor ?? '#909399'
+)
+const labelTooltipEffect = computed(() => props.labelTooltip?.effect ?? 'dark')
+const labelTooltipPopperClass = computed(() => props.labelTooltip?.popperClass)
 
 const formContext = inject(formContextKey, undefined)
 const parentFormItemContext = inject(formItemContextKey, undefined)
@@ -125,7 +168,7 @@ const contentStyle = computed<CSSProperties>(() => {
     return {}
   }
   const labelWidth = addUnit(props.labelWidth ?? formContext?.labelWidth)
-  if (!props.label && !slots.label) {
+  if (!props.label && !slots.label && !labelTooltipContent.value) {
     return { marginLeft: labelWidth }
   }
   return {}
@@ -165,7 +208,7 @@ const propString = computed(() => {
 })
 
 const hasLabel = computed<boolean>(() => {
-  return !!(props.label || slots.label)
+  return !!(props.label || slots.label || labelTooltipContent.value)
 })
 
 const labelFor = computed<string | undefined>(() => {

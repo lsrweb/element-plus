@@ -35,8 +35,13 @@ async function buildFullEntry(minify: boolean) {
       name: 'vue-compiler-bundle-alias',
       resolveId: {
         filter: { id: /^vue$/ },
-        handler(id) {
-          return { id: path.resolve(projRoot, 'node_modules/vue/dist/vue.esm-browser.js') }
+        handler() {
+          return {
+            id: path.resolve(
+              projRoot,
+              'node_modules/vue/dist/vue.esm-browser.prod.js'
+            ),
+          }
         },
       },
     },

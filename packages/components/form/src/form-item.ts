@@ -4,6 +4,7 @@ import { buildProps, definePropType } from '@element-plus/utils'
 import type { ExtractPublicPropTypes } from 'vue'
 import type { ComponentSize } from '@element-plus/constants'
 import type { Arrayable } from '@element-plus/utils'
+import type { ElTooltipContentProps } from '@element-plus/components/tooltip'
 import type { FormItemRule } from './types'
 
 export const formItemValidateStates = [
@@ -15,12 +16,40 @@ export const formItemValidateStates = [
 export type FormItemValidateState = (typeof formItemValidateStates)[number]
 
 export type FormItemProp = Arrayable<string>
+export type FormItemLabelTooltipPosition = 'before' | 'after'
+
+export interface FormItemLabelTooltip {
+  /**
+   * @description Content of the tooltip.
+   */
+  content: string
+  /**
+   * @description Position of the tooltip icon relative to the label.
+   */
+  position?: FormItemLabelTooltipPosition
+  /**
+   * @description Color of the tooltip icon.
+   */
+  iconColor?: string
+  /**
+   * @description Tooltip theme, built-in theme: `dark` / `light`.
+   */
+  effect?: ElTooltipContentProps['effect']
+  /**
+   * @description Custom class name for the label tooltip's popper.
+   */
+  popperClass?: ElTooltipContentProps['popperClass']
+}
 
 export interface FormItemProps {
   /**
    * @description Label text.
    */
   label?: string
+  /**
+   * @description Tooltip configuration displayed beside the label.
+   */
+  labelTooltip?: FormItemLabelTooltip
   /**
    * @description Width of label, e.g. `'50px'`. `'auto'` is supported.
    */
@@ -75,6 +104,12 @@ export const formItemProps = buildProps({
    * @description Label text.
    */
   label: String,
+  /**
+   * @description Tooltip configuration displayed beside the label.
+   */
+  labelTooltip: {
+    type: definePropType<FormItemLabelTooltip>(Object),
+  },
   /**
    * @description Width of label, e.g. `'50px'`. `'auto'` is supported.
    */

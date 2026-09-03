@@ -54,6 +54,14 @@ form/alignment
 
 :::
 
+## 标签提示
+
+:::demo 为 `el-form-item` 设置 `label-tooltip` 对象后，标签旁会显示问号图标，鼠标移入图标即可查看提示信息。你可以在对象中配置图标位置、颜色以及 Tooltip 样式。
+
+form/label-tooltip
+
+:::
+
 ## 表单校验
 
 Form 组件允许你验证用户的输入是否符合规范，来帮助你找到和纠正错误。
@@ -178,6 +186,7 @@ form/accessibility
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------- |
 | prop                    | `model` 的键名。 它可以是属性的路径（如 `a.b.0` 或 `['a', 'b', '0']`）。 在使用了 `validate`、`resetFields` 的方法时，该属性是必填的。 | ^[string] / ^[string&#91;&#93;]                            | —       |
 | label                   | 标签文本                                                                                                                               | ^[string]                                                  | —       |
+| label-tooltip ^(2.14.6) | 标签旁 Tooltip 的配置                                                                                                                  | ^[object]`FormItemLabelTooltip`                            | —       |
 | label-position ^(2.7.7) | 表单域标签的位置， 当设置为 `left` 或 `right` 时，则也需要设置 `label-width` 属性 默认会继承 `Form`的`label-position`                  | ^[enum]`'left' \| 'right' \| 'top'`                        | ''      |
 | label-width             | 标签宽度，例如 `'50px'`。 可以使用 `auto`。                                                                                            | ^[string] / ^[number]                                      | —       |
 | required                | 是否为必填项，如不设置，则会根据校验规则确认                                                                                           | ^[boolean]                                                 | —       |
@@ -188,6 +197,16 @@ form/accessibility
 | size                    | 用于控制该表单域下组件的默认尺寸                                                                                                       | ^[enum]`'' \| 'large' \| 'medium' \| 'default' \| 'small'` | —       |
 | for                     | 和原生标签相同能力                                                                                                                     | ^[string]                                                  | —       |
 | validate-status         | formitem 校验的状态                                                                                                                    | ^[enum]`'' \| 'error' \| 'validating' \| 'success'`        | —       |
+
+### FormItemLabelTooltip ^(2.14.6)
+
+| 名称         | 说明                             | 类型                             | 默认值  |
+| ------------ | -------------------------------- | -------------------------------- | ------- |
+| content      | Tooltip 的提示内容               | ^[string]                        | —       |
+| position     | Tooltip 图标相对于标签文本的位置 | ^[enum]`'before' \| 'after'`     | after   |
+| icon-color   | Tooltip 图标的颜色               | ^[string]                        | #909399 |
+| effect       | Tooltip 主题                     | ^[string]                        | dark    |
+| popper-class | Tooltip 弹出层的自定义类名       | ^[string] / ^[object] / ^[array] | —       |
 
 #### FormItemRule
 

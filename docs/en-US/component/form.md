@@ -55,6 +55,14 @@ form/alignment
 
 :::
 
+## Label Tooltip
+
+:::demo Set the `label-tooltip` object on `el-form-item` to display a question-mark icon beside the label. Hover over the icon to show the tooltip. You can configure the icon position, color, and Tooltip style in the object.
+
+form/label-tooltip
+
+:::
+
 ## Validation
 
 Form component allows you to verify your data, helping you find and correct errors.
@@ -179,6 +187,7 @@ form/accessibility
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------- |
 | prop                    | A key of `model`. It could be a path of the property (e.g `a.b.0` or `['a', 'b', '0']`). In the use of `validate` and `resetFields` method, the attribute is required. | ^[string] / ^[string&#91;&#93;]                            | —       |
 | label                   | Label text.                                                                                                                                                            | ^[string]                                                  | —       |
+| label-tooltip ^(2.14.6) | Tooltip configuration displayed beside the label.                                                                                                                      | ^[object]`FormItemLabelTooltip`                            | —       |
 | label-position ^(2.7.7) | Position of item label. If set to `'left'` or `'right'`, `label-width` prop is also required. Default extend `label-position` of `form`.                               | ^[enum]`'left' \| 'right' \| 'top'`                        | ''      |
 | label-width             | Width of label, e.g. `'50px'`. `'auto'` is supported.                                                                                                                  | ^[string] / ^[number]                                      | —       |
 | required                | Whether the field is required or not, will be determined by validation rules if omitted.                                                                               | ^[boolean]                                                 | —       |
@@ -189,6 +198,16 @@ form/accessibility
 | size                    | Control the size of components in this form-item.                                                                                                                      | ^[enum]`'' \| 'large' \| 'medium' \| 'default' \| 'small'` | —       |
 | for                     | Same as for in native label.                                                                                                                                           | ^[string]                                                  | —       |
 | validate-status         | Validation state of formItem.                                                                                                                                          | ^[enum]`'' \| 'error' \| 'validating' \| 'success'`        | —       |
+
+### FormItemLabelTooltip ^(2.14.6)
+
+| Name         | Description                                             | Type                             | Default |
+| ------------ | ------------------------------------------------------- | -------------------------------- | ------- |
+| content      | Tooltip content                                         | ^[string]                        | —       |
+| position     | Position of the Tooltip icon relative to the label text | ^[enum]`'before' \| 'after'`     | after   |
+| icon-color   | Color of the Tooltip icon                               | ^[string]                        | #909399 |
+| effect       | Tooltip theme                                           | ^[string]                        | dark    |
+| popper-class | Custom class name for the Tooltip popper                | ^[string] / ^[object] / ^[array] | —       |
 
 #### FormItemRule
 
